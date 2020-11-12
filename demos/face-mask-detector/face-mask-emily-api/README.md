@@ -1,7 +1,7 @@
 
-# face-mask-demo Emily API
+# face-mask Emily API
 
-To run the API, execute: 
+To run the face mask API, execute: 
 ```
 python api.py
 ```
