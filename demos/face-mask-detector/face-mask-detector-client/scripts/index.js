@@ -19,7 +19,6 @@ const startWebcam = async () => {
 const prepareImage = (image) => {
   image = image.slice(22)
   const data = new FormData()
-  data.append('model_path', './data/model/custom_model.pt')
   data.append('sample', image)
   
   return data
