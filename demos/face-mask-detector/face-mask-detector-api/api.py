@@ -1,4 +1,5 @@
 import json
+import os
 from flask import Flask, request, jsonify
 from utilities import get_uptime, configure_app
 from ml.emily import Emily
@@ -26,9 +27,9 @@ app = configure_app(config['project_name'], cors={
 
 @app.route('/api/predict', methods=['POST'])
 def predict():
-    form = request.form
+
     sample = request.form['sample']
-    model_path = request.form['model_path']
+    model_path = os.path.join(os.getcwd(), "data/custom_model.pt")
 
     return jsonify({
         'prediction': emily.predict(sample, model_path)
@@ -72,7 +73,9 @@ def healthcheck():
         'threaded': config['connection']['threaded']
     })
 
+
 if __name__ == '__main__':
+
     app.run(
         debug=True,
         host=config['connection']['host'],
