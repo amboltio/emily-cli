@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@-webkit-keyframes muted-glow {
+  0%, 100% {
+    color: #8A8A8A;
+  }
+  50% {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+@keyframes muted-glow {
+  0%, 100% {
+    color: #8A8A8A;
+  }
+  50% {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+@-webkit-keyframes cycle-shadow {
+  0% {
+    -webkit-box-shadow: 0px 0px 300px -20px;
+            box-shadow: 0px 0px 300px -20px;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 300px 20px;
+            box-shadow: 0px 0px 300px 20px;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 300px -20px;
+            box-shadow: 0px 0px 300px -20px;
+  }
+}
+
+@keyframes cycle-shadow {
+  0% {
+    -webkit-box-shadow: 0px 0px 300px -20px;
+            box-shadow: 0px 0px 300px -20px;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 300px 20px;
+            box-shadow: 0px 0px 300px 20px;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 300px -20px;
+            box-shadow: 0px 0px 300px -20px;
+  }
+}
+
+body, html {
+  font-family: Nunito;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.disabled {
+  display: none !important;
+}
+
+.main {
+  margin: 0 auto;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .title {
+  font-weight: bold;
+  font-size: 3em;
+  padding: 0;
+  margin-bottom: 0.3em;
+}
+
+.main .subtitle {
+  margin-top: 0em;
+  color: grey;
+}
+
+.main .webcam {
+  margin: 10em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .webcam .webcam-feed {
+  border-radius: 2em;
+  border: solid black 3px;
+}
+
+.main .webcam .webcam-feed.success {
+  border: solid #26C485 3px;
+}
+
+.main .webcam .webcam-feed.warn {
+  border: solid #F7B538 3px;
+}
+
+.main .webcam .status {
+  font-size: 2em;
+  font-weight: bold;
+  -webkit-animation: muted-glow 3s infinite;
+          animation: muted-glow 3s infinite;
+}
+
+.main .webcam .status.success {
+  color: #26C485;
+  -webkit-animation: none;
+          animation: none;
+}
+
+.main .webcam .status.warn {
+  color: #F7B538;
+  -webkit-animation: none;
+          animation: none;
+}
+
+.main .webcam .loading-icon {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-top: 3em;
+}
+
+.main .webcam .loading-icon div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  -webkit-animation: loading-icon 1.8s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: loading-icon 1.8s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.main .webcam .loading-icon div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.main .webcam .loading-icon div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.main .webcam .loading-icon div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+@-webkit-keyframes loading-icon {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-icon {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.main .facemask {
+  width: 20%;
+  margin-top: 3em;
+}
+
+.main .facemask.waiting {
+  -webkit-animation: cycle-colors 10s infinte;
+          animation: cycle-colors 10s infinte;
+}
+
+/* Hide the snapsnot container/canvas*/
+.d-none {
+  height: 0;
+  width: 0;
+}
+
+@-webkit-keyframes lds-grid-kf {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes lds-grid-kf {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+$info: #6EC1E4;
+$success: #26C485;
+$warn: #F7B538;
+$error: #D8315B;
+$muted: #8A8A8A;
+$pink: #b14abb;
+$main: transparentize(white, 0.1);
+
+@keyframes muted-glow {
+    0%, 100% { color:  $muted}
+    50% { color: $main }
+}
+
+@keyframes cycle-shadow {
+    0% { box-shadow: 0px 0px 300px -20px; }
+    50% { box-shadow: 0px 0px 300px 20px; }
+    100% { box-shadow: 0px 0px 300px -20px; }
+}
+
+
+body, html {
+    font-family: Nunito;
+    background-color: black;
+    color: transparentize(white, 0.1);
+}
+
+.disabled {
+    display: none !important
+}
+
+.main {
+    margin: 0 auto;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        font-weight: bold;
+        font-size: 3em;
+        padding: 0;
+        margin-bottom: 0.3em;
+    }
+
+    .subtitle {
+        margin-top: 0em;
+        color: grey;
+    }
+
+    .webcam {
+        margin: 10em 2em;
+        display: flex; 
+        flex-direction: column;
+
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        
+        .webcam-feed {
+            border-radius: 2em;
+            border: solid black 3px;
+
+            &.success {
+                border: solid $success 3px;
+            }
+
+            &.warn {
+                border: solid $warn 3px;
+            }
+        }
+
+        .status {
+            font-size: 2em;
+            font-weight: bold;
+            animation: muted-glow 3s infinite;
+
+            &.success {
+                color: $success;
+                animation: none;
+            }
+
+            &.warn {
+                color: $warn;
+                animation: none;
+            }
+        }
+
+        .loading-icon {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+
+            margin-top: 3em;
+          }
+
+          .loading-icon div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border: 8px solid #fff;
+            border-radius: 50%;
+            animation: loading-icon 1.8s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #fff transparent transparent transparent;
+          }
+          .loading-icon div:nth-child(1) {
+            animation-delay: -0.45s;
+          }
+          .loading-icon div:nth-child(2) {
+            animation-delay: -0.3s;
+          }
+          .loading-icon div:nth-child(3) {
+            animation-delay: -0.15s;
+          }
+          @keyframes loading-icon {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+          
+    }
+
+    .facemask {
+        width: 20%;
+        margin-top: 3em;
+
+        &.waiting {
+            animation: cycle-colors 10s infinte;
+        }
+    }
+
+    
+}
+  
+  /* Hide the snapsnot container/canvas*/
+.d-none {
+    height: 0;
+    width: 0;
+}
+
+@keyframes lds-grid-kf {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+// Loading animation

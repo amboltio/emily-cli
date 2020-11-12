@@ -1,0 +1,6 @@
+
+# Jetbrains editor
+*.idea/
+
+# Compiled python files
+*.pyc

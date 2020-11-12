@@ -1,0 +1,10 @@
+
+version: "3"
+services:
+  emily-face-mask-demo:
+    build:
+      context: .
+      dockerfile: ./.devcontainer/Dockerfile
+    volumes:
+    - ./data:/workspace/data/
+    
