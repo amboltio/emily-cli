@@ -1,6 +1,5 @@
 import http.server
 import socketserver
-import os
 
 PORT = 8000
 
