@@ -12,7 +12,7 @@ Make sure you have Emily CLI tool and it's dependencies installed:
 
 When all dependencies are installed, open VSCode and from VSCode open the downloaded face-mask-detector-api folder. 
 
-#####Attention: Make sure the face-mask-detector-emily-api folder is opened as a Docker container. If Emily is installed correctly, VSCode will prompt whether it should **"Re-open [the folder] in Container"**. Make sure to press **"OK"** to this.
+**Attention**: Make sure the face-mask-detector-emily-api folder is opened as a Docker container. If Emily is installed correctly, VSCode will prompt whether it should **"Re-open [the folder] in Container"**. Make sure to press **"OK"** to this.
 
 Finally, start the Face Mask Detector API by executing the following command **from the terminal in VSCode**:
 ```
