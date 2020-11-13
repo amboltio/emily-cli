@@ -1,0 +1,10 @@
+
+version: "3"
+services:
+  emily-linear-regression:
+    build:
+      context: .
+      dockerfile: ./.devcontainer/Dockerfile
+    volumes:
+    - /home/mrp/Documents/data:/workspace/data/
+    

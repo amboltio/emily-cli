@@ -1,0 +1,8 @@
+
+version: "3"
+services:
+  emily-linear-regression:
+    volumes:
+      - .:/workspace:cached
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
