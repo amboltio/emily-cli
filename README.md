@@ -14,7 +14,7 @@ Download the emily CLI for free on the official [Emily website](https://ambolt.i
 ## Installation
 See the wiki:
 * [Linux](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Linux)
-* [Windows](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Windows))
+* [Windows](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Windows)
 
 ## Demonstratations
 The best way to get familiar with the Emily machine learning API is to get hands-on experience with pre-made demonstrations:
