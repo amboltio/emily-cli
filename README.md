@@ -6,7 +6,7 @@ Learn more on how to get started with or how to use the emily CLI in the [wiki](
 ## What's new?
 - Emily combines the powers of Python and Docker 
 - The ``emily build api`` command let's you build machine learning powered micro service's faster and easier than ever
-- The ``emily doctor fix`` command helps you setup and install all the necessary tools for building your machine learning based projects
+- The ``emily doctor fix`` command helps you setup and install all the necessary tools for building machine learning based projects
 
 ## Download
 Download the emily CLI tool for free from the official [emily CLI website](https://ambolt.io/home-work-together/emily/)
