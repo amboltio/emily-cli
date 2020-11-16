@@ -12,7 +12,7 @@ Learn more on how to get started with the emily CLI in the [wiki](https://github
 Download the emily CLI for free on the official [Emily website](https://ambolt.io/home-work-together/emily/)
 
 ## Installation
-See the wiki:
+How to install:
 * [Linux](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Linux)
 * [Windows](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Windows)
 
