@@ -4,7 +4,7 @@ The Emily command line interface (CLI) is build for helping developers and teams
 Learn more on how to get started with the emily CLI in the [wiki](https://github.com/amboltio/emily-cli/wiki)
 
 ## What's new?
-- Emily combines the powers of Python and Docker 
+- Emily combines the powers of [Python](https://www.python.org/) and [Docker](https://www.docker.com/) to build a safe and consistent development environment across teams and projects.
 - The ``emily build api`` command let's you build machine learning powered micro service's faster and easier than ever
 - The ``emily doctor fix`` command helps you setup and install all the necessary tools for building machine learning based projects
 
