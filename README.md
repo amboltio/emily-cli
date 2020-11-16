@@ -1,7 +1,7 @@
 # Emily CLI
-The Emily CLI helps developers and teams implement production ready machine learning powered micro service's fast and easy.
+The Emily command line interface (CLI) is build for helping developers and teams implement production ready machine learning powered micro service's fast and easy.
 
-Learn more on how to get started with or how to use the emily CLI in the [wiki](https://github.com/amboltio/emily-cli/wiki)
+Learn more on how to get started with the emily CLI in the [wiki](https://github.com/amboltio/emily-cli/wiki)
 
 ## What's new?
 - Emily combines the powers of Python and Docker 
