@@ -1,11 +1,11 @@
 
 # Face Mask Detector API
 
-The following demonstration shows how to easily implement a Face Mask Detector using the API template provided by the [Emily](http://ambolt.io/emily) CLI tool.
+The following demonstration shows how to easily get started using a Face Mask Detector, implemented in the Emily API template provided by the [Emily](http://ambolt.io/emily) CLI tool.
 
-To run this demo, first download the demo files from this folder (face-mask-detector-api). 
+To run this demo, first download the demo files from this folder, by downloading or cloning the [emily-cli repository](https://github.com/amboltio/emily-cli). 
 
-Make sure you have Emily CLI tool and it's dependencies installed:
+Make sure you have Emily CLI and it's dependencies installed:
 1. Download the Emily CLI from [here](http://ambolt.io/emily)
 2. Install Emily (see the installation steps [here](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily))
 3. Run ```emily doctor``` from your terminal (Bash or PowerShell) to let Emily help you install all dependencies
