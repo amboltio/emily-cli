@@ -1,0 +1,18 @@
+
+{
+  "name": "linear-regression on Emily",
+  "dockerComposeFile": ["../docker-compose.yml", "./docker-compose.yml"],
+  "service": "emily-linear-regression",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "extensions": ["ms-python.python", "ms-azuretools.vscode-docker", "hnw.vscode-auto-open-markdown-preview"],
+  "forwardPorts": [4242],
+  "runServices": [],
+  "remoteEnv": {},
+  "mounts": [],
+  "settings": {
+    "terminal.integrated.shell.linux": null
+  },
+  "postCreateCommand": []
+}
+
