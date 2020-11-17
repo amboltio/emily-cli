@@ -1,0 +1,26 @@
+{
+    "epoch": 200,
+    "loss": 0.07682334631681442,
+    "acc": 0.9791666865348816,
+    "input_size": 59,
+    "output_size": 9,
+    "optimizer": [
+        "SGD (",
+        "Parameter Group 0",
+        "    dampening: 0",
+        "    lr: 0.01",
+        "    momentum: 0.9",
+        "    nesterov: True",
+        "    weight_decay: 1e-05",
+        ")"
+    ],
+    "model": [
+        "Model(",
+        "  (fc1): Linear(in_features=59, out_features=128, bias=True)",
+        "  (fc2): Linear(in_features=128, out_features=64, bias=True)",
+        "  (fc3): Linear(in_features=64, out_features=9, bias=True)",
+        "  (dl): Dropout(p=0.5, inplace=False)",
+        "  (relu): ReLU()",
+        ")"
+    ]
+}

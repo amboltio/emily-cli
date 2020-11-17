@@ -1,0 +1,39 @@
+{"intents": [
+    {"tag": "order",
+     "patterns": ["Hvad skulle det være", "hvad skal du have", "hvad skal du bruge", "hvad kan jeg gøre for dig"],
+     "context": ["order"]
+    },
+    {"tag": "confirmation",
+     "patterns": ["okay", "ja", "ok", "det er fint", "det kan du tro", "yes", "selvfølgelig", "jeps", "naturligvis", "det har jeg", "ja det kan vi godt", "sagtens"],
+     "context": ["confirmation"]
+    },
+    {"tag": "non-confirmation",
+     "patterns": ["nej", "det er ikke muligt", "nej desværre", "har jeg ikke", "jeg har ikke", "vi har ikke", "det har jeg ikke"],
+     "context": ["non-confirmation"]
+    },
+    {"tag": "non-comprehension",
+     "patterns": ["Kan du gentage det", "hvad", "undskyld det forstod jeg ikke", "undskyld", "hvad sagde du"],
+     "context": ["non-comprehension"]
+    },
+    {"tag": "wait",
+     "patterns": ["hæng lige på", "lige 2 sekunder", "vent lige", "lige et øjeblik", "2 sekunder"],
+     "context": ["wait"]
+    },
+    {"tag": "stop-wait",
+     "patterns": ["jeg er tilbage", "hej igen", "ok er tilbage", "jeg tilbage"],
+     "context": ["stop-wait"]
+    },
+    {"tag": "singularity",
+     "patterns": ["er det telefonfis", "er du seriøs", "er du en robot"],
+     "context": ["singularity"]
+    },
+    {"tag": "prompt-for-presence",
+     "patterns": ["hallo er du der", "er du der", "hallo kan du høre mig", "hallo"],
+     "context": ["prompt-for-presence"]
+    },
+    {"tag": "prompt-for-more",
+     "patterns": ["ellers andet", "var det alt", "var det det hele"],
+     "context": ["prompt-for-presence"]
+    }
+]
+}
