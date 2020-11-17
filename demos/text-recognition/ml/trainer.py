@@ -1,7 +1,6 @@
 from ml.model import Model
 
 import random
-import datetime
 import json
 import pickle
 import os
@@ -24,29 +23,25 @@ class Trainer:
 
     def __init__(self):
         self.ds = DanishStemmer()
-        # The model cannot be instanced here as the input and output size are not yet determined
+        self.model = Model()
 
-    def train(self, dataset_path: str, save_path=None, batch_size=4, epochs=200): 
+    def train(self, dataset_path: str, save_path: str, batch_size=4, epochs=200):
         """Fits the model to the specified dataset and saves it
 
         Parameters:
         dataset_path (str): The path to the dataset used for training
         batch_size (int): The batch size during training (default=4)
         epochs (int): The number of epochs to train for (default=200)
-        model_dir (str): The location for the model to be saved 
+        model_dir (str): The location for the model to be saved
                          (default=None, will create a folder by datetime)
 
+        Returns:
+        True - given that nothing fails
         """
         self.batch_size = batch_size
         self.epochs = epochs
 
-        # Set and create model path
-        if save_path is None:
-            date = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M")
-            save_path = 'emily/models/model_{}'.format(date)
-        else:
-            save_path = save_path
-
+        # create the model save directory if it does not already exist
         if not os.path.exists(save_path):
             os.makedirs(save_path)
 
@@ -55,13 +50,13 @@ class Trainer:
 
         # Preprocess the dataset
         data_loader, input_size, output_size = self._preprocess_train_data(train_data, save_path)
-    
-        # Define model
-        model = Model(input_size, output_size)
+
+        # Define network
+        self.model.define_network_layers(input_size, output_size)
 
         # Compile model. Stochastic gradient descent with Nesterov accelerated gradient
-        model.train()
-        optimizer = SGD(model.parameters(), lr=0.01, weight_decay=1e-5, momentum=0.9, nesterov=True)
+        self.model.train()
+        optimizer = SGD(self.model.parameters(), lr=0.01, weight_decay=1e-5, momentum=0.9, nesterov=True)
         criterion = CrossEntropyLoss()
 
         loss_history = []
@@ -78,7 +73,7 @@ class Trainer:
                 optimizer.zero_grad()
 
                 # perform forward pass
-                outputs = model(inputs)
+                outputs = self.model(inputs)
 
                 # cross entropy loss expectes the target as a single
                 # number between 0 and #classses which is determined as:
@@ -93,31 +88,31 @@ class Trainer:
                 # update paramters based on gradients
                 optimizer.step()
 
-                # calculte accuracy 
+                # calculte accuracy
                 # this accuracy is simply the percentage of predictions
                 # with the correct class having the highest activation
                 pred_idxs = torch.argmax(outputs, dim=1)
                 label_idxs = torch.argmax(labels, dim=1)
-                acc = (pred_idxs == label_idxs).float().sum()/len(inputs)
+                acc = (pred_idxs == label_idxs).float().sum() / len(inputs)
 
                 # accumulate loss and acc for the epoch
                 epoch_loss += loss
                 epoch_acc += acc
 
             # calculate epoch loss and acc and append it to the training history
-            epoch_loss = epoch_loss/len(self.data_loader)
-            epoch_acc = epoch_acc/len(self.data_loader)
+            epoch_loss = epoch_loss / len(data_loader)
+            epoch_acc = epoch_acc / len(data_loader)
             loss_history.append(epoch_loss)
             acc_history.append(epoch_acc)
 
-        # Define meta data
-        meta_data = {'epoch': epoch+1, 
-                     'loss': float(epoch_loss), 
-                     'acc': float(epoch_acc), 
-                     'input_size': self.input_size,
-                     'output_size': self.output_size,
-                     'optimizer': str(optimizer).splitlines(), 
-                     'model': str(model).splitlines()}
+        # Define meta data used to save as 'checkpoint'
+        meta_data = {'epoch': epoch + 1,
+                     'loss': float(epoch_loss),
+                     'acc': float(epoch_acc),
+                     'input_size': input_size,
+                     'output_size': output_size,
+                     'optimizer': str(optimizer).splitlines(),
+                     'model': str(self.model).splitlines()}
 
         # Save training diagram
         self.model.save_training_diagram(save_path, acc_history, loss_history)
@@ -126,15 +121,19 @@ class Trainer:
         return self.model.save_model(save_path, meta_data, optimizer)
 
     def _load_train_data(self, dataset_path):
+        # open data file
         data_file = open(dataset_path, encoding='utf-8').read()
+        # load it as a dictionary from the json file
         train_dataset = json.loads(data_file)
         return train_dataset
 
     def _preprocess_train_data(self, train_data, save_path):
+        # determine the classes, documents a.k.a. patterns and the vocabulary of the dataset
         classes, documents, vocab = self._define_vocab_classes_documents(train_data, save_path)
+        # create a dataloader and determine needed network input and output size
         dataloader, input_size, output_size = self._create_dataloader(classes, documents, vocab)
         return dataloader, input_size, output_size
-    
+
     def _define_vocab_classes_documents(self, train_data, save_path):
         intents = train_data
         vocab = []
@@ -144,24 +143,25 @@ class Trainer:
 
         for intent in intents['intents']:
             for pattern in intent['patterns']:
-
                 # take each word and tokenize it
                 w = nltk.word_tokenize(pattern, language='danish')
                 vocab.extend(w)
                 # adding documents
                 documents.append((w, intent['tag']))
-
-                # adding classes to our class list
+                # adding classes to the class list
                 if intent['tag'] not in classes:
                     classes.append(intent['tag'])
 
+        # filter words to ignore
         vocab = [self.ds.stem(w) for w in vocab if w not in ignore_words]
+
+        # determine the set of unique words and classes
         vocab = sorted(list(set(vocab)))
         classes = sorted(list(set(classes)))
 
-        # store vocabulary and class names 
-        pickle.dump(vocab, open(os.path.join(save_path, 'vocab.pkl'),'wb'))
-        pickle.dump(classes, open(os.path.join(save_path, 'classes.pkl'),'wb'))
+        # store vocabulary and class names
+        pickle.dump(vocab, open(os.path.join(save_path, 'vocab.pkl'), 'wb'))
+        pickle.dump(classes, open(os.path.join(save_path, 'classes.pkl'), 'wb'))
 
         return classes, documents, vocab
 

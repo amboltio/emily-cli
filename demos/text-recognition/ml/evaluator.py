@@ -3,7 +3,6 @@ from ml.model import Model
 import pickle
 import json
 import os
-from model_utils import load_model
 
 # Natural language toolkit (used for semming and tokenization)
 import nltk
@@ -23,13 +22,13 @@ class Evaluator:
         torch.no_grad()
 
         self.model_path = ""
-        self.model = None
 
         # initialize stemmer
         self.ds = DanishStemmer()
 
     def evaluate(self, dataset_path: str, model_path: str, batch_size=4, load_method='state dict'):
-        """Evaluates a trained model located at 'model_path' based on test data from the self._load_test_data function
+        """
+        Evaluates a trained model located at 'model_path' based on test data from the self._load_test_data function
 
         Parameters:
         dataset_path (str): The path to the dataset used for evaluation
@@ -40,11 +39,10 @@ class Evaluator:
         Returns:
         evaluation result dict {'loss': float, 'acc': float}: loss and accuracy
         """
-        # Loads a trained instance of the Model class
-        # If no model has been trained yet proceed to follow the steps in ml.trainer.py
+        # (Re)load model if the given model path differes from the privous model path
         if model_path != self.model_path:
             self.model = Model()
-            self.model = load_model(model_path, load_method)
+            self.model.load_model(model_path, load_method)
             self.model.eval()
 
             # load configuration data
@@ -78,25 +76,29 @@ class Evaluator:
             # calculate loss
             loss += criterion(outputs, target)
 
-            # calculte accuracy 
+            # calculte accuracy
             # this accuracy is simply the percentage of predictions
             # with the correct class having the highest activation
             pred_idxs = torch.argmax(outputs, dim=1)
             label_idxs = torch.argmax(labels, dim=1)
-            acc += (pred_idxs == label_idxs).float().sum()/len(inputs)
+            acc += (pred_idxs == label_idxs).float().sum() / len(inputs)
 
-        loss = loss/len(data_loader)
-        acc = acc/len(data_loader)
+        loss = loss / len(data_loader)
+        acc = acc / len(data_loader)
 
         return {"loss": float(loss), "acc": float(acc)}
 
     def _load_test_data(self, dataset_path):
+        # open data file
         data_file = open(dataset_path, encoding='utf-8').read()
+        # load it as a dictionary from the json file
         test_dataset = json.loads(data_file)
         return test_dataset
 
-    def _preprocess_train_data(self, test):
+    def _preprocess_test_data(self, test_data):
+        # determine the documents a.k.a. patterns in the dataset
         documents = self._define_documents(test_data)
+        # create a dataloader
         dataloader = self._create_dataloader(documents)
         return dataloader
 
@@ -106,11 +108,11 @@ class Evaluator:
 
         for intent in intents['intents']:
             for pattern in intent['patterns']:
-
                 # take each word and tokenize it
                 w = nltk.word_tokenize(pattern, language='danish')
                 # adding documents
                 documents.append((w, intent['tag']))
+
         return documents
 
     def _create_dataloader(self, documents):
@@ -141,7 +143,7 @@ class Evaluator:
 
         # create data generator
         test_set = TensorDataset(inputs, labels)
-        
+
         return DataLoader(test_set, self.batch_size)
 
     def __call__(self, dataset_path, model_path):

@@ -6,6 +6,9 @@ from ml.emily import Emily
 
 emily = Emily()
 
+print('If this is the first time you run the API.\n \
+Be patient as it is downloading nltk libs which may take some time')
+
 # --- Welcome to your Emily API! --- #
 
 # See the README for guides on how to test it.

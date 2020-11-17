@@ -5,5 +5,5 @@
     "port": 4242,
     "threaded": true
   },
-  "project_name": "linear-regression"
+  "project_name": "text-recognition"
 }

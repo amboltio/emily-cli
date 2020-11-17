@@ -1,8 +1,8 @@
 
 {
-  "name": "linear-regression on Emily",
+  "name": "text-recognition",
   "dockerComposeFile": ["../docker-compose.yml", "./docker-compose.yml"],
-  "service": "emily-linear-regression",
+  "service": "emily-text-recognition",
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
   "extensions": ["ms-python.python", "ms-azuretools.vscode-docker", "hnw.vscode-auto-open-markdown-preview"],
