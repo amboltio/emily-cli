@@ -1,6 +1,8 @@
-
-from flask import Flask, request, jsonify
 import json
+
+from flask import request, jsonify
+from waitress import serve
+
 from utilities import get_uptime, configure_app
 from ml.emily import Emily
 
@@ -73,10 +75,4 @@ def healthcheck():
     })
 
 if __name__ == '__main__':
-    app.run(
-        debug=True,
-        host=config['connection']['host'],
-        port=config['connection']['port'],
-        threaded=config['connection']['threaded']
-    )
-
+    serve(app, listen=f'{config["connection"]["host"]}:{config["connection"]["port"]}')
