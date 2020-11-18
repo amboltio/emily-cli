@@ -37,8 +37,8 @@ This should return:
 }
 ```
 
-## Performing training, evaluation and predication
-The repository includes a pre-trained model, hence you can run evaluation or predication without training a model first. However for continuity, how to send a training request will initially be explained followed by evaluation and lastly prediction.  
+## Performing training, evaluation and prediction
+The repository includes a pre-trained model, hence you can run evaluation or prediction without training a model first. However for continuity, how to send a training request will initially be explained followed by evaluation and lastly prediction.  
 **Attention**: The very first time you start the server it may take a while to start. This is because it is downloading lools from the [NLTK toolkit](https://www.nltk.org/).  
 
 ### Training
