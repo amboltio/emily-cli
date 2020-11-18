@@ -21,6 +21,7 @@ How to install:
 The best way to get familiar with the Emily machine learning API is to get hands-on experience with pre-made demonstrations:
 - [Face Mask Detector](https://github.com/amboltio/emily-cli/tree/main/demos/face-mask-detector/face-mask-detector-api): Learn how to implement and use a Face Mask Detector implemented in the Emily API template.
 - [House Price Prediction](https://github.com/amboltio/emily-cli/tree/main/demos/linear-regression): Learn how to predict house prices in the Emily API template.
+- [Text Recognition](https://github.com/amboltio/emily-cli/wiki/Text-recognition)
 
 ## License
 The emily CLI is released under the [MIT license](https://github.com/amboltio/emily-cli/blob/main/LICENSE).
