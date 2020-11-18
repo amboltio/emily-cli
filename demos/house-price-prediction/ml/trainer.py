@@ -23,8 +23,7 @@ class Trainer:
         # Preprocess the dataset
         preprocessed_train_data = self._preprocess_train_data(train_data)
 
-        # TODO 3: implement steps which trains a model using the preprocessed_train_data
-        # e.g. model.fit() for sklearn models
+        # Train the model
         X = pd.DataFrame(preprocessed_train_data['RM'])
         y = pd.DataFrame(preprocessed_train_data['MEDV'])
         self.model.fit(X, y)
@@ -33,18 +32,10 @@ class Trainer:
         return self.model.save_model(save_path)
 
     def _load_train_data(self, dataset_path):
-        """
-        TODO 1: Implement steps for reading the dataset used for training
-        e.g. Reading data from a mounted drive 'data/train/' (pandas.read_csv()) or from a database
-        """
         train_dataset = pd.read_csv(dataset_path)
         return train_dataset
 
     def _preprocess_train_data(self, train_data):
-        """
-        TODO 2.: Implement preprocessing steps which prepares the dataset for training
-        e.g. normalizing the data, removing noisy data, splitting up the data into input values and target values
-        """
         preprocessed_train_data = train_data.dropna()
         return preprocessed_train_data
 

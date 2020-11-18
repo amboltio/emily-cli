@@ -31,8 +31,7 @@ class Evaluator:
         # Preprocess dataset to prepare it for the evaluator
         test_dataset = self._preprocess_test_data(test_data)
 
-        # TODO 3: implement steps which evaluates the model here
-        # e.g. model.eval() for sklearn models
+        # Evaluate model
         predictions = self.model(test_dataset['RM'].values.reshape(-1, 1))
         actual = test_dataset['MEDV']
 
@@ -41,18 +40,10 @@ class Evaluator:
         return score
 
     def _load_test_data(self, dataset_path):
-        """
-        TODO 1: Implement steps for reading the dataset used for evaluation
-        e.g. Reading data from a mounted drive 'data/test/' (pandas.read_csv()) or from a database
-        """
         test_dataset = pd.read_csv(dataset_path)
         return test_dataset
 
     def _preprocess_test_data(self, test_data):
-        """
-        TODO 2.: Implement preprocessing steps which prepares the dataset for evaluation
-        e.g. normalizing the data, removing noisy data, splitting up the data into input values and target values
-        """
         preprocessed_test_data = test_data.dropna()
         return preprocessed_test_data
 

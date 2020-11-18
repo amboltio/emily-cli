@@ -30,20 +30,10 @@ class Predictor:
         return prediction
 
     def _preprocess(self, sample):
-        """
-        TODO 1: Implement preprocessing steps which prepares the inputted sample for the model
-        e.g. normalizing the sample, remove noisy data from the sample, transforming/formatting the sample etc.
-        Remove or ignore this function if no preprocessing steps are necessary
-        """
         return np.array(float(sample)).reshape(-1, 1)
 
     def _postprocess(self, prediction):
-        """
-        TODO 2: Implement postprocessing steps which prepares the prediction for the client
-        e.g. removing unnecessary decimal numbers from the prediction, transforming/formatting the prediction etc.
-        Remove or ignore this function if no postprocessing steps are necessary
-        """
-        return prediction
+        return "$" + str((float(prediction) * 1000))
 
     def __call__(self, sample, model_path):
         return self.predict(sample, model_path)
