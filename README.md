@@ -1,7 +1,7 @@
-# Emily CLI
-The Emily command line interface (CLI) is built to help developers and teams implement production ready machine learning powered micro services fast and easily.
+# Emily
+The Emily platform is built to help developers and teams implement production ready machine learning powered micro services fast and easily.
 
-Learn more on how to get started with the emily CLI in the [wiki](https://github.com/amboltio/emily-cli/wiki).
+Learn more on how to get started with Emily in the [wiki](https://github.com/amboltio/emily-cli/wiki).
 
 ## What's new?
 - Emily combines the powers of [Python](https://www.python.org/) and [Docker](https://www.docker.com/) to build a safe and consistent machine learning development environment across teams and projects.
@@ -9,7 +9,7 @@ Learn more on how to get started with the emily CLI in the [wiki](https://github
 - The ``emily doctor fix`` command helps you setup and install all the necessary tools for building machine learning based projects.
 
 ## Download
-Download the emily CLI for free on the official [Emily website](https://ambolt.io/home-work-together/emily/).
+Download the Emily platform for free on the official [Emily website](https://ambolt.io/home-work-together/emily/).
 
 ## Installation
 How to install:
@@ -24,4 +24,4 @@ The best way to get familiar with the Emily machine learning API is to get hands
 - [Text Recognition](https://github.com/amboltio/emily-cli/wiki/Text-recognition): Learn how to train, evaluate and predict sentences with a fully connected PyTorch classifier implemented in the Emily API template.
 
 ## License
-The emily CLI is released under the [MIT license](https://github.com/amboltio/emily-cli/blob/main/LICENSE).
+The Emily platform is released under the [MIT license](https://github.com/amboltio/emily-cli/blob/main/LICENSE).
