@@ -19,10 +19,10 @@ Finally, start the Face Mask Detector API by executing the following command **f
 python api.py
 ```
 
-By default, when the API is running it will be accessible at http://127.0.0.1:4242. 
-To test if the Face Mask Detector API is running, try entering http://127.0.0.1:4242/api/health in your browser.
+By default, when the API is running on port 4242. It will be accessible at: http://localhost:4242. 
+To test if the Face Mask Detector API is running, try entering http://localhost:4242/api/health in your browser.
  
 To see the Face Mask Detector API in action, a simple [Face Mask Detector client](https://github.com/amboltio/emily-cli/tree/main/demos/face-mask-detector/face-mask-detector-client) has been implemented. 
-Download and run the client or simply send a POST request to http://127.0.0.1:4242/api/predict with an image attached.
+Download and run the client or simply send a POST request to http://localhost:4242/api/predict with an image attached.
 ## Requirements:
 - [Emily](http://ambolt.io/emily)
