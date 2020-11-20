@@ -14,6 +14,8 @@ from inside the face-mask-detector-client folder. This will start serving the in
  
 Alternatively, any other http serving tool can be used.
 
+Finally, open the served client here: http://localhost:8000/
+
 ## Requirements:
 - A web camera
 - Python
