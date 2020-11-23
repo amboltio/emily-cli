@@ -1,0 +1,10 @@
+
+version: "3"
+services:
+  emily-sentiment-analysis-api:
+    build:
+      context: .
+      dockerfile: ./.devcontainer/Dockerfile
+    volumes:
+    - /Users/brams/dev/ambolt/emily/emily/demos/sentiment-analysis/data:/workspace/data/
+    

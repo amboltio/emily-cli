@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+$success: #26C485;
+$warn: #F7B538;
+$error: #D8315B;
+$amboltBlue: #6EC1E4;
+
+body, html {
+    font-family: Nunito;
+    background-color: white;
+    color: transparentize(black, 0.15);
+}
+
+
+.main {
+    margin: 0 auto;
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        font-weight: bold;
+        font-size: 3em;
+        padding: 0;
+        margin-bottom: 0.3em;
+    }
+
+    .subtitle {
+        margin-top: 0em;
+        color: grey;
+    }
+
+    .input-container {
+        width: 100%;
+        h1 {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 98.5%;
+
+            font-family: Nunito;
+            font-size: 1.2em;
+            text-align: center;
+
+            margin-bottom: 0;
+            padding-top: .5em;
+
+            border: 3px solid lightgrey;
+            border-radius: 8px;
+            
+            &:hover, &:focus {
+                outline: none !important;
+                border: 3px solid $amboltBlue;
+            }
+
+            transition: all .3s;
+        }
+    }
+
+    .status {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .label {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .positive {
+            color: $success
+        }
+
+        .negative {
+            color: $error
+        }
+
+        .neutral {
+            color: $warn
+        }
+    }
+
+    #sentiment-bar {
+        width: 100%;
+        background-color: $error;
+        border-radius: 3px;
+    }
+
+    #positive-sentiment-bar-fill {
+        width: 50%;
+        height: 30px;
+        background-color: $success;
+        border-radius: 3px;
+
+        transition: all .5s;
+    }
+
+    #emoji {
+        margin-top: .3em;
+        font-size: 2.3em;
+    }
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: grey;
+    text-align: center;
+    padding-bottom: 20%;
+}

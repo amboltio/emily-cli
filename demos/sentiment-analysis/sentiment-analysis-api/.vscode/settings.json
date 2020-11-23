@@ -1,0 +1,16 @@
+
+{
+  "workbench.startupEditor": "readme",
+  "python.envFile": "${workspaceFolder}/.env",
+  "python.pythonPath": "/usr/local/bin/python",
+  "terminal.integrated.env.linux": {"PYTHONPATH": "${workspaceFolder}"},
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.languageServer": "Pylance",
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.completeFunctionParens": true,
+  "python.linting.flake8Args": [
+    "--max-line-length=120",
+    "--ignore=E402,F841,F401,E302,E305,E303,W391",
+  ]
+}
