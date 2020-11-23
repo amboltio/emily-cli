@@ -16,7 +16,7 @@ code .
 ```
 
 When Visual Studio Code opens up, click "Reopen in Container" when prompted.
-Once VS Code has opened inside the the Docker container, run `python api` from the VS Code terminal. 
+Once VS Code has opened inside the the Docker container, run `python api.py` from the VS Code terminal. 
 
 **Start the client**: 
 ```
