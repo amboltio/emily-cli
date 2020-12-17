@@ -27,7 +27,7 @@ This can be done using e.g. [Postman](https://www.postman.com/) or [curl](https:
 To train, send a POST request to `http://0.0.0.0:4242/api/train` with key/value pairs `dataset_path=data/train_data.csv` and `save_path=data/model.sav`. You should get an output indicating succes:
 ```
 {
-    "success": true
+    "result": true
 }
 ```
 
@@ -41,7 +41,7 @@ To evaluate, send a POST request to `http://0.0.0.0:4242/api/evaluate` with key/
 To predict, send a POST request to `http://0.0.0.0:4242/api/predict` with key/value pairs `sample=6` and `model_path=data/model.sav`. This will ask the model to predict the house price of a 6-room house. You will get the following output.
 ```
 {
-    "prediction": "$19588.8762740132"
+    "result": "$19588.8762740132"
 }
 ```
 
