@@ -1,5 +1,7 @@
+
 from ml.model import Model
 import numpy as np
+
 
 class Predictor:
     """
@@ -11,7 +13,15 @@ class Predictor:
         self.model_path = ""
         self.model = None
 
-    def predict(self, sample, model_path):
+    def predict(self, request):
+        """
+        Performs prediction on a sample using the model at the given path
+        """
+
+        # Unpack request
+        sample = request.args['sample']
+        model_path = request.args['model_path']
+
         # Loads a trained instance of the Model class
         # If no model has been trained yet proceed to follow the steps in ml.trainer.py
         self.model = Model()
@@ -33,8 +43,7 @@ class Predictor:
         return np.array(float(sample)).reshape(-1, 1)
 
     def _postprocess(self, prediction):
-        return "$" + str((float(prediction) * 1000))
+        return "$" + str(float(prediction) * 1000)
 
-    def __call__(self, sample, model_path):
-        return self.predict(sample, model_path)
-
+    def __call__(self, request):
+        return self.predict(request)

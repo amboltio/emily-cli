@@ -1,10 +1,19 @@
 
 version: "3"
 services:
-  emily-house-price-prediction:
+  emily-house-price-prediction-q9oip9:
+    image: emily-house-price-prediction-q9oip9
+    container_name: emily-house-price-prediction-q9oip9
+    networks:
+      - emily-house-price-prediction-q9oip9-network
     build:
       context: .
       dockerfile: ./.devcontainer/Dockerfile
     volumes:
     - ./data:/workspace/data/
     
+networks:
+  emily-house-price-prediction-q9oip9-network:
+    name: emily-house-price-prediction-q9oip9-network
+    driver: bridge
+  

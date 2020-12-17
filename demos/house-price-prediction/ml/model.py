@@ -1,6 +1,7 @@
 import pickle
 from sklearn.linear_model import LinearRegression
 
+
 class Model(LinearRegression):
     """
     The Model class defines the Machine Learning model which should be used for training/evaluation/prediction
@@ -17,19 +18,14 @@ class Model(LinearRegression):
         pickle.dump(self, opened_file)
         opened_file.close()
 
-        successfully_saved = True
-        return successfully_saved
+        return True
 
     def load_model(self, model_path):
-        try:
-            opened_file = open(model_path, 'rb')
-            loaded_model = pickle.load(opened_file)
-            opened_file.close()
+        opened_file = open(model_path, 'rb')
+        loaded_model = pickle.load(opened_file)
+        opened_file.close()
 
-            return loaded_model
-        except IOError:
-            print("Could not open file ", model_path)
+        return loaded_model
 
     def __call__(self, sample):
         return self.forward(sample)
-

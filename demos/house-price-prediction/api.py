@@ -1,10 +1,9 @@
-import json
 
 from flask import request, jsonify
-from waitress import serve
-
+import json
 from utilities import get_uptime, configure_app
 from ml.emily import Emily
+from waitress import serve
 
 emily = Emily()
 
@@ -27,35 +26,13 @@ app = configure_app(config['project_name'], cors={
 })
 
 
-@app.route('/api/predict', methods=['POST'])
-def predict():
-    sample = request.args['sample']
-    model_path = request.args['model_path']
-
+@app.route('/api/health')
+def healthcheck():
     return jsonify({
-        'prediction': emily.predict(sample, model_path)
-    })
-
-
-@app.route('/api/train', methods=['POST'])
-def train():
-
-    dataset_path = request.args['dataset_path']
-    save_path = request.args['save_path']
-
-    return jsonify({
-        'success': emily.train(dataset_path, save_path)
-    })
-
-
-@app.route('/api/evaluate', methods=['POST'])
-def evaluate():
-
-    dataset_path = request.args['dataset_path']
-    model_path = request.args['model_path']
-
-    return jsonify({
-        'result': emily.evaluate(dataset_path, model_path)
+        'uptime': get_uptime(),
+        'status': 'UP',
+        'host': config['connection']['host'],
+        'port': config['connection']['port'],
     })
 
 
@@ -64,15 +41,41 @@ def hello():
     return f'The {config["project_name"]} API is running (uptime: {get_uptime()})'
 
 
-@app.route('/api/health')
-def healthcheck():
+@app.route('/api/train', methods=['POST'])
+def train():
+    """
+    Expected request fields:
+    dataset_path
+    save_path
+    """
     return jsonify({
-        'uptime': get_uptime(),
-        'status': 'UP',
-        'host': config['connection']['host'],
-        'port': config['connection']['port'],
-        'threaded': config['connection']['threaded']
+        'result': emily.train(request)
+    })
+
+
+@app.route('/api/evaluate', methods=['POST'])
+def evaluate():
+    """
+    Expected request fields:
+    dataset_path
+    model_path
+    """
+    return jsonify({
+        'result': emily.evaluate(request)
+    })
+
+
+@app.route('/api/predict', methods=['POST'])
+def predict():
+    """
+    Expected request fields:
+    sample
+    model_path
+    """
+    return jsonify({
+        'result': emily.predict(request)
     })
 
 if __name__ == '__main__':
     serve(app, listen=f'{config["connection"]["host"]}:{config["connection"]["port"]}')
+

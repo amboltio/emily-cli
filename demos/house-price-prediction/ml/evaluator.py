@@ -1,6 +1,8 @@
+
 from ml.model import Model
 import pandas as pd
 from sklearn.metrics import mean_absolute_error
+
 
 class Evaluator:
     """
@@ -15,10 +17,15 @@ class Evaluator:
         self.model_path = ""
         self.model = None
 
-    def evaluate(self, dataset_path, model_path):
+    def evaluate(self, request):
         """
         Evaluates a trained model located at 'model_path' based on test data from the self._load_test_data function
         """
+
+        # Unpack request
+        dataset_path = request.args['dataset_path']
+        model_path = request.args['model_path']
+
         # Loads a trained instance of the Model class
         # If no model has been trained yet proceed to follow the steps in ml.trainer.py
         self.model = Model()
@@ -31,7 +38,8 @@ class Evaluator:
         # Preprocess dataset to prepare it for the evaluator
         test_dataset = self._preprocess_test_data(test_data)
 
-        # Evaluate model
+        # TODO 3: implement steps which evaluates the model here
+        # e.g. model.eval() for sklearn models
         predictions = self.model(test_dataset['RM'].values.reshape(-1, 1))
         actual = test_dataset['MEDV']
 
@@ -47,6 +55,5 @@ class Evaluator:
         preprocessed_test_data = test_data.dropna()
         return preprocessed_test_data
 
-    def __call__(self, dataset_path, model_path):
-        return self.evaluate(dataset_path, model_path)
-
+    def __call__(self, request):
+        return self.evaluate(request)

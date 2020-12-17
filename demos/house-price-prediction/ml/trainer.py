@@ -1,5 +1,7 @@
+
 from ml.model import Model
 import pandas as pd
+
 
 class Trainer:
     """
@@ -11,12 +13,18 @@ class Trainer:
     """
 
     def __init__(self):
-        self.model = Model()  # creates an instance of the Model class (see guidelines in ml.model.py)
+        # creates an instance of the Model class (see guidelines in ml.model.py)
+        self.model = Model()
 
-    def train(self, dataset_path, save_path):
+    def train(self, request):
         """
         Starts the training of a model based on data loaded by the self._load_train_data function
         """
+
+        # Unpack request
+        dataset_path = request.args['dataset_path']
+        save_path = request.args['save_path']
+
         # Read the dataset from the dataset_path
         train_data = self._load_train_data(dataset_path)
 
@@ -39,6 +47,5 @@ class Trainer:
         preprocessed_train_data = train_data.dropna()
         return preprocessed_train_data
 
-    def __call__(self, dataset_path, save_path):
-        return self.train(dataset_path, save_path)
-
+    def __call__(self, request):
+        return self.train(request)
