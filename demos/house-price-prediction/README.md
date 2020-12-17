@@ -19,26 +19,26 @@ Start the House Price Prediction API by executing the following command **from t
 python api.py
 ```
 
-By default, when the API is running it will be accessible at http://127.0.0.1:4242.
-To test if the House Price Prediction API is running, try entering http://127.0.0.1:4242/api/health in your browser.
+By default, when the API is running it will be accessible at http://0.0.0.0:4242.
+To test if the House Price Prediction API is running, try entering http://0.0.0.0:4242/api/health in your browser.
 Training, evaluating, and predicting using the model is done by sending POST requests to the train, evaluate, and predict endpoints, respectively.
 This can be done using e.g. [Postman](https://www.postman.com/) or [curl](https://curl.se/).
 
-To train, send a POST request to `http://127.0.0.1:4242/api/train` with key/value pairs `dataset_path=data/train_data.csv` and `save_path=data/model.sav`. You should get an output indicating succes:
+To train, send a POST request to `http://0.0.0.0:4242/api/train` with key/value pairs `dataset_path=data/train_data.csv` and `save_path=data/model.sav`. You should get an output indicating succes:
 ```
 {
     "success": true
 }
 ```
 
-To evaluate, send a POST request to `http://127.0.0.1:4242/api/evaluate` with key/value pairs `dataset_path=data/test_data.csv` and `model_path=data/model.sav`. This will give you the mean absolute error of the model:
+To evaluate, send a POST request to `http://0.0.0.0:4242/api/evaluate` with key/value pairs `dataset_path=data/test_data.csv` and `model_path=data/model.sav`. This will give you the mean absolute error of the model:
 ```
 {
     "result": 4.0203266061645495
 }
 ```
 
-To predict, send a POST request to `http://127.0.0.1:4242/api/predict` with key/value pairs `sample=6` and `model_path=data/model.sav`. This will ask the model to predict the house price of a 6-room house. You will get the following output.
+To predict, send a POST request to `http://0.0.0.0:4242/api/predict` with key/value pairs `sample=6` and `model_path=data/model.sav`. This will ask the model to predict the house price of a 6-room house. You will get the following output.
 ```
 {
     "prediction": "$19588.8762740132"
