@@ -1,3 +1,4 @@
+
 from ml.model import Model
 
 import pickle
@@ -17,6 +18,7 @@ from torch.utils.data import TensorDataset, DataLoader
 
 
 class Evaluator:
+
     def __init__(self):
         # Disabling gradient calculation to reduce memory consumption for computations
         torch.no_grad()
@@ -26,7 +28,7 @@ class Evaluator:
         # initialize stemmer
         self.ds = DanishStemmer()
 
-    def evaluate(self, dataset_path: str, model_path: str, batch_size=4, load_method='state dict'):
+    def evaluate(self, request, batch_size=4, load_method='state dict'):
         """
         Evaluates a trained model located at 'model_path' based on test data from the self._load_test_data function
 
@@ -39,6 +41,10 @@ class Evaluator:
         Returns:
         evaluation result dict {'loss': float, 'acc': float}: loss and accuracy
         """
+
+        dataset_path = request.args['dataset_path']
+        model_path = request.args['model_path']
+
         # (Re)load model if the given model path differes from the privous model path
         if model_path != self.model_path:
             self.model = Model()
@@ -146,6 +152,6 @@ class Evaluator:
 
         return DataLoader(test_set, self.batch_size)
 
-    def __call__(self, dataset_path, model_path):
-        return self.evaluate(dataset_path, model_path)
+    def __call__(self, request):
+        return self.evaluate(request)
 

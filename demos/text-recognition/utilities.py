@@ -29,5 +29,3 @@ def configure_app(project_name, cors):
     app.json_encoder = NpEncoder
     CORS(app, resources=cors)
     return app
-
-

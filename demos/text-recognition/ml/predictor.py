@@ -1,8 +1,8 @@
+
 from ml.model import Model
 
 import numpy as np
 import pickle
-import json
 import os
 
 # Natural language toolkit (used for semming and tokenization)
@@ -15,7 +15,9 @@ from nltk.stem.snowball import DanishStemmer
 import torch
 from torch.nn.functional import softmax
 
+
 class Predictor:
+
     def __init__(self):
         # Disabling gradient calculation to reduce memory consumption for computations
         torch.no_grad()
@@ -26,7 +28,7 @@ class Predictor:
         # initialize stemmer
         self.ds = DanishStemmer()
 
-    def predict(self, sample: str, model_path: str, load_method='state dict'):
+    def predict(self, request, load_method='state dict'):
         """
         Takes a sentence, converts its to a
         bag-of-words format and predicts its class/context
@@ -41,6 +43,9 @@ class Predictor:
         OR
         (None): if no words from the sentence are contrained in the network vocabulary
         """
+
+        sample = request.args['sample']
+        model_path = request.args['model_path']
 
         # (Re)load model if the given model path differes from the privous model path
         if model_path != self.model_path:
@@ -67,6 +72,7 @@ class Predictor:
         # Postprocess the prediction to prepare it for the client
         postprocessed_prediction = self._postprocess(prediction)
         return postprocessed_prediction
+
 
     def _preprocess(self, sample):
         # tokenize and stem the pattern
@@ -100,5 +106,6 @@ class Predictor:
 
         return {"class": predicted_class, "prob": class_prob.item()}
 
-    def __call__(self, sample, model_path):
-        return self.predict(sample, model_path)
+    def __call__(self, request):
+        return self.predict(request)
+

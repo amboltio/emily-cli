@@ -1,9 +1,8 @@
 
 {
   "connection": {
-    "host": "127.0.0.1",
-    "port": 4242,
-    "threaded": true
+    "host": "*",
+    "port": 4242
   },
-  "project_name": "text-recognition"
+  "project_name": "ml-api1"
 }
