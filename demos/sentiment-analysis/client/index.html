@@ -4,27 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emily: Sentiment Analysis Demo</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/content.css">
 </head>
 <body>
+    <header>
+        <ul>
+            <li>
+                <a href="https://github.com/amboltio/emily-cli/tree/main/demos" title="Ambolt demos">
+                    <img src="https://i1.wp.com/ambolt.io/wp-content/uploads/2018/02/ambolt-white-logo-small.png?ssl=1" alt="Ambolt Logo">
+                </a>
+            </li>
+            <li>
+                <h1 class="title">
+                    Emily demo
+                </h1>
+            </li>
+            <li>
+                <a href="https://github.com/amboltio/emily-cli/tree/main/demos" title="Ambolt demos">
+                    More demos
+                </a>
+            </li>
+        </ul>
+    </header>
     <section class="main">
 
         <h1 class="title">Movie Reviews</h1>
         <h3 class="subtitle">Emily demo (Sentiment Analysis)</h3>
 
-        <section class="input-container">
-            <textarea id="input" oninput="getSentiment()" placeholder="Let 'em hear it"></textarea>
+        <section class="content">
+            <section class="input-container">
+                <textarea id="input" oninput="getSentiment()" placeholder="Let 'em hear it"></textarea>
+            </section>
+            <section class="status">
+                <p id="positive-label" class="label positive">Positive</p>
+                <p id="negative-label" class="label negative">Negative</p>
+            </section>
+            <div id="sentiment-bar">
+                <div id="positive-sentiment-bar-fill"></div>
+            </div>
+            <div id="emoji"></div>
         </section>
-        <section class="status">
-            <p id="positive-label" class="label positive">Positive</p>
-            <p id="negative-label" class="label negative">Negative</p>
-        </section>
-        <div id="sentiment-bar">
-            <div id="positive-sentiment-bar-fill"></div>
-        </div>
-        <div id="emoji"></div>
         <footer>
-            Source and guide on <a href="https://github.com/amboltio/emily-cli/wiki/Sentiment-analysis">GitHub</a>
+            <p>
+                Source and guide on <a href="https://github.com/amboltio/emily-cli/wiki/Sentiment-analysis">GitHub</a>
+            </p>
+            <a href="https://ambolt.io" class="muted">Ambolt ApS</a>
         </footer>
     </section>
 </body>
