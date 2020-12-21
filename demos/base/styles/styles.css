@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.muted {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+body, html {
+  font-family: Nunito;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+a {
+  color: white;
+  font-size: 1.2em;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+a:hover {
+  color: #6EC1E4;
+}
+
+header {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 120px;
+  background-color: black;
+  color: white;
+  font-family: 'Roboto';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header ul {
+  width: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0 2em;
+}
+
+header ul li img {
+  height: auto;
+  max-height: 55px;
+}
+
+header ul li .title {
+  text-transform: uppercase;
+  -webkit-transition: .8s all;
+  transition: .8s all;
+}
+
+header ul li .title:hover {
+  color: #6EC1E4;
+}
+
+.main {
+  margin: 120px auto;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .title {
+  font-weight: bold;
+  font-size: 3em;
+  padding: 0;
+  margin-bottom: 0.3em;
+}
+
+.main .subtitle {
+  margin-top: 0em;
+}
+
+.main .interaction {
+  width: 100%;
+  text-align: center;
+  /* 
+            INSERT CONTENT STYLING HERE
+        */
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=styles.css.map */

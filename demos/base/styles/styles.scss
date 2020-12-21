@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$background: white;
+$onBackground: transparentize(black, .15);
+
+$primary: black;
+$onPrimary: white;
+
+$secondary: #6EC1E4;
+$onSecondary: $onBackground;
+
+$success: #26C485;
+$warn: #F7B538;
+$error: #D8315B;
+
+$radius: 3px;
+$headerHeight: 120px;
+$footerHeight: 80px;
+
+@function mute($color) {
+    @return transparentize($color, .5);
+}
+
+.muted {
+    color: mute($onBackground);
+}
+
+
+body, html {
+    font-family: Nunito;
+    background-color: $background;
+    color: $onBackground;
+}
+
+a {
+    color: $onPrimary;
+    font-size: 1.2em;
+    transition: .3s all;
+
+    &:hover {
+        color: $secondary;
+    }
+}
+
+
+header {
+    
+    top: 0;
+    left: 0;
+    position: fixed;
+
+    width: 100%;
+    height: $headerHeight;
+
+    background-color: $primary;
+    color: $onPrimary;
+    font-family: 'Roboto';
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+        width: 100%;
+        list-style: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin: 0;
+        padding: 0 2em;
+
+        li {
+            img {
+                height: auto;
+                max-height: 55px;
+            }
+            .title {
+                text-transform: uppercase;
+                transition: .8s all;
+
+                &:hover {
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
+
+
+.main {
+    margin: $headerHeight auto;
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        font-weight: bold;
+        font-size: 3em;
+        padding: 0;
+        margin-bottom: 0.3em;
+    }
+
+    .subtitle {
+        margin-top: 0em;
+    }
+
+    .interaction {
+        width: 100%;
+        text-align: center;
+        /* 
+            INSERT CONTENT STYLING HERE
+        */
+    }
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $primary;
+    color: $onPrimary;
+    text-align: center;
+    height: $footerHeight;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
