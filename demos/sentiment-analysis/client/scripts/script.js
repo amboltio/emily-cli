@@ -27,7 +27,7 @@ const updateEmoji = (pos) => {
 const getPrediction = async (text) => {
     const response = await fetch(`${apiBaseUrl}/api/predict?sample=${text}`, { method: 'POST' })
     const body = await response.json()
-    return body.prediction
+    return body.result
 }
 
 const getSentiment = async () => {
