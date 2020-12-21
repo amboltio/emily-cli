@@ -1,26 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-$background: white;
-$onBackground: transparentize(black, .15);
-
-$primary: black;
-$onPrimary: white;
-
-$secondary: #6EC1E4;
-$onSecondary: $onBackground;
-
-$success: #26C485;
-$warn: #F7B538;
-$error: #D8315B;
-
-$radius: 3px;
-$headerHeight: 120px;
-$footerHeight: 80px;
-
-@function mute($color) {
-    @return transparentize($color, .5);
-}
+@import "../variables/variables";
 
 .muted {
     color: mute($onBackground);
@@ -107,14 +85,6 @@ header {
 
     .subtitle {
         margin-top: 0em;
-    }
-
-    .interaction {
-        width: 100%;
-        text-align: center;
-        /* 
-            INSERT CONTENT STYLING HERE
-        */
     }
 }
 

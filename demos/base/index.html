@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emily: Project demo</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/base/base.css">
+    <link rel="stylesheet" href="styles/content.css">
 </head>
 <body>
     <header>
@@ -31,9 +32,19 @@
         <h1 class="title">Project title</h1>
         <h3 class="subtitle muted">Project description</h3>
 
-        <section class="interaction">
+        <section class="content">
             <!-- INSERT CONTENT HERE -->
-            <p>[Content goes here]</p>
+
+            <h2>Your content goes here</h2>
+            <p>Put your styling into <code>./styles/content.scss</code>.</p>
+            <p>
+                Create custom classes for styling your elements.
+            </p>
+            <p>
+                The <code>./styles/content.scss</code> contains some pre-made classes for showing <span class="info">info</span>, 
+                <span class="success">success</span>, <span class="warn">warning</span>, and <span class="error">error</span>-coloured messages.
+            </p>
+            
         </section>
 
         <footer>
