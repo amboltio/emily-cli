@@ -27,7 +27,7 @@ curl http://127.0.0.1:4242/api/health
 ```
 Alternatively the [Postman](https://www.postman.com/) tool can be used. Download and install this software, and then start it. You do not need to register a user in order to use it. Send a GET request to `http://127.0.0.1:4242/api/health`.
 This should return:
-```
+```json
 {
   "host": "127.0.0.1",
   "port": 4242,
@@ -49,7 +49,7 @@ curl --location --request POST '127.0.0.1:4242/api/train?dataset_path=emily/data
 or using [Postman](https://www.postman.com/) sending a POST request to `127.0.0.1:4242/api/train` with the key/value pairs defined in the `Params` field.  
 
 This should return:
-```
+```json
 {
   "success": true
 }
@@ -66,7 +66,7 @@ curl --location --request POST '127.0.0.1:4242/api/evaluate?dataset_path=emily/d
 or using [Postman](https://www.postman.com/) sending a POST request to `127.0.0.1:4242/api/train` with the key/value pairs defined in the `Params` field.  
 
 This should return:
-```
+```json
 {
   "result": {
     "acc": 1.0,
@@ -86,7 +86,7 @@ curl --location --request POST '127.0.0.1:4242/api/predict?sample=%22Er%20du%20d
 Alternativly the request can be made by using [Postman](https://www.postman.com/). Send a POST request to `127.0.0.1:4242/api/predict` with the key/value pairs defined in the `Params` field.  
 **Note**: When using Postman the sample does not need to be manually encoded - simply write the sample in the value field. Remember to include quotation marks! 
 This should return:
-```
+```json
 {
   "prediction": {
     "class": "prompt-for-presence",

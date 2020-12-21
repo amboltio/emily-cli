@@ -1,10 +1,10 @@
+
 from ml.model import Model
 
 import random
 import json
 import pickle
 import os
-import numpy as np
 
 # Natural language toolkit (used for semming and tokenization)
 import nltk
@@ -25,7 +25,7 @@ class Trainer:
         self.ds = DanishStemmer()
         self.model = Model()
 
-    def train(self, dataset_path: str, save_path: str, batch_size=4, epochs=200):
+    def train(self, request, batch_size=4, epochs=200):
         """Fits the model to the specified dataset and saves it
 
         Parameters:
@@ -38,6 +38,10 @@ class Trainer:
         Returns:
         True - given that nothing fails
         """
+
+        dataset_path = request.args['dataset_path']
+        save_path = request.args['save_path']
+
         self.batch_size = batch_size
         self.epochs = epochs
 
@@ -204,6 +208,6 @@ class Trainer:
         training_set = TensorDataset(inputs, labels)
         return DataLoader(training_set, self.batch_size), input_size, output_size
 
-    def __call__(self, dataset_path, save_path):
-        return self.train(dataset_path, save_path)
+    def __call__(self, request):
+        return self.train(request)
 
