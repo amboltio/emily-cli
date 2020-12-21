@@ -79,9 +79,9 @@ header ul li .title:hover {
 }
 
 .main {
-  min-height: 100%;
+  min-height: 90%;
   margin: 120px auto;
-  margin-bottom: -200px;
+  margin-bottom: -225px;
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,19 +107,18 @@ header ul li .title:hover {
 }
 
 .push {
-  height: 200px;
+  height: 225px;
 }
 
 footer {
   width: 100vw;
-  bottom: 0;
   background-color: black;
   color: white;
   text-align: center;
   position: relative;
   height: 80px;
   padding: 20px;
-  margin-top: 40px;
+  margin-top: 225px;
   clear: both;
   display: -webkit-box;
   display: -ms-flexbox;

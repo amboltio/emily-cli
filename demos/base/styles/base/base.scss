@@ -75,7 +75,7 @@ header {
 
 
 .main {
-    min-height: 100%;
+    min-height: 90%;
     margin: $headerHeight auto;
     margin-bottom: -$footerOffset;
     width: 40%;
@@ -102,7 +102,6 @@ header {
 
 footer {
     width: 100vw;
-    bottom: 0;
     background-color: $primary;
     color: $onPrimary;
     text-align: center;
@@ -110,7 +109,7 @@ footer {
 
     height: $footerHeight;
     padding: $footerPadding;
-    margin-top: $footerMargin;
+    margin-top: $footerOffset;
 
     clear: both;
      

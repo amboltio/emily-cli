@@ -2,6 +2,7 @@
 @import "variables/variables";
 
 .content {
+  width: 100%;
   // INSERT CONTENT STYLING HERE
 
   // For example, if we want all <code>...<code> elements to have pink text, create a rule like this:
@@ -14,16 +15,16 @@
   //           <div class="a-class another-class a-third-class">...</div>
   
   // For example, we can create classes that sets the text
-  // color of the element with that class.
+  // color of the element with that class. 
 
   // Adding the "info" class to an element in index.html will render
   // the text as bold with $info (Ambolt's blue) as the color.
-  .info {
-    font-weight: bold;    
+  .info { 
+    font-weight: bold;
     color: $info;
-  }
+  } 
   
-  .success { 
+  .success {
     font-weight: bold;
     color: $success;
   }
