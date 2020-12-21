@@ -97,8 +97,22 @@ footer {
     color: $onPrimary;
     text-align: center;
     height: $footerHeight;
+    padding: 20px;
     
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
+
+    .muted {
+        color: grey;
+    }
+
+    a {
+        font-size: 1em;
+    }
+
+    a.muted {
+        text-decoration: none;
+    }
 }
