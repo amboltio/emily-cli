@@ -30,3 +30,6 @@ Your content goes into `index.html`:
 Declare your styling rules in `./styles/content.scss`. 
 Consult `./styles/variables/variables.scss` for a set of color variables that you can use.
 Consult `./styles/base/base.scss` for the base styling that is applied to the entire document.
+
+## Scripting
+Put your code in `./scripts/script.js`. The code is interpreted when the page is loaded.
