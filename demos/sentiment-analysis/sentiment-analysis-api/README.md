@@ -11,4 +11,3 @@ To test it, try running:
 ```
 curl http://*:4242/api/health
 ```
-

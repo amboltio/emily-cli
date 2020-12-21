@@ -1,5 +1,5 @@
 
-from flask import Flask, request, jsonify
+from flask import request, jsonify
 import json
 from utilities import get_uptime, configure_app
 from ml.emily import Emily
@@ -17,9 +17,6 @@ emily = Emily()
 # trust before deploying your API to production.
 
 config_file = 'config.json'
-dataset_path = './data/dataset.csv'
-model_path = './data/nb.pickle'
-
 config = json.load(open(config_file))
 
 app = configure_app(config['project_name'], cors={
@@ -29,34 +26,13 @@ app = configure_app(config['project_name'], cors={
 })
 
 
-@app.route('/api/predict', methods=['POST'])
-def predict():
-    sample = request.args['sample']
-
+@app.route('/api/health')
+def healthcheck():
     return jsonify({
-        'prediction': emily.predict(sample, model_path)
-    })
-
-
-@app.route('/api/train', methods=['POST'])
-def train():
-
-    dataset_path = request.args['dataset_path']
-    save_path = request.args['save_path']
-
-    return jsonify({
-        'success': emily.train(dataset_path, save_path)
-    })
-
-
-@app.route('/api/evaluate', methods=['POST'])
-def evaluate():
-
-    dataset_path = request.args['dataset_path']
-    model_path = request.args['model_path']
-
-    return jsonify({
-        'result': emily.evaluate(dataset_path, model_path)
+        'uptime': get_uptime(),
+        'status': 'UP',
+        'host': config['connection']['host'],
+        'port': config['connection']['port'],
     })
 
 
@@ -65,16 +41,26 @@ def hello():
     return f'The {config["project_name"]} API is running (uptime: {get_uptime()})'
 
 
-@app.route('/api/health')
-def healthcheck():
+@app.route('/api/train', methods=['POST'])
+def train():
     return jsonify({
-        'uptime': get_uptime(),
-        'status': 'UP',
-        'host': config['connection']['host'],
-        'port': config['connection']['port'],
-        'threaded': config['connection']['threaded']
+        'result': emily.train(request)
     })
 
+
+@app.route('/api/predict', methods=['POST'])
+def predict():
+    """
+    Expected request fields:
+    sample
+    """
+    return jsonify({
+        'result': emily.predict(request)
+    })
+
+
 if __name__ == '__main__':
-    emily.trainer.train(dataset_path, model_path)
-    serve(app, listen=f'{config["connection"]["host"]}:{config["connection"]["port"]}')
+    # Train the model when the API starts (training is skipped after the data has been written once)
+    emily.trainer.train(request)
+    serve(
+        app, listen=f'{config["connection"]["host"]}:{config["connection"]["port"]}')

@@ -2,8 +2,7 @@
 {
   "connection": {
     "host": "*",
-    "port": 4242,
-    "threaded": true
+    "port": 4242
   },
   "project_name": "sentiment-analysis-api"
 }

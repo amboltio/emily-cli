@@ -1,10 +1,19 @@
 
 version: "3"
 services:
-  emily-sentiment-analysis-api:
+  emily-sentiment-analysis-api-d9amhs:
+    image: emily-sentiment-analysis-api-d9amhs
+    container_name: emily-sentiment-analysis-api-d9amhs
+    networks:
+      - emily-sentiment-analysis-api-d9amhs-network
     build:
       context: .
       dockerfile: ./.devcontainer/Dockerfile
     volumes:
-    - /Users/brams/dev/ambolt/emily/emily/demos/sentiment-analysis/data:/workspace/data/
+    - ./data:/workspace/data/
     
+networks:
+  emily-sentiment-analysis-api-d9amhs-network:
+    name: emily-sentiment-analysis-api-d9amhs-network
+    driver: bridge
+  

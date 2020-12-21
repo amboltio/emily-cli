@@ -3,10 +3,14 @@ import pickle
 from tqdm import tqdm
 import numpy as np
 
+
 class Model():
+    """
+    The Model class defines the Machine Learning model which should be used for training/evaluation/prediction
+    """
 
     def __init__(self):
-        super().__init__()
+        super().__init__()  # Inherit methods from the super class which this class extends from
         self.word_idx_map = {}
 
         # Probability of a word given a class
@@ -28,7 +32,8 @@ class Model():
         }
 
     def fit(self, review_sentiment_pairs):
-        review_counts, word_counts = self._count_occurrences(review_sentiment_pairs)
+        review_counts, word_counts = self._count_occurrences(
+            review_sentiment_pairs)
         for c in ['positive', 'negative']:
             self.p[c] = review_counts[c] + sum(review_counts.values())
             self.p_w[c] = self._compute_conditional_probabilities(
@@ -38,8 +43,8 @@ class Model():
         self.s_e['positive'] = self._empty_score('positive')
         self.s_e['negative'] = self._empty_score('negative')
 
-    def forward(self, words):
-        words = self._filter_words(words)
+    def forward(self, sample):
+        words = self._filter_words(sample)
         positive_score = self._score(words, 'positive')
         negative_score = self._score(words, 'negative')
         return positive_score, negative_score
@@ -52,7 +57,6 @@ class Model():
         with open(model_path, 'rb') as fp:
             model = pickle.load(fp)
             self.__dict__.update(model.__dict__)
-
 
     def _idx_vector(self, words):
         return [self.word_idx_map[word] for word in words]

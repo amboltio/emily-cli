@@ -13,7 +13,15 @@ class Predictor:
         self.model_path = ""
         self.model = None
 
-    def predict(self, sample, model_path):
+    def predict(self, request):
+        """
+        Performs prediction on a sample using the model at the given path
+        """
+
+        # Unpack request
+        sample = request.args['sample']
+        model_path = './data/nb.pickle'
+
         # Loads a trained instance of the Model class
         # If no model has been trained yet proceed to follow the steps in ml.trainer.py
         if model_path != self.model_path:
@@ -42,6 +50,5 @@ class Predictor:
             'negative': negative_score
         }
 
-    def __call__(self, sample, model_path):
-        return self.predict(sample, model_path)
-
+    def __call__(self, request):
+        return self.predict(request)

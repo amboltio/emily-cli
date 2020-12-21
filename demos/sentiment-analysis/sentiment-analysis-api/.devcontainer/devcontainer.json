@@ -2,17 +2,21 @@
 {
   "name": "sentiment-analysis-api",
   "dockerComposeFile": ["../docker-compose.yml", "./docker-compose.yml"],
-  "service": "emily-sentiment-analysis-api",
+  "service": "emily-sentiment-analysis-api-d9amhs",
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
-  "extensions": ["ms-python.python", "ms-azuretools.vscode-docker", "hnw.vscode-auto-open-markdown-preview"],
+  "extensions": [
+    "ms-python.python", 
+    "ms-azuretools.vscode-docker", 
+    "hnw.vscode-auto-open-markdown-preview", 
+    "ms-python.vscode-pylance"
+  ],
   "forwardPorts": [4242],
   "runServices": [],
   "remoteEnv": {},
   "mounts": [],
   "settings": {
     "terminal.integrated.shell.linux": null
-  },
-  "postCreateCommand": []
+  }
 }
 

@@ -2,10 +2,9 @@
 from ml.model import Model
 import pandas as pd
 import nltk
-import string
 from nltk.stem.porter import PorterStemmer
 import re
-from tqdm import tqdm
+from tqdm import tqdm  # Wraps iterables and prints a progress bar
 import os
 import pickle
 
@@ -18,9 +17,6 @@ clause_punctuation_regex = re.compile(r"^[.:;!?]$")
 negating_word_regex = re.compile(r"(?:^(?:never|no|nothing|nowhere|noone|none|not|havent|hasnt|hadnt|cant|"
                                  r"couldnt|shouldnt|wont|wouldnt|dont|doesnt|didnt|isnt|arent|aint)$)|n't")
 
-
-def _remove_punctuation(text):
-    return text.translate(str.maketrans('', '', string.punctuation))  # Not very readable but extremely fast
 
 def _negate(words):
     negated = []
@@ -48,6 +44,7 @@ def _normalize_words(words):
 
     return normalized
 
+
 def normalize_text(text):
     # Optionally: explicitly handle negations, POS tags?
     text = text.lower()
@@ -55,6 +52,7 @@ def normalize_text(text):
     words = _negate(words)
     words = _normalize_words(words)
     return words
+
 
 class Trainer:
     """
@@ -66,23 +64,32 @@ class Trainer:
     """
 
     def __init__(self):
-        self.model = Model()  # creates an instance of the Model class (see guidelines in ml.model.py)
+        # creates an instance of the Model class (see guidelines in ml.model.py)
+        self.model = Model()
 
-    def train(self, dataset_path, save_path):
+    def train(self, request):
         """
         Starts the training of a model based on data loaded by the self._load_train_data function
         """
+
+        # Unpack request
+        dataset_path = './data/dataset.csv'
+        save_path = './data/nb.pickle'
+
         # Read the dataset from the dataset_path
         train_data = self._load_train_data(dataset_path)
 
         # Preprocess the dataset
-        preprocessed_train_data = self._preprocess_train_data(train_data, './data/preprocessed.pickle')
+        preprocessed_train_data = self._preprocess_train_data(
+            train_data, './data/preprocessed.pickle')
 
         # Fit the model
         self.model.fit(preprocessed_train_data)
 
         # Save the trained model
-        return self.model.save_model(save_path)
+        self.model.save_model(save_path)
+
+        return True
 
     def _load_train_data(self, dataset_path):
         with open(dataset_path) as fp:
@@ -107,6 +114,5 @@ class Trainer:
 
         return preprocessed
 
-    def __call__(self, dataset_path, save_path):
-        return self.train(dataset_path, save_path)
-
+    def __call__(self, request):
+        return self.train(request)

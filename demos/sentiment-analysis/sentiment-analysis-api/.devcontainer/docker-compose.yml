@@ -1,7 +1,7 @@
 
 version: "3"
 services:
-  emily-sentiment-analysis-api:
+  emily-sentiment-analysis-api-d9amhs:
     volumes:
       - .:/workspace:cached
     command: /bin/sh -c "while sleep 1000; do :; done"
