@@ -19,7 +19,10 @@ $code: #e83e8c;
 
 $radius: 3px;
 $headerHeight: 120px;
+$footerPadding: 20px;
 $footerHeight: 80px;
+$footerMargin: 40px;
+$footerOffset: $footerHeight + $footerHeight + $footerMargin;
 
 @function mute($color) {
     @return transparentize($color, .5);
