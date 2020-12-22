@@ -70,6 +70,13 @@ header ul li img {
   max-height: 55px;
 }
 
+header ul li img:hover {
+  /*      ------------ white2color(red) -----------  ----------- red2ambolt-blue  ----------------------*/
+  filter: brightness(0.5) sepia(1) saturate(10000%) hue-rotate(198deg) saturate(131.4%) brightness(83.7%);
+  height: auto;
+  max-height: 55px;
+}
+
 header ul li .title {
   text-transform: uppercase;
   -webkit-transition: .8s all;
