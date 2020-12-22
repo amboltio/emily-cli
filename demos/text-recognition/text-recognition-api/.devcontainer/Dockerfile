@@ -1,0 +1,2 @@
+
+FROM ambolt/emily:full

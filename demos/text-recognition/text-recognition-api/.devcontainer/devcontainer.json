@@ -1,18 +1,22 @@
 
 {
-  "name": "text-recognition",
+  "name": "text-recognition-api",
   "dockerComposeFile": ["../docker-compose.yml", "./docker-compose.yml"],
-  "service": "emily-text-recognition",
+  "service": "emily-text-recognition-api-mshg04",
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
-  "extensions": ["ms-python.python", "ms-azuretools.vscode-docker", "hnw.vscode-auto-open-markdown-preview"],
+  "extensions": [
+    "ms-python.python", 
+    "ms-azuretools.vscode-docker", 
+    "hnw.vscode-auto-open-markdown-preview", 
+    "ms-python.vscode-pylance"
+  ],
   "forwardPorts": [4242],
   "runServices": [],
   "remoteEnv": {},
   "mounts": [],
   "settings": {
     "terminal.integrated.shell.linux": null
-  },
-  "postCreateCommand": []
+  }
 }
 

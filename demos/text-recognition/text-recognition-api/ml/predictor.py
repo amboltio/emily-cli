@@ -115,10 +115,7 @@ class Predictor:
         if class_prob > 0.85:
             for response in list(self.responses['responses']):
                 if response['tag'] == predicted_class:
-                    print(response['tag'])
-                    print(list(response['response_list']))
                     out_response = random.choice(list(response['response_list']))
-                    print(out_response)
 
         return {"class": predicted_class, "prob": class_prob.item(), "response": out_response}
 

@@ -4,5 +4,5 @@
     "host": "*",
     "port": 4242
   },
-  "project_name": "ml-api1"
+  "project_name": "text-recognition-api"
 }

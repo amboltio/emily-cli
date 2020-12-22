@@ -1,0 +1,18 @@
+
+version: "3"
+services:
+  emily-text-recognition-api-mshg04:
+    image: emily-text-recognition-api-mshg04
+    container_name: emily-text-recognition-api-mshg04
+    networks:
+      - emily-text-recognition-api-mshg04-network
+    build:
+      context: .
+      dockerfile: ./.devcontainer/Dockerfile
+    
+    
+networks:
+  emily-text-recognition-api-mshg04-network:
+    name: emily-text-recognition-api-mshg04-network
+    driver: bridge
+  

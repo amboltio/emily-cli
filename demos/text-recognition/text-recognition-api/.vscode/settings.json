@@ -9,6 +9,7 @@
   "python.linting.flake8Enabled": true,
   "python.linting.flake8Args": [
     "--max-line-length=120",
-    "--ignore=E402,F841,F401,E302,E305,E303,W391",
-  ]
+    "--ignore=E402,F841,E302,E305,E303,W391",
+  ],
+  "editor.formatOnSave": true
 }
