@@ -4,6 +4,8 @@ from ml.model import Model
 import numpy as np
 import pickle
 import os
+import json
+import random
 
 # Natural language toolkit (used for semming and tokenization)
 import nltk
@@ -27,6 +29,11 @@ class Predictor:
 
         # initialize stemmer
         self.ds = DanishStemmer()
+
+        # load responses
+        data_file = open('emily/data/responses_pizza_chatbot-danish.json',
+                         encoding='utf-8').read()
+        self.responses = json.loads(data_file)
 
     def predict(self, request, load_method='state dict'):
         """
@@ -104,7 +111,16 @@ class Predictor:
         # retrive the class name by index
         predicted_class = self.classes[class_idx.item()]
 
-        return {"class": predicted_class, "prob": class_prob.item()}
+        out_response = 'Undskyld det forstod jeg ikke'
+        if class_prob > 0.85:
+            for response in list(self.responses['responses']):
+                if response['tag'] == predicted_class:
+                    print(response['tag'])
+                    print(list(response['response_list']))
+                    out_response = random.choice(list(response['response_list']))
+                    print(out_response)
+
+        return {"class": predicted_class, "prob": class_prob.item(), "response": out_response}
 
     def __call__(self, request):
         return self.predict(request)

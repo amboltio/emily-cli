@@ -1,0 +1,39 @@
+{"responses": [
+    {"tag": "order",
+     "response_list": ["En nummer 14 tak", "To nummer 3 tak", "En nummer 7 med dressing"],
+     "context": ["order"]
+    },
+    {"tag": "confirmation",
+     "response_list": ["super", "perfekt", "tak"],
+     "context": ["confirmation"]
+    },
+    {"tag": "non-confirmation",
+     "response_list": ["okay det var ærgeligt", "nå så prøver jeg et andet sted"],
+     "context": ["non-confirmation"]
+    },
+    {"tag": "non-comprehension",
+     "response_list": ["undskyld kan du give mig spørgsmålet igen"],
+     "context": ["non-comprehension"]
+    },
+    {"tag": "wait",
+     "response_list": ["okay jeg hænger på", "jeg venter", "okay jeg venter"],
+     "context": ["wait"]
+    },
+    {"tag": "stop-wait",
+     "response_list": ["super", "okay"],
+     "context": ["stop-wait"]
+    },
+    {"tag": "singularity",
+     "response_list": ["behandler du alle dine kunder på den måde", "ja jeg er en robot lavet til at bestille pizza"],
+     "context": ["singularity"]
+    },
+    {"tag": "prompt-for-presence",
+     "response_list": ["ja jeg er her", "ja"],
+     "context": ["prompt-for-presence"]
+    },
+    {"tag": "prompt-for-more",
+     "response_list": ["lad mig lige tænke", "nej det var det hele"],
+     "context": ["prompt-for-presence"]
+    }
+]
+}

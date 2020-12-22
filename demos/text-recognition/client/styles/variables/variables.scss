@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$background: white;
+$onBackground: transparentize(black, .15);
+
+$primary: black;
+$onPrimary: white;
+
+$secondary: #6EC1E4;
+$onSecondary: $onBackground;
+
+$info: $secondary;
+$success: #26C485;
+$warn: #F7B538;
+$error: #D8315B;
+
+$code: #e83e8c;
+
+$radius: 3px;
+$headerHeight: 120px;
+
+$footerPadding: 20px;
+$footerHeight: 80px;
+$footerMargin: 40px;
+$footerOffset: $footerHeight + $footerHeight + $footerMargin + 25px;
+
+@function mute($color) {
+    @return transparentize($color, .5);
+}
