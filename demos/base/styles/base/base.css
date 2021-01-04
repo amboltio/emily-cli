@@ -13,7 +13,24 @@ body, html {
   font-family: Nunito;
   background-color: white;
   color: rgba(0, 0, 0, 0.85);
-  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.site-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -78,10 +95,12 @@ header ul li .title:hover {
   color: #6EC1E4;
 }
 
-.main {
-  min-height: 90%;
-  margin: 120px auto;
-  margin-bottom: -225px;
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 auto;
+  margin-top: 120px;
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,30 +114,28 @@ header ul li .title:hover {
           align-items: center;
 }
 
-.main .title {
+main .title {
   font-weight: bold;
   font-size: 3em;
   padding: 0;
   margin-bottom: 0.3em;
 }
 
-.main .subtitle {
+main .subtitle {
   margin-top: 0em;
 }
 
-.push {
-  height: 225px;
-}
-
 footer {
-  width: 100vw;
+  position: relative;
+  bottom: 0;
+  width: 100%;
   background-color: black;
   color: white;
   text-align: center;
-  position: relative;
   height: 80px;
-  padding: 20px;
-  margin-top: 225px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin-top: 40px;
   clear: both;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -163,7 +180,7 @@ button {
 
 button.block {
   display: block;
-  width: 100%;
+  width: 90%;
 }
 
 button.large {

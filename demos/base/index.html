@@ -7,82 +7,91 @@
     <link rel="stylesheet" href="styles/content.css">
     <link rel="icon" type="image/png" href="https://i1.wp.com/ambolt.io/wp-content/uploads/2018/02/ambolt-white-logo-small.png?ssl=1">
 </head>
-<body>
-    <header>
-        <ul>
-            <li>
-                <a href="https://ambolt.io" title="Ambolt">
-                    <img src="https://i1.wp.com/ambolt.io/wp-content/uploads/2018/02/ambolt-white-logo-small.png?ssl=1" alt="Ambolt Logo">
-                </a>
-            </li>
-            <li>
-                <h1>
-                    <!-- CHANGE THIS TO LINK TO THE SPECIFIC DEMO -->
-                    <a class="title" style="text-decoration: none" href="https://github.com/amboltio/emily-cli/tree/main/demos" title="Emily demo">
-                        Emily demo
+<div class="site-wrapper">
+    <body>
+        <header>
+            <ul>
+                <li>
+                    <a href="https://ambolt.io" title="Ambolt">
+                        <img src="https://i1.wp.com/ambolt.io/wp-content/uploads/2018/02/ambolt-white-logo-small.png?ssl=1" alt="Ambolt Logo">
                     </a>
-                </h1>
-            </li>
-            <li>
-                <a href="https://github.com/amboltio/emily-cli/tree/main/demos" title="Emily demos">
-                    More demos
-                </a>
-            </li>
-        </ul>
-    </header>
-    <section class="main">
+                </li>
+                <li>
+                    <h1>
+                        <!-- CHANGE THIS TO LINK TO THE SPECIFIC DEMO -->
+                        <a class="title" style="text-decoration: none" href="https://github.com/amboltio/emily-cli/tree/main/demos" title="Emily demo">
+                            Emily demo
+                        </a>
+                    </h1>
+                </li>
+                <li>
+                    <a href="https://github.com/amboltio/emily-cli/tree/main/demos" title="Emily demos">
+                        More demos
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <main>
+    
+            <h1 class="title">Project title</h1>
+            <h3 class="subtitle muted">Project description</h3>
+    
+            <section class="content">
+                <!-- INSERT CONTENT HERE -->
+    
+                <h2>Your content goes here</h2>
+                <p>Put your styling into <code>./styles/content.scss</code>.</p>
+                <p>
+                    Create custom classes for styling your elements.
+                </p>
+                <p>
+                    The <code>./styles/content.scss</code> contains some pre-made classes for showing <span class="info">info</span>, 
+                    <span class="success">success</span>, <span class="warn">warning</span>, and <span class="error">error</span>-coloured messages.
+                </p>
+                <h2>Buttons</h2>
+                
+                <div class="center">
+                    <button id="click-me-btn">Click me</button>
+                </div>
+    
+                <h3>Standard buttons</h3>
+                <button class="standard">standard</button>
+                <button class="info">info</button>
+                <button class="success">success</button>
+                <button class="warn">warn</button>
+                <button class="error">error</button>
+    
+                <h3>Inline buttons</h3>
+                <p>
+                    We <button class="inline">can</button> have <button class="info inline">inline</button> buttons that 
+                    <button class="success inline">can be</button> inserted <button class="warn inline">arbitrarily</button> into 
+                    a <button class="error inline">piece</button> of text.
+                </p>
+                <h3>Block buttons</h3>
+                <p>Covers the full width of the parent element.</p>
+                <button class="block">standard</button>
+                <button class="info block">info</button>
+                <button class="success block">success</button>
+                <button class="warn block">warn</button>
+                <button class="error block">error</button>
 
-        <h1 class="title">Project title</h1>
-        <h3 class="subtitle muted">Project description</h3>
+                <h1>Footer test</h1>
+                <input type="checkbox" id="show-more-content"/>
+                <label for="show-more-content">Show more content</label>
 
-        <section class="content">
-            <!-- INSERT CONTENT HERE -->
-
-            <h2>Your content goes here</h2>
-            <p>Put your styling into <code>./styles/content.scss</code>.</p>
-            <p>
-                Create custom classes for styling your elements.
-            </p>
-            <p>
-                The <code>./styles/content.scss</code> contains some pre-made classes for showing <span class="info">info</span>, 
-                <span class="success">success</span>, <span class="warn">warning</span>, and <span class="error">error</span>-coloured messages.
-            </p>
-            <h2>Buttons</h2>
-            
-            <div class="center">
-                <button id="click-me-btn">Click me</button>
-            </div>
-
-            <h3>Standard buttons</h3>
-            <button class="standard">standard</button>
-            <button class="info">info</button>
-            <button class="success">success</button>
-            <button class="warn">warn</button>
-            <button class="error">error</button>
-
-            <h3>Inline buttons</h3>
-            <p>
-                We <button class="inline">can</button> have <button class="info inline">inline</button> buttons that 
-                <button class="success inline">can be</button> inserted <button class="warn inline">arbitrarily</button> into 
-                a <button class="error inline">piece</button> of text.
-            </p>
-            <h3>Block buttons</h3>
-            <p>Covers the full width of the parent element.</p>
-            <button class="block">standard</button>
-            <button class="info block">info</button>
-            <button class="success block">success</button>
-            <button class="warn block">warn</button>
-            <button class="error block">error</button>
-
-        </section>
-        <div class="push"></div>
-        <footer>
-            <p>
-                Source and guide on <a href="https://github.com/amboltio/emily-cli/wiki/Demonstrations">GitHub</a>
-            </p>
-            <a href="https://ambolt.io" title="Ambolt">Ambolt ApS </a>
-        </footer>
-    </section>
-</body>
+                <p id="more-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam culpa, nostrum tenetur ex corporis officia quasi harum fugit! Aspernatur commodi beatae illo doloribus at aliquam corrupti atque aperiam omnis perferendis quas error, molestias placeat tempora dolorem explicabo possimus quae hic sunt vitae consequatur ex corporis esse sint. Aliquam iusto quia explicabo in dolore sint accusamus excepturi illo voluptates? In saepe quo, voluptas cumque nam sunt doloremque labore blanditiis non dolorem. Eum architecto quam quasi reiciendis tempora esse hic voluptatum sint delectus nobis incidunt molestias provident id qui excepturi quo, tenetur cumque voluptatibus ad obcaecati exercitationem. At quidem corrupti sapiente velit odit, dolorem dolor temporibus? Quasi voluptas, illum beatae consequatur recusandae libero aperiam quisquam. Modi quidem unde quaerat ipsum odit voluptatum consequatur dignissimos porro, aliquid similique odio corrupti cum laboriosam voluptas, vitae illo obcaecati beatae iusto error enim, esse illum praesentium. Non, provident, quam necessitatibus blanditiis ratione maiores vitae aspernatur a reiciendis fugiat sequi itaque quos illo ducimus vel laboriosam possimus saepe sed esse? Amet ratione accusamus numquam iste id ut sequi quisquam, dolor unde pariatur. Adipisci illo, labore assumenda quasi praesentium sed hic quisquam nam doloremque obcaecati ea commodi qui deserunt nemo reprehenderit, illum amet? Iure culpa rem, magnam nihil recusandae eveniet itaque, pariatur eius qui repellendus quisquam dolorum dolore ea! Delectus similique mollitia beatae rerum aliquid, dignissimos vitae non fugit tenetur fuga odio ut illo itaque maiores. Fugiat perspiciatis, earum, aliquid eveniet sint, deserunt nulla deleniti temporibus vitae minima voluptates nostrum soluta. Repellendus tempora provident modi sunt, corporis omnis.
+                </p>
+    
+            </section>
+        </main>
+    </body>
+    <footer>
+        <p>
+            Source and guide on <a href="https://github.com/amboltio/emily-cli/wiki/Demonstrations">GitHub</a>
+        </p>
+        <a href="https://ambolt.io" title="Ambolt">Ambolt ApS </a>
+    </footer>
+</div>
 <script src='scripts/script.js'></script>
 </html>

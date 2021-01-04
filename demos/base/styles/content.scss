@@ -19,6 +19,7 @@
 
   // Adding the "info" class to an element in index.html will render
   // the text as bold with $info (Ambolt's blue) as the color.
+
   .info { 
     font-weight: bold;
     color: $info;
@@ -26,7 +27,7 @@
   
   .success {
     font-weight: bold;
-    color: $success;
+    color: $success; 
   }
 
   .warn {
@@ -37,5 +38,13 @@
   .error {
     font-weight: bold;
     color: $error;
+  }
+
+  #more-content {
+    display: none;
+  }
+
+  input:checked ~ #more-content {
+    display: block;
   }
 }

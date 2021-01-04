@@ -14,7 +14,18 @@ body, html {
     font-family: Nunito;
     background-color: $background;
     color: $onBackground;
-    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -73,11 +84,11 @@ header {
     }
 }
 
+main {
+    flex: 1;
 
-.main {
-    min-height: 90%;
-    margin: $headerHeight auto;
-    margin-bottom: -$footerOffset;
+    margin: 0 auto;
+    margin-top: $headerHeight;
     width: 40%;
 
     display: flex;
@@ -96,20 +107,19 @@ header {
     }
 }
 
-.push {
-    height: $footerOffset;
-}
-
 footer {
-    width: 100vw;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
     background-color: $primary;
     color: $onPrimary;
     text-align: center;
-    position: relative;
 
     height: $footerHeight;
-    padding: $footerPadding;
-    margin-top: $footerOffset;
+    padding-top: $footerPadding;
+    padding-bottom: $footerPadding;
+    margin-top: $footerMargin;
 
     clear: both;
      
@@ -146,7 +156,7 @@ button {
 
     &.block {
         display: block;
-        width: 100%;
+        width: 90%;
     }
 
     &.large {
