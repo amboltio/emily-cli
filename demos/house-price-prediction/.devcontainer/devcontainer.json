@@ -2,7 +2,7 @@
 {
   "name": "house-price-prediction",
   "dockerComposeFile": ["../docker-compose.yml", "./docker-compose.yml"],
-  "service": "emily-house-price-prediction-q9oip9",
+  "service": "emily-house-price-prediction-y4734c",
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
   "extensions": [
@@ -11,10 +11,8 @@
     "hnw.vscode-auto-open-markdown-preview", 
     "ms-python.vscode-pylance"
   ],
-  "forwardPorts": [4242],
   "runServices": [],
   "remoteEnv": {},
-  "mounts": [],
   "settings": {
     "terminal.integrated.shell.linux": null
   }

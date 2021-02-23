@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-data = pd.read_csv("HousingData.csv")
+data = pd.read_csv("kc_house_data.csv")
 
 train, test = train_test_split(data, test_size=0.2)
 

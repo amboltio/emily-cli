@@ -23,8 +23,8 @@ class Evaluator:
         """
 
         # Unpack request
-        dataset_path = request.args['dataset_path']
-        model_path = request.args['model_path']
+        dataset_path = request.dataset_path
+        model_path = request.model_path
 
         # Loads a trained instance of the Model class
         # If no model has been trained yet proceed to follow the steps in ml.trainer.py
@@ -39,8 +39,10 @@ class Evaluator:
         test_dataset = self._preprocess_test_data(test_data)
 
         # Evaluate model
-        predictions = self.model(test_dataset['RM'].values.reshape(-1, 1))
-        actual = test_dataset['MEDV']
+        predictions = self.model(
+            test_dataset[['sqft_living', 'condition', 'zipcode']]
+        )
+        actual = test_dataset['price']
 
         score = mean_absolute_error(actual, predictions)
 

@@ -1,8 +1,6 @@
 
 version: "3"
 services:
-  emily-house-price-prediction-q9oip9:
-    volumes:
-      - .:/workspace:cached
+  emily-house-price-prediction-y4734c:
     command: /bin/sh -c "while sleep 1000; do :; done"
 

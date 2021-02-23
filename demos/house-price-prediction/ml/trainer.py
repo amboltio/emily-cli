@@ -22,8 +22,8 @@ class Trainer:
         """
 
         # Unpack request
-        dataset_path = request.args['dataset_path']
-        save_path = request.args['save_path']
+        dataset_path = request.dataset_path
+        save_path = request.save_path
 
         # Read the dataset from the dataset_path
         train_data = self._load_train_data(dataset_path)
@@ -32,8 +32,9 @@ class Trainer:
         preprocessed_train_data = self._preprocess_train_data(train_data)
 
         # Train the model
-        X = pd.DataFrame(preprocessed_train_data['RM'])
-        y = pd.DataFrame(preprocessed_train_data['MEDV'])
+        X = pd.DataFrame(preprocessed_train_data[[
+                         'sqft_living', 'condition', 'zipcode']])
+        y = pd.DataFrame(preprocessed_train_data['price'])
         self.model.fit(X, y)
 
         # Save the trained model

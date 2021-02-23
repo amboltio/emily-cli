@@ -2,7 +2,7 @@
 {
   "workbench.startupEditor": "readme",
   "python.envFile": "${workspaceFolder}/.env",
-  "python.pythonPath": "/usr/local/bin/python",
+  "python.pythonPath": "/usr/local/bin/python3.8",
   "terminal.integrated.env.linux": {"PYTHONPATH": "${workspaceFolder}"},
   
   "python.linting.pylintEnabled": false,
