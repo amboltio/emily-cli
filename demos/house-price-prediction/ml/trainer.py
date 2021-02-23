@@ -45,8 +45,7 @@ class Trainer:
         return train_dataset
 
     def _preprocess_train_data(self, train_data):
-        preprocessed_train_data = train_data.dropna()
-        return preprocessed_train_data
+        return train_data
 
     def __call__(self, request):
         return self.train(request)

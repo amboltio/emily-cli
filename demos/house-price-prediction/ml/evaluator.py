@@ -53,8 +53,7 @@ class Evaluator:
         return test_dataset
 
     def _preprocess_test_data(self, test_data):
-        preprocessed_test_data = test_data.dropna()
-        return preprocessed_test_data
+        return test_data
 
     def __call__(self, request):
         return self.evaluate(request)
