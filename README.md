@@ -8,16 +8,25 @@ Learn more on how to get started with Emily in the [wiki](https://github.com/amb
 - The ``emily build`` command lets you build machine learning powered micro services faster and easier than ever.
 - The ``emily doctor fix`` command helps you setup and install all the necessary tools for building machine learning based projects.
 
-## Download
+## Getting Started
+### Download
 Download the Emily platform for free on the official [Emily website](https://ambolt.io/home-work-together/emily/).
 
-## Installation
-How to install:
-* [Linux](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Linux)
-* [Windows](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Windows)
-* [MacOS](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Mac)
+### Installation
+#### Linux
+1. Unzip the Emily executeable and run it with `$ ./emily`
+2. Follow the on-screen intructions or [see detailed instructions](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Linux)
 
-## Demonstrations
+#### Windows
+1. Unzip the Emily executeable and double click `emily.exe`
+2. Follow the on-screen intructions or [see detailed instructions](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Windows)
+
+#### MacOS
+1. Unzip the Emily executeable and run it with `$ ./emily`
+2. MacOS may block Emily - go to `Security & Privacy` to allow anyway
+3. Follow the on-screen intructions or [see detailed instructions](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Mac)
+
+### Demonstrations
 The best way to get familiar with the Emily machine learning API is to get hands-on experience with pre-made demonstrations:
 - [Face Mask Detector](https://github.com/amboltio/emily-cli/tree/main/demos/face-mask-detector/face-mask-detector-api): Learn how to implement a convolutional neural network for face mask detection with PyTorch and the Emily API template.
 - [House Price Prediction](https://github.com/amboltio/emily-cli/tree/main/demos/linear-regression): Learn how to predict house prices with a linear regression model in the Emily API template.
