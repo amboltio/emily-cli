@@ -1,12 +1,12 @@
 # Emily
-The Emily platform is built to help developers and teams implement production ready machine learning powered micro services fast and easily.
+The Emily CLI is built to help developers and teams implement production ready machine learning powered micro services fast and easily.
 
-Learn more on how to get started with Emily in the [wiki](https://github.com/amboltio/emily-cli/wiki).
+## What is Emily?
+- Emily combines the powers of [Python](https://www.python.org/) and [Docker](https://www.docker.com/) to build stable and reliable machine learning environments for cross-team project development.
 
-## What's new?
-- Emily combines the powers of [Python](https://www.python.org/) and [Docker](https://www.docker.com/) to build a safe and consistent machine learning development environment across teams and projects.
-- The ``emily build`` command lets you build machine learning powered micro services faster and easier than ever.
-- The ``emily doctor fix`` command helps you setup and install all the necessary tools for building machine learning based projects.
+### Example commands
+- ``emily build`` initializes a new machine learning powered micro services faster and easier than ever.
+- ``emily doctor fix`` installs and sets up all the necessary dependencies for Emily (like CUDA, Python and Docker).
 
 ## Getting Started
 ### Download
