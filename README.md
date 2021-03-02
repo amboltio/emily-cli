@@ -25,4 +25,4 @@ The best way to get familiar with the Emily machine learning API is to get hands
 - [Sentiment Analysis](https://github.com/amboltio/emily-cli/wiki/Sentiment-analysis): Learn how to automatically classify reviews as negative or positive based on a simple and fast naive Bayes classifier.
 
 ## License
-The Emily platform is released under the [MIT license](https://github.com/amboltio/emily-cli/blob/main/LICENSE).
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />The Emily platform is released under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
