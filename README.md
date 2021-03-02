@@ -1,32 +1,32 @@
-# Emily
+# Emily CLI
 The Emily CLI is built to help developers and teams implement production ready machine learning powered micro services fast and easily.
-
-## What is Emily?
-- Emily combines the powers of [Python](https://www.python.org/) and [Docker](https://www.docker.com/) to build stable and reliable machine learning environments for cross-team project development.
 
 ### Example commands
 - ``emily build`` initializes a new machine learning powered micro services faster and easier than ever.
 - ``emily doctor fix`` installs and sets up all the necessary dependencies for Emily (like CUDA, Python and Docker).
+
+### What is Emily?
+Emily combines the powers of [Python](https://www.python.org/) and [Docker](https://www.docker.com/) to build stable and consistent machine learning environments for cross-team project development.
 
 ## Getting Started
 ### Download
 Download the Emily platform for free on the official [Emily website](https://ambolt.io/home-work-together/emily/).
 
 ### Installation
-#### Linux
+**Linux**
 1. Unzip the Emily executeable and run it with `$ ./emily`
 2. Follow the on-screen intructions or [see detailed instructions](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Linux)
 
-#### Windows
+**Windows**
 1. Unzip the Emily executeable and double click `emily.exe`
 2. Follow the on-screen intructions or [see detailed instructions](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Windows)
 
-#### MacOS
+**MacOS**
 1. Unzip the Emily executeable and run it with `$ ./emily`
 2. MacOS may block Emily - go to `Security & Privacy` to allow anyway
 3. Follow the on-screen intructions or [see detailed instructions](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Mac)
 
-### Demonstrations
+## Demos
 The best way to get familiar with the Emily machine learning API is to get hands-on experience with pre-made demonstrations:
 - [Face Mask Detector](https://github.com/amboltio/emily-cli/tree/main/demos/face-mask-detector/face-mask-detector-api): Learn how to implement a convolutional neural network for face mask detection with PyTorch and the Emily API template.
 - [House Price Prediction](https://github.com/amboltio/emily-cli/tree/main/demos/linear-regression): Learn how to predict house prices with a linear regression model in the Emily API template.
