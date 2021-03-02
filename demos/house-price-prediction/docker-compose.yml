@@ -11,7 +11,7 @@ services:
       dockerfile: ./.devcontainer/Dockerfile
     volumes:
       - .:/workspace:cached
-      - ${MOUNT1}:/workspace/data/
+      - ${MOUNT1}:/workspace/house-price-data/
     runtime: ${RUNTIME}
     environment:
       - NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES}
