@@ -27,10 +27,9 @@ Download the Emily platform for free on the official [Emily website](https://amb
 3. Follow the on-screen intructions or [see detailed instructions](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Mac)
 
 ### Running and Build your First Emily Service
-We recommend the [House Price Prediction](https://github.com/amboltio/emily-cli/tree/main/demos/house-price-prediction) demo as a first dive into importing and running as well as building an Emily project fromm scratch.
+We recommend the [House Price Prediction](https://github.com/amboltio/emily-cli/tree/main/demos/house-price-prediction) demo as a first dive into importing and running or building an Emily project from scratch.
 
 ## Demos
-The best way to get familiar with the Emily machine learning API is to get hands-on experience with pre-made demonstrations:
 - [Face Mask Detector](https://github.com/amboltio/emily-cli/tree/main/demos/face-mask-detector/face-mask-detector-api): Learn how to implement a convolutional neural network for face mask detection with PyTorch and the Emily API template.
 - [House Price Prediction](https://github.com/amboltio/emily-cli/tree/main/demos/house-price-prediction): Learn how to predict house prices with a linear regression model in the Emily API template.
 - [Text Recognition](https://github.com/amboltio/emily-cli/wiki/Text-recognition): Learn how to train, evaluate and predict sentences with a fully connected PyTorch classifier implemented in the Emily API template.
