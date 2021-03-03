@@ -37,5 +37,5 @@ curl --location --request POST 'http://0.0.0.0:4242/api/predict' \
 You can see the full guide for builing this Emily Service [here.](https://github.com/amboltio/emily-cli/wiki/House-price-prediction) 
 The guide covers:
 - Setting up the Emily project from scratch
-- Implementaiton of required classes for data processing, trainning, evaluating and predicting
+- Implementaiton of required classes for data processing, training, evaluating and predicting
 - Examples of how to update and evaluate the service with new data, via the /train and /evaluate endpoints
