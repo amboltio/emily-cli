@@ -7,7 +7,7 @@ To run this demo, first make sure your Emily CLI is up and running:
 
 # Project setup
 1. Download this demo by downloading or cloning the [emily-cli repo](https://github.com/amboltio/emily-cli).
-1. run ```$ emily import ./house-price-prediction``` to initialize your local environment from the downloaded project folder
+1. run ```$ emily import ./house-price-prediction``` to initialize your Emily project and local environment from the downloaded project folder
 3. select a slim image
 4. press `y` to mount data from local folder and give path: `./house-price-prediction/house-price-data`
 5. run `$ emily open house-price-prediction`
