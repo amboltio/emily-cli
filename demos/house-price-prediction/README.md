@@ -1,8 +1,8 @@
 # House Price Prediction API
-In this demo we build an API that predicts house prices using linear regression. The accompanying guide can be found [here.](https://github.com/amboltio/emily-cli/wiki/House-price-prediction).
+In this demo we build an API that predicts house prices using linear regression. The accompanying guide can be found [here.](https://github.com/amboltio/emily-cli/wiki/House-price-prediction)
 
 To run this demo, first make sure your Emily CLI is up and running: 
-1. Install Emily (see the installation steps [here](https://github.com/amboltio/emily-cli/)
+1. Install Emily (see the installation steps [here](https://github.com/amboltio/emily-cli/))
 2. Run ```emily doctor``` to check all dependencies (CUDA is not required)
 
 # Project setup
