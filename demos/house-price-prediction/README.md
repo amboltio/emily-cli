@@ -17,13 +17,13 @@ To run this demo, first make sure your Emily CLI is up and running:
 # Using the API
 #### Starting the API
 1. Press `F5` in VSCode to run api.py
-3. Visit http://0.0.0.0:4242/api/health on your host machine to ensure that the API is running correctly (port 4242 could used by another process)
+3. Visit http://127.0.0.1:4242/api/health on your host machine to ensure that the API is running correctly (port 4242 could used by another process)
 
 #### Make a prediction
 1. Open a terminal on your host machine
 2. Run:
 ```
-curl --location --request POST 'http://0.0.0.0:4242/api/predict' \
+curl --location --request POST 'http://127.0.0.1:4242/api/predict' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "sqft_living": "2000",
