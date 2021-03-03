@@ -21,7 +21,7 @@ To run this demo, first make sure your Emily CLI is up and running:
 
 #### Make a prediction
 1. Open a terminal on your host machine
-2. To get a prediction run: `$ curl --location --request POST 'http://127.0.0.1:4242/api/predict' \ --header 'Content-Type: application/json' \ --data-raw '{ "sqft_living": "2000", "condition": "3", "zipcode": "98107", "model_path": "house-price-data/model.sav"}'`
+2. To get a prediction run: `$ curl --header "Content-Type: application/json" --request POST --location http://127.0.0.1:4242/api/predict --data "{\"sqft_living\":\"2000\",\"condition\":\"3\",\"zipcode\":\"98107\",\"model_path\":\"house-price-data/model.sav\"}"`
 
 # Full Guide
 You can see the full guide for builing this Emily Service [here.](https://github.com/amboltio/emily-cli/wiki/House-price-prediction) 
