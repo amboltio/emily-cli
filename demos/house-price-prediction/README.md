@@ -15,7 +15,7 @@ To run this demo, first make sure your Emily CLI is up and running:
 
 
 # Using the API
-#### starting the API
+#### Starting the API
 1. Press `F5` in VSCode to run api.py
 3. Visit http://0.0.0.0:4242/api/health on your host machine to ensure that the API is running correctly
 
