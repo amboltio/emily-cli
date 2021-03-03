@@ -6,17 +6,17 @@ To run this demo, first make sure your Emily CLI is up and running:
 2. Run ```emily doctor``` to check all dependencies (CUDA is not required)
 
 # Project setup
-1. Download this demo by downloading or cloning the [emily-cli repo](https://github.com/amboltio/emily-cli).
-1. run ```$ emily import ./house-price-prediction``` to initialize your Emily project and local environment from the downloaded project folder
-3. select a slim image
-4. press `y` to mount data from local folder and give path: `./house-price-prediction/house-price-data`
-5. run `$ emily open house-price-prediction`
-6. The VSCode project opens
+1. Download the [emily-cli repository files](https://github.com/amboltio/emily-cli).
+2. open a terminal and locate the /emily-cli/demos folder
+3. run ```$ emily import ./house-price-prediction``` to import the Emily project and initialize the local environment
+4. select a slim image
+5. press `y` to mount data from local folder and give path: `./house-price-prediction/house-price-data`
+6. run `$ emily open house-price-prediction` to open the project in VSCode
+
 
 # Using the API
 #### starting the API
-1. Open the Run tab in VSCode
-2. Select Emily API and click play
+1. press `F5` in VSCode to run api.py
 3. visit http://0.0.0.0:4242/api/health on your host machine to ensure that the API is running correctly
 
 #### Make a prediction
