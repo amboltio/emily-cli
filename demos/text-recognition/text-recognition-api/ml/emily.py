@@ -17,24 +17,24 @@ class Emily:
         self.trainer = Trainer()        # Creates instance of the Trainer class
         self.evaluator = Evaluator()    # Creates instance of the Evaluator class
 
-    def predict(self, request):
+    def predict(self, sample):
         """
         This function calls the __call__ function from the Predictor class in ml.predictor.py.
         Make sure the __call__ method is implemented correctly
         """
-        return self.predictor(request)
+        return self.predictor(sample)
 
-    def train(self, request):
+    def train(self, train_opp):
         """
         This function calls the __call__ function from the Trainer class in ml.trainer.py.
         Make sure the __call__ method is implemented correctly
         """
-        return self.trainer(request)
+        return self.trainer(train_opp)
 
-    def evaluate(self, request):
+    def evaluate(self, eval_data_config):
         """
         This function calls the __call__ function from the Evaluator class in ml.evaluator.py.
         Make sure the __call__ method is implemented correctly
         """
-        return self.evaluator(request)
+        return self.evaluator(eval_data_config)
 
