@@ -4,12 +4,13 @@ import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from pydantic import BaseModel
+from dotenv import load_dotenv
+from argparse import ArgumentParser
 
-from flask import request, jsonify
-import json
-from utilities import get_uptime, configure_app
+from utilities import get_uptime
 from ml.emily import Emily
-from waitress import serve
+
 
 emily = Emily()
 
@@ -34,7 +35,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[os.environ.get('HOST_IP')],
+    allow_origins=['*', os.environ.get('HOST_IP')],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -69,6 +70,14 @@ def predict(item: PredictItem):
 
 if __name__ == '__main__':
     # Train the model when the API starts (training is skipped after the data has been written once)
-    emily.trainer.train(request)
-    serve(
-        app, listen=f'{config["connection"]["host"]}:{config["connection"]["port"]}')
+    emily.trainer.train()
+
+    host = os.environ.get('HOST_IP')
+    if host == '*':
+        host = '0.0.0.0'
+
+    uvicorn.run(
+        'api:app',
+        host=host,
+        port=int(os.environ.get('HOST_PORT'))
+    )

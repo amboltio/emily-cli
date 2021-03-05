@@ -1,0 +1,15 @@
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Emily API",
+            "type": "python",
+            "request": "launch",
+            "program": "api.py",
+            "console": "integratedTerminal",
+            "args": []
+        }
+    ]
+  }
+  
