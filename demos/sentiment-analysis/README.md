@@ -3,8 +3,7 @@
 This demo contains an Emily microservice for conducting sentiment analysis, and a web client that consumes the API exposed by the microservice. 
 
 **Pre-requirements**
-- [Emily](https://ambolt.io/emily-ai/) **- installer**
-	- [Emily setup guide](https://github.com/amboltio/emily-cli/)
+- [Emily](https://github.com/amboltio/emily-cli/#getting-started)
 	- CUDA is **NOT** required for this project
 
 ## Quick start 
