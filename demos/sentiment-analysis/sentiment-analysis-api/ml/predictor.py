@@ -13,13 +13,13 @@ class Predictor:
         self.model_path = ""
         self.model = None
 
-    def predict(self, request):
+    def predict(self, item):
         """
         Performs prediction on a sample using the model at the given path
         """
 
-        # Unpack request
-        sample = request.args['sample']
+        # Unpack item
+        sample = item.sample
         model_path = './data/nb.pickle'
 
         # Loads a trained instance of the Model class
@@ -50,5 +50,5 @@ class Predictor:
             'negative': negative_score
         }
 
-    def __call__(self, request):
-        return self.predict(request)
+    def __call__(self, item):
+        return self.predict(item)
