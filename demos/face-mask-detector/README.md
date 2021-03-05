@@ -3,8 +3,7 @@
 The following demonstration shows how to easily get started using a Face Mask Detector, implemented in the Emily API template provided by the [Emily](http://ambolt.io/emily) tool.
 
 **Pre-requirements**
-- [Emily](https://ambolt.io/emily-ai/) **- installer**
-	- [Emily setup guide](https://github.com/amboltio/emily-cli/)
+- [Emily](https://github.com/amboltio/emily-cli/#getting-started)
 	- CUDA is **NOT** required for this project, but optional
 - Python
 - A web camera
