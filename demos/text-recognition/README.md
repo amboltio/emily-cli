@@ -4,7 +4,7 @@ This is a demonstration on how to implement text recognition(also called classif
 
 **Pre-requirements**
 - [Emily](https://github.com/amboltio/emily-cli/#getting-started)
-	- CUDA is **NOT** required for this project
+	- CUDA is **NOT** required for this project, but optional
 
 ## Quick start 
 [**Full walkthrough**](https://github.com/amboltio/emily-cli/wiki/Text-recognition) of the implementation.
