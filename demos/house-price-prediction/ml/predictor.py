@@ -20,7 +20,7 @@ class Predictor:
         # Unpack request
         sqft_living = request.sqft_living
         condition = request.condition
-        zipcode = request.zipcode
+        yr_built = request.yr_built
         model_path = request.model_path
 
         # Loads a trained instance of the Model class
@@ -30,7 +30,7 @@ class Predictor:
         self.model_path = model_path
 
         # Preprocess the inputted sample to prepare it for the model
-        preprocessed_sample = self._preprocess(sqft_living, condition, zipcode)
+        preprocessed_sample = self._preprocess(sqft_living, condition, yr_built)
 
         # Forward the preprocessed sample into the model as defined in the __call__ function in the Model class
         prediction = self.model(preprocessed_sample)
@@ -40,11 +40,11 @@ class Predictor:
 
         return prediction
 
-    def _preprocess(self, sqft_living, condition, zipcode):
+    def _preprocess(self, sqft_living, condition, yr_built):
         array = np.zeros((1, 3), dtype=int)
         array[0][0] = sqft_living
         array[0][1] = condition
-        array[0][2] = zipcode
+        array[0][2] = yr_built
         return array
 
     def _postprocess(self, prediction):

@@ -33,7 +33,7 @@ class Trainer:
 
         # Train the model
         X = pd.DataFrame(preprocessed_train_data[[
-                         'sqft_living', 'condition', 'zipcode']])
+                         'sqft_living', 'condition', 'yr_built']])
         y = pd.DataFrame(preprocessed_train_data['price'])
         self.model.fit(X, y)
 
