@@ -2,7 +2,7 @@
 {
   "name": "sentiment-analysis-api",
   "dockerComposeFile": ["../docker-compose.yml", "./docker-compose.yml"],
-  "service": "emily-sentiment-analysis-api-d9amhs",
+  "service": "emily-sentiment-analysis-api-qp4hww",
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
   "extensions": [
@@ -11,7 +11,6 @@
     "hnw.vscode-auto-open-markdown-preview", 
     "ms-python.vscode-pylance"
   ],
-  "forwardPorts": [4242],
   "runServices": [],
   "remoteEnv": {},
   "mounts": [],

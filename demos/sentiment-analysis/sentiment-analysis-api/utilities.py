@@ -3,8 +3,6 @@ import datetime
 import time
 import json
 import numpy as np
-from flask_cors import CORS
-from flask import Flask
 
 START_TIME = time.time()
 
@@ -22,10 +20,3 @@ class NpEncoder(json.JSONEncoder):
             return obj.tolist()
         else:
             return super(NpEncoder, self).default(obj)
-
-
-def configure_app(project_name, cors):
-    app = Flask(project_name)
-    app.json_encoder = NpEncoder
-    CORS(app, resources=cors)
-    return app

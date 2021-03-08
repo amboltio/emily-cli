@@ -28,7 +28,7 @@ class Evaluator:
         # initialize stemmer
         self.ds = DanishStemmer()
 
-    def evaluate(self, request, batch_size=4, load_method='state dict'):
+    def evaluate(self, eval_data_config, batch_size=4, load_method='state dict'):
         """
         Evaluates a trained model located at 'model_path' based on test data from the self._load_test_data function
 
@@ -42,8 +42,8 @@ class Evaluator:
         evaluation result dict {'loss': float, 'acc': float}: loss and accuracy
         """
 
-        dataset_path = request.args['dataset_path']
-        model_path = request.args['model_path']
+        dataset_path = eval_data_config.dataset_path
+        model_path = eval_data_config.model_path
 
         # (Re)load model if the given model path differes from the privous model path
         if model_path != self.model_path:

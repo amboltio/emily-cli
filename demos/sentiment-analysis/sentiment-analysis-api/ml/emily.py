@@ -22,9 +22,9 @@ class Emily:
         """
         return self.predictor(request)
 
-    def train(self, request):
+    def train(self):
         """
         This function calls the __call__ function from the Trainer class in ml.trainer.py.
         Make sure the __call__ method is implemented correctly
         """
-        return self.trainer(request)
+        return self.trainer()

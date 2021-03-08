@@ -67,7 +67,7 @@ class Trainer:
         # creates an instance of the Model class (see guidelines in ml.model.py)
         self.model = Model()
 
-    def train(self, request):
+    def train(self):
         """
         Starts the training of a model based on data loaded by the self._load_train_data function
         """

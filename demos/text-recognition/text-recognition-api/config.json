@@ -1,8 +1,0 @@
-
-{
-  "connection": {
-    "host": "*",
-    "port": 4242
-  },
-  "project_name": "text-recognition-api"
-}
