@@ -30,7 +30,7 @@ Download the Emily platform for free on the official [Emily website](https://amb
 We recommend the [House Price Prediction](https://github.com/amboltio/emily-cli/tree/main/demos/house-price-prediction) demo as a first dive into importing and running or building an Emily project from scratch.
 
 ## Demos
-- [Face Mask Detector](https://github.com/amboltio/emily-cli/tree/main/demos/face-mask-detector/face-mask-detector-api): Learn how to implement a convolutional neural network for face mask detection with PyTorch and the Emily API template.
+- [Face Mask Detector](https://github.com/amboltio/emily-cli/tree/main/demos/face-mask-detector): Learn how to implement a convolutional neural network for face mask detection with PyTorch and the Emily API template.
 - [House Price Prediction](https://github.com/amboltio/emily-cli/tree/main/demos/house-price-prediction): Learn how to predict house prices with a linear regression model in the Emily API template.
 - [Text Recognition](https://github.com/amboltio/emily-cli/wiki/Text-recognition): Learn how to train, evaluate and predict sentences with a fully connected PyTorch classifier implemented in the Emily API template.
 - [Sentiment Analysis](https://github.com/amboltio/emily-cli/wiki/Sentiment-analysis): Learn how to automatically classify reviews as negative or positive based on a simple and fast naive Bayes classifier.
