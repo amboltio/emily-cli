@@ -40,7 +40,7 @@ class Evaluator:
 
         # Evaluate model
         predictions = self.model(
-            test_dataset[['sqft_living', 'condition', 'zipcode']]
+            test_dataset[['sqft_living', 'condition', 'yr_built']]
         )
         actual = test_dataset['price']
 

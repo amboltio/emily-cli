@@ -29,8 +29,8 @@ In this demo we will run an API that predicts house prices using linear regressi
 
 **Make Predictions**
 
-1. Execute the following in your terminal: `$ curl --header "Content-Type: application/json" --request POST --location http://127.0.0.1:4242/api/predict --data "{\"sqft_living\":\"2000\",\"condition\":\"3\",\"zipcode\":\"98107\",\"model_path\":\"house-price-data/model.sav\"}"`  to get a prediction
-	* You can play around with the sqft_living, condition, and zip code to get more predictions
+1. Execute the following in your terminal: `$ curl --header "Content-Type: application/json" --request POST --location http://localhost:4242/api/predict --data "{\"sqft_living\":\"2000\",\"condition\":\"3\",\"yr_built\":\"1987\",\"model_path\":\"house-price-data/model.sav\"}"`  to get a prediction
+	* You can play around with the `sqft_living`, `condition`, and `yr_built` to get more predictions
 
 
 **Learn more** 

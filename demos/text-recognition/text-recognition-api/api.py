@@ -40,6 +40,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get('/api/health')
+def healthcheck():
+    return {
+        'uptime': get_uptime(),
+        'status': 'UP',
+        'port': os.environ.get("HOST_PORT"),
+    }
 
 @app.get('/api')
 def hello():

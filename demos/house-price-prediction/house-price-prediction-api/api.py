@@ -76,7 +76,7 @@ def evaluate(item: EvaluateItem):
 class PredictItem(BaseModel):
     sqft_living: str
     condition: str
-    zipcode: str
+    yr_built: str
     model_path: str
 
 
