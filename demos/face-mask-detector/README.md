@@ -1,4 +1,4 @@
-# Face Mask Detector demo
+[//]: # # Face Mask Detector demo
 
 The following demonstration shows how to easily get started using a Face Mask Detector, implemented in the Emily API template provided by the [Emily](http://ambolt.io/emily) tool.
 
