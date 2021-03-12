@@ -1,4 +1,4 @@
-# Demo is currently under maintenance, but will be back later today
+# Demo is currently not up-to-date
 <!--- 
 # Face Mask Detector demo
 
