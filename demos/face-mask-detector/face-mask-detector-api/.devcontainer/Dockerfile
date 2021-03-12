@@ -1,5 +1,5 @@
 
-FROM ambolt/emily:1.0.0-pytorch
+FROM ambolt/emily:1.0.1-pytorch
 
 COPY requirements.txt /workspace/requirements.txt
 WORKDIR /workspace
