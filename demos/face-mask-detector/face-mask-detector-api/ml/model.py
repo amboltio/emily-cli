@@ -1,6 +1,7 @@
 import torch
-from torch import nn
-from torch.nn import functional as F
+import os
+
+from torchvision import models
 
 
 class Model(torch.nn.Module):
@@ -9,53 +10,42 @@ class Model(torch.nn.Module):
     """
 
     def __init__(self):
-        super().__init__()  # Inherit methods from the super class which this class extends from
-        self.conv1 = nn.Conv2d(3, 32, 3, 1)
-        self.conv2 = nn.Conv2d(32, 64, 3, 1)
-        self.conv3 = nn.Conv2d(64, 128, 3, 1)
-        self.conv4 = nn.Conv2d(128, 128, 3, 1)
-        self.dropout1 = nn.Dropout(0.25)
-        self.dropout2 = nn.Dropout(0.5)
-        self.fc1 = nn.Linear(4608, 128)
-        self.fc3 = nn.Linear(128, 2)
+        # Inherit methods from the super class which this class extends from
+        super().__init__()
+        
+        self.resnet = models.resnet18(pretrained=True, progress=False)
+
+        # Disable gradient calculations on the layer/weights coming from ResNet. We will leave them as they are.
+        for param in self.resnet.parameters():
+            param.requires_grad = False
+        
+        self.fc1 = torch.nn.Linear(1000, 512)
+        self.act1 = torch.nn.ReLU()
+        self.fc2 = torch.nn.Linear(512, 256)
+        self.act2 = torch.nn.ReLU()
+        self.fc3 = torch.nn.Linear(256, 2)
+
+        # Set the device to GPU or CPU depending on what is available
+        use_cuda = torch.cuda.is_available()
+        self.device = torch.device("cuda" if use_cuda else "cpu")
+        self.to(self.device)
 
     def forward(self, sample):
-        # First layer
-        x = self.conv1(sample)
-        x = F.relu(x)
-        x = F.max_pool2d(x, 2)
-
-        # Second layer
-        x = self.conv2(x)
-        x = F.relu(x)
-        x = F.max_pool2d(x, 2)
-
-        # Third layer
-        x = self.conv3(x)
-        x = F.relu(x)
-        x = F.max_pool2d(x, 2)
-
-        # Fourth layer
-        x = self.dropout1(x)
-        x = self.conv4(x)
-        x = F.relu(x)
-        x = F.max_pool2d(x, 2)
-
-        # Fifth layer
-        x = torch.flatten(x, 1)
+        """
+        Steps which forwards the inputted sample into the model
+        """
+        x = self.resnet(sample)
         x = self.fc1(x)
-        x = F.relu(x)
-        x = self.dropout2(x)
-
-        # Final layer
-        x = self.dropout2(x)
-        x = self.fc3(x)
-        output = F.log_softmax(x, dim=1)
+        x = self.act1(x)
+        x = self.fc2(x)
+        x = self.act2(x)
+        output = self.fc3(x)
         return output
 
     def save_model(self, save_path):
         """
-        Steps for saving the model instance.
+        Implement steps for saving the model instance.
+        e.g. using the pickle module (pickle.dump(model)) for sklearn models or torch.save(model) for PyTorch models
         save_path : str
             The path where a trained model should be saved to
         """
@@ -63,12 +53,12 @@ class Model(torch.nn.Module):
 
     def load_model(self, model_path):
         """
-        Steps for loading a trained model
+        Implement steps for loading a trained model
         model_path : str
             The path where the trained model is located and should be loaded from
         """
-        self.load_state_dict(torch.load(model_path))
+        assert os.path.exists(model_path), f"Couldn't find a trained model at {model_path}"
+        self.load_state_dict(torch.load(model_path, map_location=self.device))
 
     def __call__(self, sample):
         return self.forward(sample)
-

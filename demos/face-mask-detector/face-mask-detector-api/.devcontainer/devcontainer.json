@@ -1,18 +1,20 @@
 
 {
-  "name": "face-mask-demo on Emily",
+  "name": "face-mask-detector",
   "dockerComposeFile": ["../docker-compose.yml", "./docker-compose.yml"],
-  "service": "emily-face-mask-demo",
+  "service": "emily-face-mask-detector-ay17gb",
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
-  "extensions": ["ms-python.python", "ms-azuretools.vscode-docker", "hnw.vscode-auto-open-markdown-preview"],
-  "forwardPorts": [4242],
+  "extensions": [
+    "ms-python.python", 
+    "ms-azuretools.vscode-docker", 
+    "hnw.vscode-auto-open-markdown-preview", 
+    "ms-python.vscode-pylance"
+  ],
   "runServices": [],
   "remoteEnv": {},
-  "mounts": [],
   "settings": {
     "terminal.integrated.shell.linux": null
-  },
-  "postCreateCommand": []
+  }
 }
 

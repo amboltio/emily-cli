@@ -1,8 +1,6 @@
 
 version: "3"
 services:
-  emily-face-mask-demo:
-    volumes:
-      - .:/workspace:cached
+  emily-face-mask-detector-ay17gb:
     command: /bin/sh -c "while sleep 1000; do :; done"
 
