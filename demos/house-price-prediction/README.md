@@ -1,49 +1,41 @@
-# House Price Prediction API
-This demo shows how to easily predict house prices using linear regression in the Emily API template provided by the [Emily](http://ambolt.io/emily) CLI tool.
-The accompanying guide can be found at [https://github.com/amboltio/emily-cli/wiki/House-price-prediction](https://github.com/amboltio/emily-cli/wiki/House-price-prediction).
+# House Price Prediction demo
 
-To run this demo, first download the demo files from this folder, by downloading or cloning the [emily-cli repository](https://github.com/amboltio/emily-cli). 
+In this demo we will run an API that predicts house prices using linear regression.
 
-Make sure you have Emily CLI and its dependencies installed:
-1. Download the Emily CLI from [here](http://ambolt.io/emily)
-2. Install Emily (see the installation steps [here](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily))
-3. Run ```emily doctor``` from your terminal (Bash or PowerShell) to let Emily help you install all dependencies
+**Pre-requirements**
+- [Emily](https://github.com/amboltio/emily-cli/#getting-started)
+	- CUDA is **NOT** required for this project
 
-When all dependencies are installed, open VSCode and from VSCode open the downloaded house-price-prediction folder. 
+## Quick start 
+[**Full walkthrough**](https://github.com/amboltio/emily-cli/wiki/House-price-prediction) of the implementation.
 
-**Attention**: Make sure the house-price-prediction folder is opened as a Docker container. If Emily is installed correctly, VSCode will prompt whether it should **"Re-open [the folder] in Container"**. Make sure to press **"OK"** to this.
+**Importing the Project**
 
-# Using the API
-Start the House Price Prediction API by executing the following command **from the terminal in VSCode**:
-```
-python api.py
-```
+1. Download the [emily-cli repository files](https://github.com/amboltio/emily-cli).
+	* You can either clone or download as a ZIP (remember to unzip)
+2. Open a terminal and locate the /emily-cli/demos folder
+3. Run ```$ emily import ./house-price-prediction/house-price-prediction-api``` to import the Emily project and initialize the local environment
+4. Press `y` to let Emily overwrite existing files. This updates the project to your current version of Emily.
+5. Select a slim image
+6. Press `y` to mount data from local folder and give path: `./house-price-prediction/house-price-prediction-api/house-price-data`
 
-By default, when the API is running it will be accessible at http://0.0.0.0:4242.
-To test if the House Price Prediction API is running, try entering http://0.0.0.0:4242/api/health in your browser.
-Training, evaluating, and predicting using the model is done by sending POST requests to the train, evaluate, and predict endpoints, respectively.
-This can be done using e.g. [Postman](https://www.postman.com/) or [curl](https://curl.se/).
+**Running the API**
 
-To train, send a POST request to `http://0.0.0.0:4242/api/train` with key/value pairs `dataset_path=data/train_data.csv` and `save_path=data/model.sav`. You should get an output indicating succes:
-```
-{
-    "result": true
-}
-```
+1. Run `$ emily open house-price-prediction-api` to open the project in VSCode
+2. When VSCode opens up you might have to rebuild the container and reload PyLance 
+3. Open api.py and press `F5`
+	* This will host the API on port :4242
+	* You can check it on [http://localhost:4242/api/health](http://localhost:4242/api/health)
 
-To evaluate, send a POST request to `http://0.0.0.0:4242/api/evaluate` with key/value pairs `dataset_path=data/test_data.csv` and `model_path=data/model.sav`. This will give you the mean absolute error of the model:
-```
-{
-    "result": 4.0203266061645495
-}
-```
+**Make Predictions**
 
-To predict, send a POST request to `http://0.0.0.0:4242/api/predict` with key/value pairs `sample=6` and `model_path=data/model.sav`. This will ask the model to predict the house price of a 6-room house. You will get the following output.
-```
-{
-    "result": "$19588.8762740132"
-}
-```
+1. Execute the following in your terminal: `$ curl --header "Content-Type: application/json" --request POST --location http://localhost:4242/api/predict --data "{\"sqft_living\":\"2000\",\"condition\":\"3\",\"yr_built\":\"1987\",\"model_path\":\"house-price-data/model.sav\"}"`  to get a prediction
+	* You can play around with the `sqft_living`, `condition`, and `yr_built` to get more predictions
 
-## Requirements:
-- [Emily](http://ambolt.io/emily)
+
+**Learn more** 
+
+If you want to learn more you should check out this in depth walkthrough of how the API is implemented in Emily.
+([Implementation walkthrough](https://github.com/amboltio/emily-cli/wiki/House-price-prediction))
+
+

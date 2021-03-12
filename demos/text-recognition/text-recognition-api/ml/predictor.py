@@ -35,7 +35,7 @@ class Predictor:
                          encoding='utf-8').read()
         self.responses = json.loads(data_file)
 
-    def predict(self, request, load_method='state dict'):
+    def predict(self, sample_item, load_method='state dict'):
         """
         Takes a sentence, converts its to a
         bag-of-words format and predicts its class/context
@@ -51,8 +51,8 @@ class Predictor:
         (None): if no words from the sentence are contrained in the network vocabulary
         """
 
-        sample = request.args['sample']
-        model_path = request.args['model_path']
+        sample = sample_item.sample
+        model_path = sample_item.model_path
 
         # (Re)load model if the given model path differes from the privous model path
         if model_path != self.model_path:

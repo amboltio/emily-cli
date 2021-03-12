@@ -1,8 +1,6 @@
 
 version: "3"
 services:
-  emily-text-recognition-api-mshg04:
-    volumes:
-      - .:/workspace:cached
+  emily-text-recognition-api-17ma5n:
     command: /bin/sh -c "while sleep 1000; do :; done"
 

@@ -25,7 +25,7 @@ class Trainer:
         self.ds = DanishStemmer()
         self.model = Model()
 
-    def train(self, request, batch_size=4, epochs=200):
+    def train(self, train_opp, batch_size=4, epochs=200):
         """Fits the model to the specified dataset and saves it
 
         Parameters:
@@ -39,8 +39,8 @@ class Trainer:
         True - given that nothing fails
         """
 
-        dataset_path = request.args['dataset_path']
-        save_path = request.args['save_path']
+        dataset_path = train_opp.dataset_path
+        save_path = train_opp.save_path
 
         self.batch_size = batch_size
         self.epochs = epochs

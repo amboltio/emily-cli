@@ -1,9 +1,14 @@
+import uvicorn
+import os
 
-from flask import request, jsonify
-import json
-from utilities import get_uptime, configure_app
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+from dotenv import load_dotenv
+from argparse import ArgumentParser
+
+from utilities import get_uptime
 from ml.emily import Emily
-from waitress import serve
 
 emily = Emily()
 
@@ -16,66 +21,83 @@ emily = Emily()
 # Make sure to restrict access below to origins you
 # trust before deploying your API to production.
 
-config_file = 'config.json'
-config = json.load(open(config_file))
 
-app = configure_app(config['project_name'], cors={
-    r'/api/*': {
-        "origins": "*"
-    }
-})
+parser = ArgumentParser()
+parser.add_argument('-e', '--env', default='.env',
+                    help='sets the environment file')
+args = parser.parse_args()
+dotenv_file = args.env
+load_dotenv(dotenv_file)
 
 
-@app.route('/api/health')
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*", os.environ.get('HOST_IP')],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get('/api/health')
 def healthcheck():
-    return jsonify({
+    return {
         'uptime': get_uptime(),
         'status': 'UP',
-        'host': config['connection']['host'],
-        'port': config['connection']['port'],
-    })
+        'port': os.environ.get("HOST_PORT"),
+    }
 
-
-@app.route('/api')
+@app.get('/api')
 def hello():
-    return f'The {config["project_name"]} API is running (uptime: {get_uptime()})'
+    return f'The API is running (uptime: {get_uptime()}'
 
 
-@app.route('/api/train', methods=['POST'])
-def train():
+class dataConfig(BaseModel):
+    dataset_path: str
+    save_path: str
+
+@app.post('/api/train')
+def train(train_data_config: dataConfig):
     """
     Expected request fields:
     dataset_path
     save_path
     """
-    return jsonify({
-        'result': emily.train(request)
-    })
+    return {'result': emily.train(train_data_config)}
 
 
-@app.route('/api/evaluate', methods=['POST'])
-def evaluate():
+@app.post('/api/evaluate')
+def evaluate(eval_data_config: dataConfig):
     """
     Expected request fields:
     dataset_path
     model_path
     """
-    return jsonify({
-        'result': emily.evaluate(request)
-    })
+    return {'result': emily.evaluate(eval_data_config)}
 
 
-@app.route('/api/predict', methods=['POST'])
-def predict():
+class sampleItem(BaseModel):
+    sample: str
+    model_path: str
+
+@app.post('/api/predict')
+def predict(sample: sampleItem):
     """
     Expected request fields:
     sample
     model_path
     """
-    return jsonify({
-        'result': emily.predict(request)
-    })
+    return {'result': emily.predict(sample)}
+
 
 if __name__ == '__main__':
-    serve(app, listen=f'{config["connection"]["host"]}:{config["connection"]["port"]}')
+    host = os.environ.get('HOST_IP')
+    if host == '*':
+        host = '0.0.0.0'
 
+    uvicorn.run(
+        'api:app',
+        host=host,
+        port=int(os.environ.get('HOST_PORT'))
+    )

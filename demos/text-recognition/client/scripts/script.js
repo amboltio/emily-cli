@@ -12,7 +12,7 @@ Array.prototype.random = function () {
   }
 
 const getPrediction = async (text) => {
-    const response = await fetch(`${apiBaseUrl}/api/predict?sample=${text}&model_path=emily/model`, { method: 'POST' })
+    const response = await fetch(`${apiBaseUrl}/api/predict`, {method:'POST', body: JSON.stringify({"sample": text, "model_path": "emily/model"})})
     const body = await response.json()
     return body
 }
