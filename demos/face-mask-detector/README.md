@@ -1,4 +1,4 @@
-# Demo is currently not up-to-date
+# Demo is currently being updated
 <!--- 
 # Face Mask Detector demo
 
