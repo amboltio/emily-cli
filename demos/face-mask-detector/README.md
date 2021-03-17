@@ -1,5 +1,3 @@
-# Demo is currently being updated
-<!--- 
 # Face Mask Detector demo
 
 The following demonstration shows how to easily get started using a Face Mask Detector, implemented in the Emily API template provided by the [Emily](http://ambolt.io/emily) tool.
@@ -19,12 +17,6 @@ The following demonstration shows how to easily get started using a Face Mask De
 	* You can either clone or download as a ZIP (remember to unzip)
 2. Open a terminal and locate the /emily-cli/demos folder
 3. Run ```$ emily import ./face-mask-detector/face-mask-detector-api``` to import the Emily project and initialize the local environment
-4. Press `y` to let Emily overwrite existing files. This updates the project to your current version of Emily.
-5. Select a Full or PyTorch image
-6. Press `n` to not mount data from a local folder
-7. Choose if you want to run your project with GPU:
-	* If you have CUDA enabled you can press `y` to run it with your GPU
-	* Else, press `n`
 
 **Running the API**
 
@@ -46,5 +38,3 @@ Your project is now running in your browser!
 
 If you want to learn more you should check out this in-depth walkthrough of how the API is implemented in Emily.
 ([Implementation walkthrough](https://github.com/amboltio/emily-cli/wiki/Face-mask-detection))
-
--->
