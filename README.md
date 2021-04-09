@@ -37,3 +37,10 @@ We recommend the [House Price Prediction](https://github.com/amboltio/emily-cli/
 
 ## License
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />The Emily platform is released under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+
+
+## Privacy Policy
+The Emily CLI collects no data by default.
+If you opt in to share anonumous usage data, you will be sharing:
+* Log-data produced by the Emily CLI in case of crashes. - You will be prompted for acknowledgement each time.
+* Basic usage of the CLI: installation, updates, command usage
