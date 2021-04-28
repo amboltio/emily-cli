@@ -17,6 +17,8 @@ const startWebcam = async () => {
 }
 
 const prepareImage = (image) => {
+
+    // Remove first 22 chars from string as they are meta info
     image = image.slice(22)
     return image
 }
@@ -33,7 +35,6 @@ const getPrediction = async (image) => {
     const responseBody = await response.json()
 
     console.log("Prediction: " + responseBody.prediction)
-    console.log("Prediction type: " + typeof responseBody.prediction)
     return responseBody.prediction >= 50
 }
 
@@ -66,6 +67,7 @@ const beginDetectionLoop = async () => {
             statusMessage.innerHTML = '✗ No mask found'
         }
 
+        // Set sleep timeout for 1/3 of a sec to avoid the CPU/GPU to be overflown with requests
         await new Promise(r => setTimeout(r, 333));
     }
 }

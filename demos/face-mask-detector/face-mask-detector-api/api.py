@@ -114,9 +114,6 @@ def predict_v1(request_item: PredictRequest):
 @app.post('/api/predict-webcam')
 def predict_webcam(request_item: PredictWebcamRequest):
 
-    print(request_item.model_path)
-    print(type(request_item.image))
-
     try:
         # Initialize predictor object
         predictor = Predictor(request_item.model_path)
