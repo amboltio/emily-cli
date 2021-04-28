@@ -1,6 +1,6 @@
 
 version: "3"
 services:
-  emily-face-mask-detector-ay17gb:
+  emily-face-maske-detector-api-0-2-4-9ln6a0:
     command: /bin/sh -c "while sleep 1000; do :; done"
 

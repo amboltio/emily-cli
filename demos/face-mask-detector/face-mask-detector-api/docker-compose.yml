@@ -1,24 +1,24 @@
 
 version: "3"
 services:
-  emily-face-mask-detector-ay17gb:
-    image: emily-face-mask-detector-ay17gb
-    container_name: emily-face-mask-detector-ay17gb
+  emily-face-maske-detector-api-0-2-4-9ln6a0:
+    image: emily-face-maske-detector-api-0-2-4-9ln6a0
+    container_name: emily-face-maske-detector-api-0-2-4-9ln6a0
     networks:
-      - emily-face-mask-detector-ay17gb-network
+      - emily-face-maske-detector-api-0-2-4-9ln6a0-network
     build:
       context: .
       dockerfile: ./.devcontainer/Dockerfile
     volumes:
       - .:/workspace:cached
-      - ${MOUNT1}:/workspace/emily/
+      
     runtime: ${RUNTIME}
     environment:
       - NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES}
       - NVIDIA_DRIVER_CAPABILITIES=${NVIDIA_DRIVER_CAPABILITIES}
     ipc: ${IPC}
 networks:
-  emily-face-mask-detector-ay17gb-network:
-    name: emily-face-mask-detector-ay17gb-network
+  emily-face-maske-detector-api-0-2-4-9ln6a0-network:
+    name: emily-face-maske-detector-api-0-2-4-9ln6a0-network
     driver: bridge
   
