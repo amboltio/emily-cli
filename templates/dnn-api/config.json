@@ -1,6 +1,6 @@
 {
   "name": "Deep neural network API",
   "image": "pytorch",
-  "version": "0.2.3--0.2.4",
+  "version": "0.2.4--0.2.8",
   "requirements": []
 }
