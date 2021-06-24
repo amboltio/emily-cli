@@ -1,7 +1,7 @@
 {
   "name": "Default",
   "flag": "default",
-  "description": "Minimal project with hello world script"
+  "description": "Minimal project with hello world script",
   "image": "",
   "version": "0.2.3--",
   "requirements": []
