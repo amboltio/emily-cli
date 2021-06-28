@@ -14,7 +14,7 @@ def single_line_format(record: dict) -> str:
         record["extra"]["payload"] = pformat(
             record["extra"]["payload"], indent=4, compact=True, width=88
         )
-        format_string += "\\n<level>{extra[payload]}</level>"
+        format_string += "\n<level>{extra[payload]}</level>"
 
-    format_string += "{exception}\\n"
+    format_string += "{exception}\n"
     return format_string
