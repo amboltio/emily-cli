@@ -8,7 +8,9 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 from argparse import ArgumentParser
 
-from utilities import get_uptime
+from utilities.utilities import get_uptime
+from utilities.logging.config import initialize_logging, initialize_logging_middleware
+
 from ml.emily import Emily
 
 emily = Emily()
@@ -29,6 +31,9 @@ dotenv_file = args.env
 load_dotenv(dotenv_file)
 
 app = FastAPI()
+
+initialize_logging()
+initialize_logging_middleware()
 
 app.add_middleware(
     CORSMiddleware,
