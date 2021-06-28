@@ -7,7 +7,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from argparse import ArgumentParser
 
-from utilities import get_uptime
+from utilities.utilities import get_uptime
+from utilities.logging.config import initialize_logging, initialize_logging_middleware
+
 
 # --- Welcome to your Emily API! --- #
 # See the README for guides on how to test it.
@@ -25,6 +27,9 @@ dotenv_file = args.env
 load_dotenv(dotenv_file)
 
 app = FastAPI()
+
+initialize_logging()
+initialize_logging_middleware(app)
 
 app.add_middleware(
     CORSMiddleware,
