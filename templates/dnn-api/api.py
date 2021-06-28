@@ -14,6 +14,9 @@ from src.evaluator import Evaluator
 from src.predictor import Predictor
 from src.requests import TrainRequest, EvaluateRequest, PredictRequest
 
+from src.utilities.logging.config import initialize_logging, initialize_logging_middleware
+
+
 # --- Welcome to your Emily API! --- #
 # See the README for guides on how to test it.
 
@@ -23,6 +26,9 @@ from src.requests import TrainRequest, EvaluateRequest, PredictRequest
 # trust before deploying your API to production.
 
 app = FastAPI()
+
+initialize_logging()
+initialize_logging_middleware()
 
 app.add_middleware(
     CORSMiddleware,

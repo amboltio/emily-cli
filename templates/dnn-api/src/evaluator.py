@@ -1,7 +1,7 @@
 
 import torch
 
-from src.data_utilities import create_data_loader
+from src.utilities.data_utilities import create_data_loader
 from src.transforms import test_transforms
 from src.engine import calculate_accuracy
 from src.model import Model

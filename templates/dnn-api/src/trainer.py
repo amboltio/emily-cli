@@ -4,7 +4,7 @@ import time
 
 from src.model import Model
 from src.engine import train_step, validation_step
-from src.data_utilities import create_data_loader
+from src.utilities.data_utilities import create_data_loader
 from src.transforms import train_transforms, validation_transforms
 from src.requests import TrainRequest
 
