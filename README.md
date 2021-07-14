@@ -1,6 +1,6 @@
 <div align="center">
 <h1>Emily CLI</h1>
-The Emily CLI is built to help developers and teams implement and run production ready machine learning powered micro services fast and easy
+The <a href="https://ambolt.io/emily-ai/">Emily CLI</a> is built and maintained by <a href="https://ambolt.io/">Ambolt</a> to help developers and teams implement and run production ready machine learning powered micro services fast and easy
 </div>
 
 ### What is Emily?
