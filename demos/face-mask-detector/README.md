@@ -11,7 +11,7 @@ This guide explains how to run an **AI model** which can detect whether a person
 ## Before you start
 This guide requires that you have a **web camera** and [Emily](https://ambolt.io/emily-ai/) installed on your computer.
 - Download [Emily](https://github.com/amboltio/emily-cli/releases/latest) for your OS
-- Install **Emily**:
+- Install the Emily CLI:
   - [Windows install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Windows)
   - [Linux install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Linux)
   - [Mac install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-emily-on-Mac)
