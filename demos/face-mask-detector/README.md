@@ -1,40 +1,56 @@
-# Face Mask Detector demo
+# Face Mask Detector  
 
-The following demonstration shows how to easily get started using a Face Mask Detector, implemented in the Emily API template provided by the [Emily](http://ambolt.io/emily) tool.
+[comment]: <> (The following demonstration shows how to easily get started using a Face Mask Detector, implemented in the Emily API template provided by the [Emily]&#40;http://ambolt.io/emily&#41; tool.)
 
-**Pre-requirements**
-- [Emily](https://github.com/amboltio/emily-cli/#getting-started)
-	- CUDA is **NOT** required for this project, but optional
-- Python
-- A web camera
+This guide explains how to run an **AI model** which can detect whether a person is **wearing a face mask or not**.
 
-## Quick start 
-[**Full walkthrough**](https://github.com/amboltio/emily-cli/wiki/Face-mask-detection) of the implementation.
+<div align="center">
+<img src="https://github.com/amboltio/emily-cli/blob/main/demos/face-mask-detector/face-mask-detector-client/static/imgs/face_mask_detector.png" alt="Face Mask Detector" width="400" height="500"/>
+</div>
 
-**Importing the Project**
+## Before you start
+This guide requires that you have a **web camera** and [Emily](https://ambolt.io/emily-ai/) installed on your computer.
+- Download [Emily](https://github.com/amboltio/emily-cli/releases/latest) for your OS
+- Install **Emily**:
+  - [Windows install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Windows)
+  - [Linux install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Linux)
+  - [Mac install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-emily-on-Mac)
 
-1. Download the [emily-cli repository files](https://github.com/amboltio/emily-cli).
-	* You can either clone or download as a ZIP (remember to unzip)
-2. Open a terminal and locate the /emily-cli/demos folder
-3. Run ```$ emily import ./face-mask-detector/face-mask-detector-api``` to import the Emily project and initialize the local environment
 
-**Running the API**
 
-1. Run `$ emily open face-mask-detector-api` to open the project in VSCode
-2. When VSCode opens up you might have to rebuild the container and reload PyLance 
-3. Open api.py and press `F5`
-	* This will host the API on port :4242
-	* You can check it on [http://localhost:4242/api/health](http://localhost:4242/api/health)
+## Start the Face Mask Detector API
+```console
+$ git clone https://github.com/amboltio/emily-cli.git
+$ cd emily-cli/demos/face-mask-detector 
+$ emily open face-mask-detector-api  # Open the api running on port 4242
+```
 
-**Launching the client**
+- **OPS**: Open the face-mask-detector-api in **vscode**.
+- In vscode open a terminal and run:
+```console
+$ python api.py
+```
 
-1. Go to `./demos/face-mask-detector/face-mask-detector-client/` in your terminal
-2. Start the client by executing `$ pyhton main.py` in your terminal
-3. Go to `http://localhost:8000/` in your browser
+The face-mask-detector-api should now be hosting a FastAPI api on port 4242!
 
-Your project is now running in your browser!
+## Start the Face Mask Detector Client
+```console
+$ emily open face-mask-detector-client  # Open the client 
+```
+- **OPS**: Open the face-mask-detector-client in **vscode**.
+- In vscode open a terminal and run:
+```console
+$ python main.py
+```
+## Finally:
+Your Face Mask detector client is now running in your browser.
+- Go to http://localhost:8000/ 
 
-**Learn more** 
 
-If you want to learn more you should check out this in-depth walkthrough of how the API is implemented in Emily.
-([Implementation walkthrough](https://github.com/amboltio/emily-cli/wiki/Face-mask-detection))
+
+## Learn more: 
+
+Do you want to learn more on how the **Face Mask Detector** is implemented Emily, check out this in-depth walkthrough:
+
+- [Face Maske Detector walkthrough](https://github.com/amboltio/emily-cli/wiki/Face-mask-detection)
+- For more information on the [Emily Platform](https://ambolt.io/emily-ai/) 
