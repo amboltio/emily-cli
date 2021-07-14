@@ -8,7 +8,7 @@ Emily combines the powers of [Python](https://www.python.org/) and [Docker](http
 
 ### Example commands
 - ``$ emily open <dir>`` to open a directory as an Emily project 
-- ``$ emily open <file>`` to open a jupyter notebook or python script as an Emily project  
+- ``$ emily open <file>`` to open a jupyter notebook as an Emily project  
 - ``$ emily build`` to build a new Emily project 
 - ``$ emily install-requirements`` to make Emily install Emily's requirements (Docker and Visual Studio Code)
 
