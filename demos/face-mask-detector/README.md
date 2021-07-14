@@ -2,7 +2,7 @@
 
 [comment]: <> (The following demonstration shows how to easily get started using a Face Mask Detector, implemented in the Emily API template provided by the [Emily]&#40;http://ambolt.io/emily&#41; tool.)
 
-This guide explains how to run an **AI model** which can detect whether a person is **wearing a face mask or not**. 
+This guide explains how to run an **AI model** which can detect whether a person is **wearing a face mask or not** using the Emily CLI. 
 
 <div align="center">
 <img src="https://github.com/amboltio/emily-cli/blob/main/demos/face-mask-detector/face-mask-detector-client/static/imgs/face_mask_detector.png" alt="Face Mask Detector" width="400" height="500"/>
