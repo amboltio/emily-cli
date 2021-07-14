@@ -1,4 +1,3 @@
-
 version: "3"
 services:
   emily-face-maske-detector-api-0-2-4-9ln6a0:
@@ -11,14 +10,14 @@ services:
       dockerfile: ./.devcontainer/Dockerfile
     volumes:
       - .:/workspace:cached
-      
     runtime: ${RUNTIME}
     environment:
       - NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES}
       - NVIDIA_DRIVER_CAPABILITIES=${NVIDIA_DRIVER_CAPABILITIES}
     ipc: ${IPC}
+    ports:
+      - ${NOTEBOOK_PORT}
 networks:
   emily-face-maske-detector-api-0-2-4-9ln6a0-network:
     name: emily-face-maske-detector-api-0-2-4-9ln6a0-network
     driver: bridge
-  
