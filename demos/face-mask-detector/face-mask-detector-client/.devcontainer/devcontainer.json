@@ -1,0 +1,22 @@
+
+{
+  "name": "face-mask-detector-client",
+  "dockerComposeFile": [
+    "../docker-compose.yml", "./docker-compose.yml"
+  ],
+  "service": "emily-face-mask-detector-client-qc9l6o",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "extensions": [
+    "ms-python.python", 
+    "ms-azuretools.vscode-docker", 
+    "hnw.vscode-auto-open-markdown-preview", 
+    "ms-python.vscode-pylance"
+  ],
+  "runServices": [],
+  "remoteEnv": {},
+  "settings": {
+    "terminal.integrated.shell.linux": null
+  }
+}
+

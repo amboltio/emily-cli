@@ -1,0 +1,23 @@
+version: "3"
+services:
+  emily-face-mask-detector-client-qc9l6o:
+    image: emily-face-mask-detector-client-qc9l6o
+    container_name: emily-face-mask-detector-client-qc9l6o
+    networks:
+      - emily-face-mask-detector-client-qc9l6o-network
+    build:
+      context: .
+      dockerfile: ./.devcontainer/Dockerfile
+    volumes:
+      - .:/workspace:cached
+    ports:
+      - ${NOTEBOOK_PORT}
+    runtime: ${RUNTIME}
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES}
+      - NVIDIA_DRIVER_CAPABILITIES=${NVIDIA_DRIVER_CAPABILITIES}
+    ipc: ${IPC}
+networks:
+  emily-face-mask-detector-client-qc9l6o-network:
+    name: emily-face-mask-detector-client-qc9l6o-network
+    driver: bridge

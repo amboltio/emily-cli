@@ -1,0 +1,6 @@
+
+version: "3"
+services:
+  emily-face-mask-detector-client-qc9l6o:
+    command: /bin/sh -c "while sleep 1000; do :; done"
+

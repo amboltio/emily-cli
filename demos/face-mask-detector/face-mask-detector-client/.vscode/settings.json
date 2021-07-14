@@ -1,0 +1,19 @@
+
+{
+  "workbench.startupEditor": "readme",
+  "python.envFile": "${workspaceFolder}/.env",
+  "python.pythonPath": "/usr/local/bin/python3.8",
+  "python.defaultInterpreterPath": "/usr/local/bin/python3.8",
+  "terminal.integrated.env.linux": {
+    "PYTHONPATH": "${workspaceFolder}"
+  },
+  
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": [
+    "--max-line-length=120",
+    "--ignore=E402,F841,E302,E305,E303,W391",
+  ],
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay"
+}
