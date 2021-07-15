@@ -13,7 +13,7 @@ In this demo we will run an API that predicts house prices using linear regressi
 
 1. Download the [emily-cli repository files](https://github.com/amboltio/emily-cli).
 	* You can either clone or download as a ZIP (remember to unzip)
-2. Open a terminal and locate the /emily-cli/demos folder
+2. Open a terminal and locate the /emily-cli/tutorials folder
 3. Run ```$ emily import ./house-price-prediction/house-price-prediction-api``` to import the Emily project and initialize the local environment
 4. Press `y` to let Emily overwrite existing files. This updates the project to your current version of Emily.
 5. Select a slim image

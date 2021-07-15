@@ -5,7 +5,7 @@
 This guide explains how to run an **AI model** which can detect whether a person is **wearing a face mask or not**. 
 
 <div align="center">
-<img src="https://github.com/amboltio/emily-cli/blob/main/demos/face-mask-detector/face-mask-detector-client/static/imgs/face_mask_detector.png" alt="Face Mask Detector" width="400" height="500"/>
+<img src="https://github.com/amboltio/emily-cli/blob/main/tutorials/face-mask-detector/face-mask-detector-client/static/imgs/face_mask_detector.png" alt="Face Mask Detector" width="400" height="500"/>
 </div>
 
 ## Before you start
@@ -21,7 +21,7 @@ This guide requires that you have a **web camera** and [Emily](https://ambolt.io
 ## Start the Face Mask Detector API
 ```console
 $ git clone https://github.com/amboltio/emily-cli.git
-$ cd emily-cli/demos/face-mask-detector 
+$ cd emily-cli/tutorials/face-mask-detector 
 $ emily open face-mask-detector-api  # Open the api running on port 4242
 ```
 

@@ -13,7 +13,7 @@ This is a demonstration on how to implement text recognition(also called classif
 
 1. Download the [emily-cli repository files](https://github.com/amboltio/emily-cli).
 	* You can either clone or download as a ZIP (remember to unzip)
-2. Open a terminal and locate the /emily-cli/demos folder
+2. Open a terminal and locate the /emily-cli/tutorials folder
 3. Run ```$ emily import ./text-recognition/text-recognition-api``` to import the Emily project and initialize the local environment
 4. Press `y` to let Emily overwrite existing files. This updates the project to your current version of Emily.
 5. Select a Full or PyTorch image
@@ -33,7 +33,7 @@ This is a demonstration on how to implement text recognition(also called classif
 
 **Launching the client**
 
-1. Go to `./demos/sentiment-analysis/client/`
+1. Go to `./tutorials/sentiment-analysis/client/`
 2. Launch the `index.html` file
 
 Your project is now running in your browser!
