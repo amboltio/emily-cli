@@ -1,6 +1,6 @@
 <div align="center">
 <h1>Emily CLI</h1>
-The Emily CLI is built to help developers and teams implement and run production ready machine learning powered micro services fast and easy
+The <a href="https://ambolt.io/emily-ai/">Emily CLI</a> is built and maintained by <a href="https://ambolt.io/">Ambolt</a> to help developers and teams implement and run production ready machine learning powered micro services fast and easy
 </div>
 
 ### What is Emily?
@@ -8,7 +8,7 @@ Emily combines the powers of [Python](https://www.python.org/) and [Docker](http
 
 ### Example commands
 - ``$ emily open <dir>`` to open a directory as an Emily project 
-- ``$ emily open <file>`` to open a jupyter notebook or python script as an Emily project  
+- ``$ emily open <file>`` to open a jupyter notebook as an Emily project  
 - ``$ emily build`` to build a new Emily project 
 - ``$ emily install-requirements`` to make Emily install Emily's requirements (Docker and Visual Studio Code)
 
