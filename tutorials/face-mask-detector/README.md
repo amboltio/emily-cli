@@ -25,7 +25,7 @@ $ cd emily-cli/tutorials/face-mask-detector
 $ emily open face-mask-detector-api  # Open the api running on port 4242
 ```
 
-- **OPS**: Open the face-mask-detector-api in **Visual Studio Code**.
+- **OPS**: Select to open the face-mask-detector-api in **Visual Studio Code** when the Emily CLI prompts for this.
 - In Visual Studio Code open a terminal and run:
 ```console
 $ python api.py
@@ -37,7 +37,7 @@ The face-mask-detector-api should now be hosting a FastAPI api on port 4242!
 ```console
 $ emily open face-mask-detector-client  # Open the client 
 ```
-- **OPS**: Open the face-mask-detector-client in **Visual Studio Code**.
+- **OPS**: Select to open the face-mask-detector-client in **Visual Studio Code** when the Emily CLI prompts for this.
 - In Visual Studio Code open a terminal and run:
 ```console
 $ python main.py
