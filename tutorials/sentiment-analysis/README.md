@@ -27,7 +27,7 @@ This guide requires that you have [Emily](https://ambolt.io/emily-ai/) installed
 
 ## Interacting with the API
 ### Launch the client
-1. Go to `tutorials/sentiment-analysis/sentiment-analysis-client/`
+1. Go to `tutorials/sentiment-analysis/client/`
 2. Launch the `index.html` file
       * Your project is now running in your browser!
 3. Write movie reviews and get a live sentiment analysis of them.
