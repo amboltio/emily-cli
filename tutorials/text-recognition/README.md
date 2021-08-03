@@ -1,44 +1,38 @@
-# Text Recognition demo
+# Text Recognition 📝🧐
 
-This is a demonstration on how to implement text recognition(also called classification) in the Emily API template provided by the [Emily](http://ambolt.io/emily) tool.
+This guide explains how to run an **text recognition** to responde to **pizza ordering requests** using the Emily CLI. 
 
-**Pre-requirements**
-- [Emily](https://github.com/amboltio/emily-cli/#getting-started)
-	- CUDA is **NOT** required for this project, but optional
+## Prerequisites
+This guide requires that you have [Emily](https://ambolt.io/emily-ai/) installed on your computer.
+- Download [Emily](https://github.com/amboltio/emily-cli/releases/latest) for your OS
+- Install Emily:
+  - [Windows install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Windows)
+  - [Linux install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Linux)
+  - [Mac install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-emily-on-Mac)
 
-## Quick start 
-[**Full walkthrough**](https://github.com/amboltio/emily-cli/wiki/Text-recognition) of the implementation.
-
-**Importing the Project**
-
+## Importing the Project
 1. Download the [emily-cli repository files](https://github.com/amboltio/emily-cli).
 	* You can either clone or download as a ZIP (remember to unzip)
-2. Open a terminal and locate the /emily-cli/tutorials folder
-3. Run ```$ emily import ./text-recognition/text-recognition-api``` to import the Emily project and initialize the local environment
-4. Press `y` to let Emily overwrite existing files. This updates the project to your current version of Emily.
-5. Select a Full or PyTorch image
-6. Press `n` to not mount data from a local folder
-7. Choose if you want to run your project with GPU:
-	* If you have CUDA enabled you can press `y` to run it with your GPU
-	* Else, press `n`
+2. Open a terminal and locate the _/emily-cli/tutorials_ folder
+4. Run ```$ emily open ./text-recognition/text-recognition-api``` to import the Emily project
+5. Select a slim image
+6. Select the Visual Studio Code editor  
+	* **Note:** After Visual Studio Code is opened you might be asked to rebuild the container and/or reload PyLance - do so.
 
-**Running the API**
 
-1. Run `$ emily open text-recognition-api` to open the project in VSCode
-	* Ignore `WARNING: Found orphan containers`
-3. When VSCode opens up you might have to rebuild the container and reload PyLance 
-4. Open api.py and press `F5`
-	* This will host the API on port :4242
-	* You can check it on [http://localhost:4242/api/health](http://localhost:4242/api/health)
+## Running the API
+1. Open api.py and press `F5` or press the green _play_ icon in the top right 
+	* This will host the API on port _4242_
+2. You can check it on [http://localhost:4242/api/health](http://localhost:4242/api/health)
 
-**Launching the client**
-
+## Interacting with the API
+### Launch the client
 1. Go to `./tutorials/sentiment-analysis/client/`
 2. Launch the `index.html` file
+      * Your project is now running in your browser!
+3. Write acting as a danish pizza vendor e.g. "hvad skulle det være" and get a text class and response.
 
-Your project is now running in your browser!
-
-**Learn more** 
-
-If you want to learn more you should check out this in-depth walkthrough of how the API is implemented in Emily.
-([Implementation walkthrough](https://github.com/amboltio/emily-cli/wiki/Text-recognition))
+## Learn more 
+Do you want to learn more on how the **Text Recognition** is implemented Emily, check out this in-depth walkthrough:
+- [Text Recognition walkthrough](https://github.com/amboltio/emily-cli/wiki/Sentiment-analysis)
+- Get more information on the [Emily Platform](https://ambolt.io/emily-ai/)
