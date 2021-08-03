@@ -27,7 +27,7 @@ This guide requires that you have [Emily](https://ambolt.io/emily-ai/) installed
 
 ## Interacting with the API
 ### Launch the client
-1. Go to `./tutorials/sentiment-analysis/client/`
+1. Go to `./tutorials/text-recognition/client/`
 2. Launch the `index.html` file
       * Your project is now running in your browser!
 3. Write acting as a danish pizza vendor e.g. "hvad skulle det være" and get a text class and response.
