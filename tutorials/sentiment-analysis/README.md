@@ -2,7 +2,10 @@
 
 This guide explains how run **sentiment analysis** on **movie reviews** using the Emily CLI.
 
-![alt text](https://raw.githubusercontent.com/wiki/amboltio/emily-cli/images/demos/sentiment-analysis/sentiment-analysis-client.png)
+<div align="center">
+<img src="https://raw.githubusercontent.com/wiki/amboltio/emily-cli/images/demos/sentiment-analysis/sentiment-analysis-client.png" alt="Face Mask Detector" width="500" height="500"/>
+</div>
+
 ## Prerequisites
 This guide requires that you have [Emily](https://ambolt.io/emily-ai/) installed on your computer.
 - Download [Emily](https://github.com/amboltio/emily-cli/releases/latest) for your OS
