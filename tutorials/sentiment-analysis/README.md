@@ -35,7 +35,9 @@ This guide requires that you have [Emily](https://ambolt.io/emily-ai/) installed
       * Your project is now running in your browser!
 3. Write movie reviews and get a live sentiment analysis of them.
 
+<!---
 ## Learn more 
 Do you want to learn more on how the **Sentiment Analysis** is implemented Emily, check out this in-depth walkthrough:
 - [Sentiment Analysis walkthrough](https://github.com/amboltio/emily-cli/wiki/Sentiment-analysis)
 - Get more information on the [Emily Platform](https://ambolt.io/emily-ai/)
+-->
