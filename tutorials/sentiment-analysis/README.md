@@ -7,12 +7,8 @@ This guide explains how run **sentiment analysis** on **movie reviews** using th
 </div>
 
 ## Prerequisites
-This guide requires that you have [Emily](https://ambolt.io/emily-ai/) installed on your computer.
-- Download [Emily](https://github.com/amboltio/emily-cli/releases/latest) for your OS
-- Install Emily:
-  - [Windows install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Windows)
-  - [Linux install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Linux)
-  - [Mac install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-emily-on-Mac)
+1. This guide requires that you have [Emily](https://ambolt.io/emily-ai/).
+Hence you must [download](https://github.com/amboltio/emily-cli/releases/latest) and [install](https://github.com/amboltio/emily-cli/wiki/Install-Emily) it.
 
 ## Importing the Project
 1. Download the [emily-cli repository files](https://github.com/amboltio/emily-cli).
