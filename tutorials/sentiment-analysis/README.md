@@ -13,10 +13,9 @@ Hence you must [download](https://github.com/amboltio/emily-cli/releases/latest)
 ## Importing the Project
 1. Download the [emily-cli repository files](https://github.com/amboltio/emily-cli).
 	* You can either clone or download as a ZIP (remember to unzip)
-2. Open a terminal and locate the _/emily-cli/tutorials_ folder
-3. Run ```$ emily open ./sentiment-analysis/sentiment-anylysis-api``` to import the Emily project
-4. Select a slim image
-5. Select the Visual Studio Code editor  
+2. Open a terminal and locate the `tutorials` folder
+3. Run ```$ emily open ./sentiment-analysis/sentiment-analysis-api``` to import the Emily project
+4. Select the Visual Studio Code editor  
 	* **Note:** After Visual Studio Code is opened you might be asked to rebuild the container and/or reload PyLance - do so.
 
 ## Running the API
@@ -26,7 +25,7 @@ Hence you must [download](https://github.com/amboltio/emily-cli/releases/latest)
 
 ## Interacting with the API
 ### Launch the client
-1. Go to `tutorials/sentiment-analysis/client/`
+1. Go to `tutorials/sentiment-analysis/sentiment-analysis-client/`
 2. Launch the `index.html` file
       * Your project is now running in your browser!
 3. Write movie reviews and get a live sentiment analysis of them.
