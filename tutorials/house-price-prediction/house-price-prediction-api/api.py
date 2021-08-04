@@ -8,7 +8,9 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 from argparse import ArgumentParser
 
-from utilities import get_uptime
+from utilities.utilities import get_uptime
+from utilities.logging.config import initialize_logging, initialize_logging_middleware
+
 from ml.emily import Emily
 
 emily = Emily()
@@ -30,9 +32,12 @@ load_dotenv(dotenv_file)
 
 app = FastAPI()
 
+initialize_logging()
+initialize_logging_middleware(app)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[os.environ.get('HOST_IP')],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -85,13 +90,12 @@ def predict(item: PredictItem):
     return {'result': emily.predict(item)}
 
 
+
 if __name__ == '__main__':
-    host = os.environ.get('HOST_IP')
-    if host == '*':
-        host = '0.0.0.0'
 
     uvicorn.run(
         'api:app',
-        host=host,
+        host=os.environ.get('HOST_IP'),
         port=int(os.environ.get('CONTAINER_PORT'))
     )
+
