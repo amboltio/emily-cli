@@ -43,7 +43,9 @@ This guide requires that you have a **web camera** and [Emily](https://ambolt.io
 	* This will host the client on port _8888_
 2. Open the client at [http://localhost:8000/ ](http://localhost:8000/)
 
+<!---
 ## Learn more: 
 Do you want to learn more on how the **Face Mask Detector** is implemented Emily, check out this in-depth walkthrough:
 - [Face Maske Detector walkthrough](https://github.com/amboltio/emily-cli/wiki/Face-mask-detection)
-- Get information on the [Emily Platform](https://ambolt.io/emily-ai/) 
+- Get information on the [Emily Platform](https://ambolt.io/emily-ai/)
+-->
