@@ -16,27 +16,26 @@ Emily combines the powers of [Python](https://www.python.org/) and [Docker](http
 ## Getting Started
 <details open>
 <summary>Download Emily</summary>
-
 The Emily CLI is available on Windows, Linux and Mac OS. <a href="https://github.com/amboltio/emily-cli/releases/latest">Download the Emily CLI</a> 
 </details>
 <br>
+
 <details open>
-<summary>[[Install Emily]]</summary>
+<summary><a href="https://github.com/amboltio/emily-cli/wiki/Install-Emily">Install Emily</a></summary>
+<ul>
+<li><a href="https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Windows">Windows install guide</a>   
+<li><a href="https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Linux">Linux install guide</a>   
+<li><a href="https://github.com/amboltio/emily-cli/wiki/How-to-install-emily-on-Mac">Mac OS install guide</a>   
+</ul>
+</details>
+<br>
 
-Follow the install guides:
-
-- <a href="https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Windows">Windows install guide</a>
-- <a href="https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Linux">Linux install guide</a>
-- <a href="https://github.com/amboltio/emily-cli/wiki/How-to-install-emily-on-Mac">Mac OS install guide</a>
-
+<details open>
+<summary><a href="https://github.com/amboltio/emily-cli/wiki/Quick-Start">Quick Start</a></summary>
 </details>
 <br>
 <details open>
-<summary>[[Quick Start]]</summary>
-</details>
-<br>
-<details open>
-<summary>[[Tutorials]]</summary>
+<summary><a href="https://github.com/amboltio/emily-cli/wiki/Tutorials">Tutorials</a></summary>
 
 * [Face Mask Detector](https://github.com/amboltio/emily-cli/tree/main/tutorials/face-mask-detector): Detect if a person is wearing a face mask or not 😷
 * [Sentiment Analysis](https://github.com/amboltio/emily-cli/tree/main/tutorials/sentiment-analysis): Classify reviews as negative 👎 or positive 👍  
