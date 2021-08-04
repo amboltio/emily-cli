@@ -33,7 +33,7 @@ Hence you must [download](https://github.com/amboltio/emily-cli/releases/latest)
 2. Select the Visual Studio Code editor  
 	* **Note:** After Visual Studio Code is opened you might be asked to rebuild the container and/or reload PyLance - do so.
 
-## Running the client
+### Running the client
 1. Open main.py and press `F5` or press the green _play_ icon in the top right 
 	* This will host the client on port _8888_
 2. Open the client at [http://localhost:8000/ ](http://localhost:8000/)
