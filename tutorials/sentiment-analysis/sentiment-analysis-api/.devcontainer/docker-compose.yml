@@ -1,6 +1,6 @@
 
 version: "3"
 services:
-  emily-sentiment-analysis-api-qp4hww:
+  emily-sentiment-analysis-api-w3h4m4:
     command: /bin/sh -c "while sleep 1000; do :; done"
 

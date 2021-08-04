@@ -1,8 +1,10 @@
 
 {
   "name": "sentiment-analysis-api",
-  "dockerComposeFile": ["../docker-compose.yml", "./docker-compose.yml"],
-  "service": "emily-sentiment-analysis-api-qp4hww",
+  "dockerComposeFile": [
+    "../docker-compose.yml", "./docker-compose.yml"
+  ],
+  "service": "emily-sentiment-analysis-api-w3h4m4",
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
   "extensions": [
@@ -13,7 +15,6 @@
   ],
   "runServices": [],
   "remoteEnv": {},
-  "mounts": [],
   "settings": {
     "terminal.integrated.shell.linux": null
   }

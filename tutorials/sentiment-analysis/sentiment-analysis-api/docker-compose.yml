@@ -1,24 +1,23 @@
-
 version: "3"
 services:
-  emily-sentiment-analysis-api-qp4hww:
-    image: emily-sentiment-analysis-api-qp4hww
-    container_name: emily-sentiment-analysis-api-qp4hww
+  emily-sentiment-analysis-api-w3h4m4:
+    image: emily-sentiment-analysis-api-w3h4m4
+    container_name: emily-sentiment-analysis-api-w3h4m4
     networks:
-      - emily-sentiment-analysis-api-qp4hww-network
+      - emily-sentiment-analysis-api-w3h4m4-network
     build:
       context: .
       dockerfile: ./.devcontainer/Dockerfile
     volumes:
       - .:/workspace:cached
-      - ${MOUNT1}:/workspace/sentiment-analysis/
+    ports:
+      - ${NOTEBOOK_PORT}
     runtime: ${RUNTIME}
     environment:
       - NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES}
       - NVIDIA_DRIVER_CAPABILITIES=${NVIDIA_DRIVER_CAPABILITIES}
     ipc: ${IPC}
 networks:
-  emily-sentiment-analysis-api-qp4hww-network:
-    name: emily-sentiment-analysis-api-qp4hww-network
+  emily-sentiment-analysis-api-w3h4m4-network:
+    name: emily-sentiment-analysis-api-w3h4m4-network
     driver: bridge
-  
