@@ -18,7 +18,6 @@ Hence you must [download](https://github.com/amboltio/emily-cli/releases/latest)
 	* You can either clone or download as a ZIP (remember to unzip)
 2. Open a terminal and locate the _/emily-cli/tutorials_ folder
 4. Run ```$ emily open ./face-mask-detector/face-mask-detector-api``` to import the Emily project
-5. Select a slim image
 6. Select the Visual Studio Code editor  
 	* **Note:** After Visual Studio Code is opened you might be asked to rebuild the container and/or reload PyLance - do so.
 
