@@ -21,7 +21,7 @@ The Emily CLI is available on Windows, Linux and Mac OS. <a href="https://github
 </details>
 <br>
 <details open>
-<summary>Install Emily</summary>
+<summary>[[Install Emily]]</summary>
 
 Follow the install guides:
 
@@ -32,25 +32,16 @@ Follow the install guides:
 </details>
 <br>
 <details open>
-<summary>Tutorials</summary>
+<summary>[[Quick Start]]</summary>
+</details>
+<br>
+<details open>
+<summary>[[Tutorials]]</summary>
 
 * [Face Mask Detector](https://github.com/amboltio/emily-cli/tree/main/tutorials/face-mask-detector): Detect if a person is wearing a face mask or not 😷
 * [Sentiment Analysis](https://github.com/amboltio/emily-cli/tree/main/tutorials/sentiment-analysis): Classify reviews as negative 👎 or positive 👍  
-* [House Price Prediction](https://github.com/amboltio/emily-cli/tree/main/tutorials/house-price-prediction): predict house prices with a **Linear Regression Model 📈 
-
-[comment]: <> (* [Text Recognition]&#40;https://github.com/amboltio/emily-cli/tree/main/tutorials/text-recognition&#41;: Learn how to train, evaluate and predict sentences with a fully connected PyTorch classifier implemented in the Emily API template.)
+* [House Price Prediction](https://github.com/amboltio/emily-cli/tree/main/tutorials/house-price-prediction): predict house prices with a Linear Regression Model 📈 
 </details>
 
 ## License
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />The Emily platform is released under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
-
-
-[comment]: <> (## Privacy Policy)
-
-[comment]: <> (The Emily CLI collects no data by default.)
-
-[comment]: <> (If you opt in to share anonumous usage data, you will be sharing:)
-
-[comment]: <> (* Log-data produced by the Emily CLI in case of crashes. - You will be prompted for acknowledgement each time.)
-
-[comment]: <> (* Basic usage of the CLI: installation, updates, command usage)
