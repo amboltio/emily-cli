@@ -30,9 +30,8 @@ The Emily CLI is available on Windows, Linux and Mac OS. <a href="https://github
 </details>
 <br>
 
-<details open>
 <summary><a href="https://github.com/amboltio/emily-cli/wiki/Quick-Start">Quick Start</a></summary>
-</details>
+
 <br>
 <details open>
 <summary><a href="https://github.com/amboltio/emily-cli/wiki/Tutorials">Tutorials</a></summary>
