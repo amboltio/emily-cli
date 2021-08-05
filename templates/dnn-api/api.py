@@ -28,7 +28,7 @@ from src.utilities.logging.config import initialize_logging, initialize_logging_
 app = FastAPI()
 
 initialize_logging()
-initialize_logging_middleware()
+initialize_logging_middleware(app)
 
 app.add_middleware(
     CORSMiddleware,
