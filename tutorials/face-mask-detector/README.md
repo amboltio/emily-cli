@@ -35,7 +35,7 @@ Hence you must [download](https://github.com/amboltio/emily-cli/releases/latest)
 
 ### Running the client
 1. Open main.py and press `F5` or press the green _play_ icon in the top right 
-	* This will host the client on port _8888_
+	* This will host the client on port _8000_
 2. Open the client at [http://localhost:8000/ ](http://localhost:8000/)
 
 <!---
