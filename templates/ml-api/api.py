@@ -33,7 +33,7 @@ load_dotenv(dotenv_file)
 app = FastAPI()
 
 initialize_logging()
-initialize_logging_middleware()
+initialize_logging_middleware(app)
 
 app.add_middleware(
     CORSMiddleware,
