@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Emily CLI v.0.2.7</h1>
+<h1>Emily CLI</h1>
 The <a href="https://ambolt.io/emily-ai/">Emily CLI</a> is built and maintained by <a href="https://ambolt.io/">Ambolt</a> to help developers and teams implement and run production ready machine learning powered micro services fast and easy
 </div>
 
