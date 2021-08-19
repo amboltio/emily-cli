@@ -2,9 +2,9 @@
 {
   "name": "face-mask-detector-client",
   "dockerComposeFile": [
-    "../docker-compose.yml", "./docker-compose.yml"
+    "../.base/docker-compose.yml", "./docker-compose.yml"
   ],
-  "service": "emily-face-mask-detector-client-qc9l6o",
+  "service": "emily-face-mask-detector-client-9ebqlg",
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
   "extensions": [

@@ -1,0 +1,19 @@
+
+version: "3"
+services:
+  emily-face-mask-detector-client-9ebqlg:
+    image: emily-face-mask-detector-client-9ebqlg
+    container_name: emily-face-mask-detector-client-9ebqlg
+    build:
+      context: ../
+
+    volumes:
+      - ../:/workspace:cached
+
+    networks:
+      - emily-face-mask-detector-client-9ebqlg-network
+
+networks:
+  emily-face-mask-detector-client-9ebqlg-network:
+    name: emily-face-mask-detector-client-9ebqlg-network
+    driver: bridge
