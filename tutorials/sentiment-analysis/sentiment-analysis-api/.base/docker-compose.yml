@@ -1,0 +1,19 @@
+
+version: "3"
+services:
+  emily-sentiment-analysis-api-1h66ir:
+    image: emily-sentiment-analysis-api-1h66ir
+    container_name: emily-sentiment-analysis-api-1h66ir
+    build:
+      context: ../
+
+    volumes:
+      - ../:/workspace:cached
+
+    networks:
+      - emily-sentiment-analysis-api-1h66ir-network
+
+networks:
+  emily-sentiment-analysis-api-1h66ir-network:
+    name: emily-sentiment-analysis-api-1h66ir-network
+    driver: bridge

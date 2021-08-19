@@ -1,41 +1,38 @@
-# Sentiment Analysis demo
+# Sentiment Analysis 👍👎
 
-This demo contains an Emily microservice for conducting sentiment analysis, and a web client that consumes the API exposed by the microservice. 
+This guide explains how run **sentiment analysis** on **movie reviews** using the Emily CLI.
 
-**Pre-requirements**
-- [Emily](https://github.com/amboltio/emily-cli/#getting-started)
-	- CUDA is **NOT** required for this project
+<div align="center">
+<img src="https://raw.githubusercontent.com/wiki/amboltio/emily-cli/images/demos/sentiment-analysis/sentiment-analysis-client.png" alt="Face Mask Detector" width="500" height="500"/>
+</div>
 
-## Quick start 
-[**Full walkthrough**](https://github.com/amboltio/emily-cli/wiki/Sentiment-analysis) of the implementation.
+## Prerequisites
+1. This guide requires that you have [Emily](https://ambolt.io/emily-ai/).
+Hence you must [download](https://github.com/amboltio/emily-cli/releases/latest) and [install](https://github.com/amboltio/emily-cli/wiki/Install-Emily) it.
 
-**Importing the Project**
-
+## Importing the Project
 1. Download the [emily-cli repository files](https://github.com/amboltio/emily-cli).
 	* You can either clone or download as a ZIP (remember to unzip)
-2. Open a terminal and locate the /emily-cli/tutorials folder
-3. Run ```$ emily import ./sentiment-analysis/sentiment-anylysis-api``` to import the Emily project and initialize the local environment
-4. Press `y` to let Emily overwrite existing files. This updates the project to your current version of Emily.
-5. Select a slim image
-6. Press `y` to mount data from local folder and give path: `./sentiment-analysis/sentiment-analysis-api/data`
+2. Open a terminal and locate the `tutorials` folder
+3. Run ```$ emily open ./sentiment-analysis/sentiment-analysis-api``` to import the Emily project
+4. Select the Visual Studio Code editor  
+	* **Note:** After Visual Studio Code is opened you might be asked to rebuild the container and/or reload PyLance - do so.
 
-**Running the API**
+## Running the API
+1. Open api.py and press `F5` or press the green _play_ icon in the top right 
+	* This will host the API on port _4242_
+2. You can check it on [http://localhost:4242/api/health](http://localhost:4242/api/health)
 
-1. Run `$ emily open sentiment-analysis-api` to open the project in VSCode
-	* Ignore `WARNING: Found orphan containers`
-2. When VSCode opens up you might have to rebuild the container and reload PyLance 
-3. Open api.py and press `F5`
-	* This will preprocess the training data and host the API on port :4242
-	* You can check it on [http://localhost:4242/api/health](http://localhost:4242/api/health)
-
-**Launching the client**
-
+## Interacting with the API
+### Launch the client
 1. Go to `tutorials/sentiment-analysis/sentiment-analysis-client/`
 2. Launch the `index.html` file
+      * Your project is now running in your browser!
+3. Write movie reviews and get a live sentiment analysis of them.
 
-Your project is now running in your browser!
-
-**Learn more** 
-
-If you want to learn more you should check out this in depth walkthrough of how the API is implemented in Emily.
-([Implementation walkthrough](https://github.com/amboltio/emily-cli/wiki/Sentiment-analysis))
+<!---
+## Learn more 
+Do you want to learn more on how the **Sentiment Analysis** is implemented Emily, check out this in-depth walkthrough:
+- [Sentiment Analysis walkthrough](https://github.com/amboltio/emily-cli/wiki/Sentiment-analysis)
+- Get more information on the [Emily Platform](https://ambolt.io/emily-ai/)
+-->

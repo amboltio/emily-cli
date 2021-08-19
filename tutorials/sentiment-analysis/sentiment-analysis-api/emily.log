@@ -1,0 +1,8 @@
+2021-08-19 13:33:13.369 | INFO     | uvicorn.server:serve:63 - Started server process [414]
+2021-08-19 13:33:13.370 | INFO     | uvicorn.lifespan.on:startup:26 - Waiting for application startup.
+2021-08-19 13:33:13.370 | INFO     | uvicorn.lifespan.on:startup:38 - Application startup complete.
+2021-08-19 13:33:13.371 | INFO     | uvicorn.server:startup:166 - Uvicorn running on http://0.0.0.0:4242 (Press CTRL+C to quit)
+2021-08-19 13:33:16.128 | INFO     | utilities.logging.handlers:http_request_logging_middleware:36 - HTTP GET for http://localhost:4242/
+2021-08-19 13:33:16.128 | INFO     | utilities.logging.handlers:http_request_logging_middleware:38 - HTTP 404 for http://localhost:4242/
+2021-08-19 13:33:16.176 | INFO     | utilities.logging.handlers:http_request_logging_middleware:36 - HTTP GET for http://localhost:4242/favicon.ico
+2021-08-19 13:33:16.177 | INFO     | utilities.logging.handlers:http_request_logging_middleware:38 - HTTP 404 for http://localhost:4242/favicon.ico
