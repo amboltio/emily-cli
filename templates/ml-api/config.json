@@ -1,8 +1,0 @@
-{
-  "name": "Machine learning API",
-  "flag": "ml-api",
-  "description": "Machine learning template with API",
-  "image": "",
-  "version": "0.2.3--",
-  "requirements": []
-}
