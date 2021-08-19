@@ -2,9 +2,9 @@
 {
   "name": "sentiment-analysis-api",
   "dockerComposeFile": [
-    "../docker-compose.yml", "./docker-compose.yml"
+    "../.base/docker-compose.yml", "./docker-compose.yml"
   ],
-  "service": "emily-sentiment-analysis-api-w3h4m4",
+  "service": "emily-sentiment-analysis-api-1h66ir",
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
   "extensions": [

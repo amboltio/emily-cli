@@ -1,0 +1,19 @@
+
+version: "3"
+services:
+  emily-face-mask-detector-api-xa5jt2:
+    image: emily-face-mask-detector-api-xa5jt2
+    container_name: emily-face-mask-detector-api-xa5jt2
+    build:
+      context: ../
+
+    volumes:
+      - ../:/workspace:cached
+
+    networks:
+      - emily-face-mask-detector-api-xa5jt2-network
+
+networks:
+  emily-face-mask-detector-api-xa5jt2-network:
+    name: emily-face-mask-detector-api-xa5jt2-network
+    driver: bridge

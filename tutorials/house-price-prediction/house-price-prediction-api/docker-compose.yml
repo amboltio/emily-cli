@@ -1,23 +1,9 @@
+
 version: "3"
 services:
-  emily-house-price-prediction-api-t90ge9:
-    image: emily-house-price-prediction-api-t90ge9
-    container_name: emily-house-price-prediction-api-t90ge9
+  emily-house-price-prediction-api-g8fnzm:
+
+    # Add your custom configuration here!
+
     networks:
-      - emily-house-price-prediction-api-t90ge9-network
-    build:
-      context: .
-      dockerfile: ./.devcontainer/Dockerfile
-    volumes:
-      - .:/workspace:cached
-    ports:
-      - ${NOTEBOOK_PORT}
-    runtime: ${RUNTIME}
-    environment:
-      - NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES}
-      - NVIDIA_DRIVER_CAPABILITIES=${NVIDIA_DRIVER_CAPABILITIES}
-    ipc: ${IPC}
-networks:
-  emily-house-price-prediction-api-t90ge9-network:
-    name: emily-house-price-prediction-api-t90ge9-network
-    driver: bridge
+      - emily-house-price-prediction-api-g8fnzm-network

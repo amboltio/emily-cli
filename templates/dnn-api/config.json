@@ -1,8 +1,0 @@
-{
-  "name": "Deep neural network API",
-  "flag": "dnn-api",
-  "description": "Deep neural network template with an API using Pytorch",
-  "image": "pytorch",
-  "version": "0.2.3--",
-  "requirements": []
-}

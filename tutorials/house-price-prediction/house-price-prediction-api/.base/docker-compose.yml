@@ -1,0 +1,19 @@
+
+version: "3"
+services:
+  emily-house-price-prediction-api-g8fnzm:
+    image: emily-house-price-prediction-api-g8fnzm
+    container_name: emily-house-price-prediction-api-g8fnzm
+    build:
+      context: ../
+
+    volumes:
+      - ../:/workspace:cached
+
+    networks:
+      - emily-house-price-prediction-api-g8fnzm-network
+
+networks:
+  emily-house-price-prediction-api-g8fnzm-network:
+    name: emily-house-price-prediction-api-g8fnzm-network
+    driver: bridge

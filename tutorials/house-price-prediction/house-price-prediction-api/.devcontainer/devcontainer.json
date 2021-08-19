@@ -2,9 +2,9 @@
 {
   "name": "house-price-prediction-api",
   "dockerComposeFile": [
-    "../docker-compose.yml", "./docker-compose.yml"
+    "../.base/docker-compose.yml", "./docker-compose.yml"
   ],
-  "service": "emily-house-price-prediction-api-t90ge9",
+  "service": "emily-house-price-prediction-api-g8fnzm",
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
   "extensions": [

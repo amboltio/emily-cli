@@ -13,5 +13,6 @@ RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 # set emilyuser as current user
 USER emilyuser
 
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+ENV PATH="/home/emilyuser/.local/bin:$PATH"
+
+RUN pip install --disable-pip-version-check -r requirements.txt
