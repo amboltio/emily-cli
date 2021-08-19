@@ -1,24 +1,9 @@
 
 version: "3"
 services:
-  emily-house-price-prediction-y4734c:
-    image: emily-house-price-prediction-y4734c
-    container_name: emily-house-price-prediction-y4734c
+  emily-house-price-prediction-api-g8fnzm:
+
+    # Add your custom configuration here!
+
     networks:
-      - emily-house-price-prediction-y4734c-network
-    build:
-      context: .
-      dockerfile: ./.devcontainer/Dockerfile
-    volumes:
-      - .:/workspace:cached
-      - ${MOUNT1}:/workspace/house-price-data/
-    runtime: ${RUNTIME}
-    environment:
-      - NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES}
-      - NVIDIA_DRIVER_CAPABILITIES=${NVIDIA_DRIVER_CAPABILITIES}
-    ipc: ${IPC}
-networks:
-  emily-house-price-prediction-y4734c-network:
-    name: emily-house-price-prediction-y4734c-network
-    driver: bridge
-  
+      - emily-house-price-prediction-api-g8fnzm-network

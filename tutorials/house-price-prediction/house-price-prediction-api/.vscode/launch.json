@@ -1,9 +1,9 @@
 
 {
-  "version": "0.2.0",
+  "version": "0.1.0",
   "configurations": [
       {
-          "name": "Emily API",
+          "name": "Emily",
           "type": "python",
           "request": "launch",
           "program": "${file}",

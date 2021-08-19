@@ -3,7 +3,6 @@ from ml.predictor import Predictor
 from ml.trainer import Trainer
 from ml.evaluator import Evaluator
 
-
 class Emily:
     """
     The Emily class is simply a wrapper class which creates instances of:
@@ -38,3 +37,4 @@ class Emily:
         Make sure the __call__ method is implemented correctly
         """
         return self.evaluator(request)
+
