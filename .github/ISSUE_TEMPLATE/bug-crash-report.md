@@ -21,7 +21,9 @@ A clear and concise description of what you expected to happen.
 
 **Add logs**
 You can retrieve the newest parts of the Emily logs with the command "Emily log".
+
 Alternatively, if the relevant logs are not shown with "Emily log", get the contents from the log file located in your ".emily" folder.
+
 If the error occurred when installing with the windows installer, please provide the newest installation log located in your %TEMP% folder. The file is named: Setup Log <year>-<month>-<day> #<number> e.g. "Setup Log 2021-08-20 #001"
 
 **Screenshots**
