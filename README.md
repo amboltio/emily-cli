@@ -31,6 +31,14 @@ Follow the install guides:
 
 </details>
 <br>
+
+<details open>
+<summary>Quick Start</summary>
+
+* [Quick-Start](https://github.com/amboltio/emily-cli/wiki/Quick-Start)
+</details>
+<br>
+
 <details open>
 <summary>Tutorials</summary>
 
