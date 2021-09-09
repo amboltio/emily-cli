@@ -39,7 +39,7 @@ The face-mask-detector-api should now be hosting a FastAPI api on port 4242!
 
 ### Running the Client
 1. Open main.py and press `F5` or press the green _play_ icon in the top right 
-	* (Alternatively run ```$ python api.py``` in the Visual Studio Code terminal)
+	* (Alternatively run ```$ python main.py``` in the Visual Studio Code terminal)
 
 
 ## Finally:
