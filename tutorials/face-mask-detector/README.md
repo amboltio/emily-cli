@@ -44,7 +44,7 @@ $ python main.py
 ```
 ## Finally:
 Your Face Mask detector client is now running in your browser.
-- Go to http://localhost:8000/ 
+- Go to http://localhost:8000/ (It might take a few seconds before the client is running)
 
 
 
