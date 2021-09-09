@@ -14,7 +14,7 @@ Hence you must [download](https://github.com/amboltio/emily-cli/releases/latest)
 
 
 ## Start the Face Mask Detector API
-# Importing the Emily project API
+### Importing the Emily project API
 1. Download the [emily-cli repository files](https://github.com/amboltio/emily-cli).
 	* You can either clone or download as a ZIP (remember to unzip)
 2. Open a terminal and locate the `tutorials` folder
@@ -22,7 +22,7 @@ Hence you must [download](https://github.com/amboltio/emily-cli/releases/latest)
 4. Select the Visual Studio Code editor  
 	* **Note:** After Visual Studio Code is opened you might be asked to rebuild the container and/or reload PyLance - do so.
 
-# Running the API
+### Running the API
 1. Open api.py and press `F5` or press the green _play_ icon in the top right 
 	* This will host the API on port _4242_
 	* (Alternatively use ```$ python api.py``` in the Visual Studio Code terminal)
@@ -30,13 +30,13 @@ Hence you must [download](https://github.com/amboltio/emily-cli/releases/latest)
 The face-mask-detector-api should now be hosting a FastAPI api on port 4242!
 
 ## Start the Face Mask Detector Client
-# Importing the Emily project Client
+### Importing the Emily project Client
 1. Open a new terminal and locate the `tutorials` folder
 2. Run ```$ emily open ./face-mask-detector/face-mask-detector-api``` to import the Emily API project
 3. Select the Visual Studio Code editor  
 	* **Note:** After Visual Studio Code is opened you might be asked to rebuild the container and/or reload PyLance - do so.
 
-# Running the Client
+### Running the Client
 1. Open main.py and press `F5` or press the green _play_ icon in the top right 
 	* (Alternatively use ```$ python api.py``` in the Visual Studio Code terminal)
 
