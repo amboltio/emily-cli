@@ -1,0 +1,8 @@
+{
+    "id": "XA5JT2",
+    "name": "face-mask-detector-api",
+    "containerName": "emily-face-mask-detector-api-xa5jt2",
+    "image": "torch-cv",
+    "imageVersion": "1.0.0",
+    "mountTargets": []
+}
