@@ -15,8 +15,7 @@ Hence you must [download](https://github.com/amboltio/emily-cli/releases/latest)
 	* You can either clone or download as a ZIP (remember to unzip)
 2. Open a terminal and locate the `tutorials` folder
 3. Run ```$ emily open ./house-price-prediction/house-price-prediction-api``` to import the Emily project
-4. Select a slim image
-5. Select the Visual Studio Code editor  
+4. Select the Visual Studio Code editor  
 	* **Note:** After Visual Studio Code is opened you might be asked to rebuild the container and/or reload PyLance - do so.
 
 ## Running the API
