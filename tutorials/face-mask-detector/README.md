@@ -28,6 +28,7 @@ Hence you must [download](https://github.com/amboltio/emily-cli/releases/latest)
 	* (Alternatively run ```$ python api.py``` in the Visual Studio Code terminal)
 
 The face-mask-detector-api should now be hosting a FastAPI api on port 4242!
+* You can check it on [http://localhost:4242/api/health](http://localhost:4242/api/health)
 
 ## Start the Face Mask Detector Client
 ### Importing the Emily project Client
