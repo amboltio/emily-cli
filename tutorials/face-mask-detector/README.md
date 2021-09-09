@@ -8,40 +8,39 @@ This guide explains how to run an **AI model** which can detect whether a person
 <img src="https://github.com/amboltio/emily-cli/blob/main/tutorials/face-mask-detector/face-mask-detector-client/static/imgs/face_mask_detector.png" alt="Face Mask Detector" width="400" height="500"/>
 </div>
 
-## Before you start
-This guide requires that you have a **web camera** and [Emily](https://ambolt.io/emily-ai/) installed on your computer.
-- Download [Emily](https://github.com/amboltio/emily-cli/releases/latest) for your OS
-- Install Emily:
-  - [Windows install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Windows)
-  - [Linux install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Linux)
-  - [Mac install guide](https://github.com/amboltio/emily-cli/wiki/How-to-install-emily-on-Mac)
-
+## Prerequisites
+1. This guide requires that you have [Emily](https://ambolt.io/emily-ai/).
+Hence you must [download](https://github.com/amboltio/emily-cli/releases/latest) and [install](https://github.com/amboltio/emily-cli/wiki/Install-Emily) it.
 
 
 ## Start the Face Mask Detector API
-```console
-$ git clone https://github.com/amboltio/emily-cli.git
-$ cd emily-cli/tutorials/face-mask-detector 
-$ emily open face-mask-detector-api  # Open the api running on port 4242
-```
+# Importing the Emily project API
+1. Download the [emily-cli repository files](https://github.com/amboltio/emily-cli).
+	* You can either clone or download as a ZIP (remember to unzip)
+2. Open a terminal and locate the `tutorials` folder
+3. Run ```$ emily open ./face-mask-detector/face-mask-detector-api``` to import the Emily API project
+4. Select the Visual Studio Code editor  
+	* **Note:** After Visual Studio Code is opened you might be asked to rebuild the container and/or reload PyLance - do so.
 
-- **OPS**: Open the face-mask-detector-api in **Visual Studio Code**.
-- In Visual Studio Code open a terminal and run:
-```console
-$ python api.py
-```
+# Running the API
+1. Open api.py and press `F5` or press the green _play_ icon in the top right 
+	* This will host the API on port _4242_
+	* (Alternatively use ```$ python api.py``` in the Visual Studio Code terminal)
 
 The face-mask-detector-api should now be hosting a FastAPI api on port 4242!
 
 ## Start the Face Mask Detector Client
-```console
-$ emily open face-mask-detector-client  # Open the client 
-```
-- **OPS**: Open the face-mask-detector-client in **Visual Studio Code**.
-- In Visual Studio Code open a terminal and run:
-```console
-$ python main.py
-```
+# Importing the Emily project Client
+1. Open a new terminal and locate the `tutorials` folder
+2. Run ```$ emily open ./face-mask-detector/face-mask-detector-api``` to import the Emily API project
+3. Select the Visual Studio Code editor  
+	* **Note:** After Visual Studio Code is opened you might be asked to rebuild the container and/or reload PyLance - do so.
+
+# Running the Client
+1. Open main.py and press `F5` or press the green _play_ icon in the top right 
+	* (Alternatively use ```$ python api.py``` in the Visual Studio Code terminal)
+
+
 ## Finally:
 Your Face Mask detector client is now running in your browser.
 - Go to http://localhost:8000/ (It might take a few seconds before the client is running)
