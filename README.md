@@ -4,11 +4,19 @@ The <a href="https://ambolt.io/emily-ai/">Emily CLI</a> is built and maintained 
 </div>
 
 ### Download Emily
-<a href="https://commons.wikimedia.org/wiki/File:Windows10Logo.png">
-  <img alt="EmilyDownloadWindows" src="https://commons.wikimedia.org/wiki/File:Windows_logo_-_2012.svg#/media/File:Windows_logo_-_2012_(dark_blue).svg" 
-       width=150" height="70">
+<a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily-installer.exe">
+  <img alt="EmilyDownloadWindows" src="https://www.freepnglogos.com/uploads/windows-logo-png/windows-logo-taking-back-control-windows-updates-techgage-17.png" 
+       width=150" height="150" align="left">
 </a>
-
+<a href="https://github.com/amboltio/emily-cli/releases/latest/download/linux.zip">
+  <img alt="EmilyDownloadUbuntu" src="https://static.javatpoint.com/linux/images/ubuntu-logo4.png" 
+       width=150" height="150" align="middle">
+</a>        
+<a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily.pkg">
+  <img alt="EmilyDownloadUbuntu" src="https://www.freepnglogos.com/uploads/mac-cosmetic-png-logo/infinite-island-apple-emblem-mac-cosmetic-png-logo-10.png" 
+       width=150" height="150" align="right">
+</a>     
+                              
 ### What is Emily?
 Emily combines the powers of [Python](https://www.python.org/) and [Docker](https://www.docker.com/) to build stable and consistent machine learning and datascience python environments. Emily is useful for large cross-team project development as well as for simply running a single jupyter notebook or python script.
 
@@ -23,8 +31,11 @@ Emily combines the powers of [Python](https://www.python.org/) and [Docker](http
 <details open>
 <summary>Download Emily</summary>
 
-The Emily CLI is available on Windows, Linux and Mac OS. <a href="https://github.com/amboltio/emily-cli/releases/latest">Download the Emily CLI</a> 
-
+The Emily CLI is available on Windows, Linux and Mac OS:
+- <a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily-installer.exe">Windows</a>
+- <a href="https://github.com/amboltio/emily-cli/releases/latest/download/linux.zip">Linux</a> 
+- <a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily.pkg">Mac OS</a> 
+                                                                                              
 </details>
 <br>
 <details open>
