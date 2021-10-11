@@ -5,7 +5,7 @@ The <a href="https://ambolt.io/emily-ai/">Emily CLI</a> is built and maintained 
 
 ### Download Emily
 <a href="https://commons.wikimedia.org/wiki/File:Windows10Logo.png">
-  <img alt="Qries" src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Windows10Logo.png" 
+  <img alt="EmilyDownloadWindows" src="https://commons.wikimedia.org/wiki/File:Windows_logo_-_2012.svg#/media/File:Windows_logo_-_2012_(dark_blue).svg" 
        width=150" height="70">
 </a>
 
