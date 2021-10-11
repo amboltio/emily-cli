@@ -3,6 +3,12 @@
 The <a href="https://ambolt.io/emily-ai/">Emily CLI</a> is built and maintained by <a href="https://ambolt.io/">Ambolt</a> to help developers and teams implement and run production ready machine learning powered micro services fast and easy
 </div>
 
+### Download Emily
+<a href="https://commons.wikimedia.org/wiki/File:Windows10Logo.png">
+  <img alt="Qries" src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Windows10Logo.png" 
+       width=150" height="70">
+</a>
+
 ### What is Emily?
 Emily combines the powers of [Python](https://www.python.org/) and [Docker](https://www.docker.com/) to build stable and consistent machine learning and datascience python environments. Emily is useful for large cross-team project development as well as for simply running a single jupyter notebook or python script.
 
@@ -18,10 +24,6 @@ Emily combines the powers of [Python](https://www.python.org/) and [Docker](http
 <summary>Download Emily</summary>
 
 The Emily CLI is available on Windows, Linux and Mac OS. <a href="https://github.com/amboltio/emily-cli/releases/latest">Download the Emily CLI</a> 
-<a href="https://commons.wikimedia.org/wiki/File:Windows10Logo.png">
-  <img alt="Qries" src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Windows10Logo.png" 
-       width=150" height="70">
-</a>
 
 </details>
 <br>
