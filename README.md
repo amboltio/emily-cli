@@ -18,8 +18,8 @@ Emily combines the powers of [Python](https://www.python.org/) and [Docker](http
 <summary>Download Emily</summary>
 
 The Emily CLI is available on Windows, Linux and Mac OS. <a href="https://github.com/amboltio/emily-cli/releases/latest">Download the Emily CLI</a> 
-<a href="https://docs.github.com/en/repositories/releasing-projects-on-github/linking-to-releases">
-         <img alt="EmilyWindowsDownload" src="https://commons.wikimedia.org/wiki/File:Windows_logo_-_2012.svg#/media/File:Windows_logo_-_2012_(dark_blue).svg"
+<a href="https://commons.wikimedia.org/wiki/File:Windows10Logo.png">
+         <img alt="Qries" src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Windows10Logo.png"
          width=150" height="70">
       </a>
 
