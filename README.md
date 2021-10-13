@@ -2,7 +2,41 @@
 <h1>Emily CLI</h1>
 The <a href="https://ambolt.io/emily-ai/">Emily CLI</a> is built and maintained by <a href="https://ambolt.io/">Ambolt</a> to help developers and teams implement and run production ready machine learning powered micro services fast and easy
 </div>
+                                            
+                                             
+### Download Emily
+Choose your system:
+<p align="center">
+  
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%">
+  
+<a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily-installer.exe">
+  <img alt="EmilyDownloadWindows" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" 
+       width="150" height="150">
+</a>
+  
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%">
+  
+<a href="https://github.com/amboltio/emily-cli/releases/latest/download/linux.zip">
+  <img alt="EmilyDownloadUbuntu" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/428px-Logo-ubuntu_cof-orange-hex.svg.png" 
+       width=150" height="150">
+</a>
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%">
+                              
+<a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily.pkg">
+  <img alt="EmilyDownloadMac" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Apple_logo_grey.svg/640px-Apple_logo_grey.svg.png" 
+       width=140" height="150">
+</a>   
+  
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%">
+  
+
+  
+</p>
+
+<br> 
+                                            
 ### What is Emily?
 Emily combines the powers of [Python](https://www.python.org/) and [Docker](https://www.docker.com/) to build stable and consistent machine learning and datascience python environments. Emily is useful for large cross-team project development as well as for simply running a single jupyter notebook or python script.
 
@@ -17,7 +51,11 @@ Emily combines the powers of [Python](https://www.python.org/) and [Docker](http
 <details open>
 <summary>Download Emily</summary>
 
-The Emily CLI is available on Windows, Linux and Mac OS. <a href="https://github.com/amboltio/emily-cli/releases/latest">Download the Emily CLI</a> 
+The Emily CLI is available on Windows, Linux and Mac OS:
+- <a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily-installer.exe">Windows</a>
+- <a href="https://github.com/amboltio/emily-cli/releases/latest/download/linux.zip">Linux</a> 
+- <a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily.pkg">Mac OS</a> 
+                                                                                              
 </details>
 <br>
 <details open>
