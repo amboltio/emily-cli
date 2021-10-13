@@ -4,19 +4,24 @@ The <a href="https://ambolt.io/emily-ai/">Emily CLI</a> is built and maintained 
 </div>
 
 ### Download Emily
+<p align="center">
 <a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily-installer.exe">
-  <img alt="EmilyDownloadWindows" src="https://www.freepnglogos.com/uploads/windows-logo-png/windows-logo-taking-back-control-windows-updates-techgage-17.png" 
+  <img alt="EmilyDownloadWindows" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" 
        width=150" height="150" align="left">
-</a>
+</a>                                                                                
 <a href="https://github.com/amboltio/emily-cli/releases/latest/download/linux.zip">
-  <img alt="EmilyDownloadUbuntu" src="https://static.javatpoint.com/linux/images/ubuntu-logo4.png" 
-       width=150" height="150" align="middle">
-</a>        
+  <img alt="EmilyDownloadUbuntu" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Ubuntu_logo_orange.png" 
+       width=200" height="100">
+</a>    
+
 <a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily.pkg">
-  <img alt="EmilyDownloadUbuntu" src="https://www.freepnglogos.com/uploads/mac-cosmetic-png-logo/infinite-island-apple-emblem-mac-cosmetic-png-logo-10.png" 
-       width=150" height="150" align="right">
-</a>     
-                              
+  <img alt="EmilyDownloadUbuntu" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" 
+       width=140" height="150" align="right">
+</a>   
+</p>
+
+<br> 
+                                            
 ### What is Emily?
 Emily combines the powers of [Python](https://www.python.org/) and [Docker](https://www.docker.com/) to build stable and consistent machine learning and datascience python environments. Emily is useful for large cross-team project development as well as for simply running a single jupyter notebook or python script.
 
