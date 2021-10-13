@@ -30,9 +30,13 @@ Choose your system:
 </a>   
   
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%">
-  
 
-  
+</p>
+
+<p align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%" height="10px">
+<a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily.pkg">Download to Windows</a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%" height="10px"><a href="https://github.com/amboltio/emily-cli/releases/latest/download/linux.zip">Download to Ubuntu&nbsp;&nbsp;</a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%" height="10px"><a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily.pkg">Download to Mac&nbsp;&nbsp;&nbsp;</a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%" height="10px">
 </p>
 
 <br> 
