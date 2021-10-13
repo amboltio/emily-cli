@@ -2,22 +2,37 @@
 <h1>Emily CLI</h1>
 The <a href="https://ambolt.io/emily-ai/">Emily CLI</a> is built and maintained by <a href="https://ambolt.io/">Ambolt</a> to help developers and teams implement and run production ready machine learning powered micro services fast and easy
 </div>
-
+                                            
+                                            
 ### Download Emily
+Choose your system:
 <p align="center">
+  
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%">
+  
 <a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily-installer.exe">
   <img alt="EmilyDownloadWindows" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" 
-       width=150" height="150" align="left">
-</a>                                                                                
+       width="150" height="150">
+</a>
+  
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%">
+  
 <a href="https://github.com/amboltio/emily-cli/releases/latest/download/linux.zip">
-  <img alt="EmilyDownloadUbuntu" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Ubuntu_logo_orange.png" 
-       width=200" height="100">
-</a>    
+  <img alt="EmilyDownloadUbuntu" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/428px-Logo-ubuntu_cof-orange-hex.svg.png" 
+       width=150" height="150">
+</a>
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%">
+                              
 <a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily.pkg">
-  <img alt="EmilyDownloadUbuntu" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" 
-       width=140" height="150" align="right">
+  <img alt="EmilyDownloadMac" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Apple_logo_grey.svg/640px-Apple_logo_grey.svg.png" 
+       width=140" height="150">
 </a>   
+  
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%">
+  
+
+  
 </p>
 
 <br> 
