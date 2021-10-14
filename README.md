@@ -19,14 +19,14 @@ Choose your system:
   
 <a href="https://github.com/amboltio/emily-cli/releases/latest/download/linux.zip">
   <img alt="EmilyDownloadUbuntu" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/428px-Logo-ubuntu_cof-orange-hex.svg.png" 
-       width=150" height="150">
+       width="150" height="150">
 </a>
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%">
                               
 <a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily.pkg">
   <img alt="EmilyDownloadMac" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Apple_logo_grey.svg/640px-Apple_logo_grey.svg.png" 
-       width=140" height="150">
+       width="140" height="150">
 </a>   
   
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%">
@@ -35,7 +35,7 @@ Choose your system:
 
 <p align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%" height="10px">
-<a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily.pkg">Download to Windows</a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%" height="10px"><a href="https://github.com/amboltio/emily-cli/releases/latest/download/linux.zip">Download to Ubuntu&nbsp;&nbsp;</a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%" height="10px"><a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily.pkg">Download to Mac&nbsp;&nbsp;&nbsp;</a>
+<a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily-installer.exe">Download to Windows</a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%" height="10px"><a href="https://github.com/amboltio/emily-cli/releases/latest/download/linux.zip">Download to Ubuntu&nbsp;&nbsp;</a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%" height="10px"><a href="https://github.com/amboltio/emily-cli/releases/latest/download/emily.pkg">Download to Mac&nbsp;&nbsp;&nbsp;</a>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Antonia_Sautter_Creations.png/180px-Antonia_Sautter_Creations.png" width="10%" height="10px">
 </p>
 
