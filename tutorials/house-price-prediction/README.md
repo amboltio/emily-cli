@@ -23,6 +23,7 @@ Hence you must [download](https://github.com/amboltio/emily-cli/releases/latest)
 	* This will host the API on port _4242_
 	* (Alternatively run ```$ python api.py``` in the Visual Studio Code terminal)
 2. You can check it on [http://localhost:4242/api/health](http://localhost:4242/api/health)
+* You can also check the available API endpoints at [http://localhost:4242/docs](http://localhost:4242/docs)
 
 ## Interacting with the API
 ### Launch the client
