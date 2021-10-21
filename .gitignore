@@ -7,3 +7,6 @@
 
 # Env files
 *.env
+
+# Mac files
+*.DS_Store
