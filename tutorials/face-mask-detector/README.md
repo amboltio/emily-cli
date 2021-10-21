@@ -34,7 +34,7 @@ The face-mask-detector-api should now be hosting a FastAPI api on port 4242!
 ## Start the Face Mask Detector Client
 ### Importing the Emily project Client
 1. Open a new terminal and locate the `tutorials` folder
-2. Run ```$ emily open ./face-mask-detector/face-mask-detector-client``` to import the Emily API project
+2. Run ```$ emily open ./face-mask-detector/face-mask-detector-client``` to import the Emily Client project
 3. Select the Visual Studio Code editor  
 	* **Note:** After Visual Studio Code is opened you might be asked to rebuild the container and/or reload PyLance - do so.
 
