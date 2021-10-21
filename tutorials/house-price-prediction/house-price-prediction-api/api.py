@@ -11,6 +11,9 @@ from argparse import ArgumentParser
 from utilities.utilities import get_uptime
 from utilities.logging.config import initialize_logging, initialize_logging_middleware
 
+from static.render import render
+from starlette.responses import HTMLResponse
+
 from ml.emily import Emily
 
 emily = Emily()
@@ -89,6 +92,16 @@ class PredictItem(BaseModel):
 def predict(item: PredictItem):
     return {'result': emily.predict(item)}
 
+
+@app.get('/')
+def index():
+    return HTMLResponse(
+        render(
+            'static/index.html',
+            host=os.environ.get('HOST_IP'),
+            port=os.environ.get('CONTAINER_PORT')
+        )
+    )
 
 
 if __name__ == '__main__':
