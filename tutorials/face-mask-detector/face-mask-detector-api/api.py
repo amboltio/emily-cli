@@ -14,6 +14,11 @@ from src.evaluator import Evaluator
 from src.predictor import Predictor
 from src.requests import PredictRequest, PredictWebcamRequest, TrainRequest, EvaluateRequest
 
+from utilities.utilities import get_uptime
+
+from static.render import render
+from starlette.responses import HTMLResponse
+
 # --- Welcome to your Emily API! --- #
 # See the README for guides on how to test it.
 
@@ -40,6 +45,11 @@ def health_check():
         'status': 'UP',
         'port': os.environ.get("HOST_PORT"),
     }
+
+
+@app.get('/api')
+def hello():
+    return f'The API is running (uptime: {get_uptime()})'
 
 
 @app.post('/api/train')
@@ -131,6 +141,17 @@ def predict_webcam(request_item: PredictWebcamRequest):
             'status': str(err),
             'stack_trace': str(traceback.format_exc())
         }
+
+
+@app.get('/')
+def index():
+    return HTMLResponse(
+        render(
+            'static/index.html',
+            host=os.environ.get('HOST_IP'),
+            port=os.environ.get('CONTAINER_PORT')
+        )
+    )
 
 
 # Load environment variables from the projects env file
