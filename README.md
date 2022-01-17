@@ -40,6 +40,9 @@ Choose your system:
 </p>
 
 <br> 
+
+### Documentation
+The documentation for emily can be found <a href="https://emily.ambolt.io/#/">here</a>
                                             
 ### What is Emily?
 Emily combines the powers of [Python](https://www.python.org/) and [Docker](https://www.docker.com/) to build stable and consistent machine learning and datascience python environments. Emily is useful for large cross-team project development as well as for simply running a single jupyter notebook or python script.
