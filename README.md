@@ -42,7 +42,7 @@ Choose your system:
 <br> 
 
 ### Documentation
-The documentation for emily can be found <a href="https://emily.ambolt.io/#/">here</a>
+The documentation for emily can be found <a href="https://emily.ambolt.io/docs/latest">here</a>
                                             
 ### What is Emily?
 Emily combines the powers of [Python](https://www.python.org/) and [Docker](https://www.docker.com/) to build stable and consistent machine learning and datascience python environments. Emily is useful for large cross-team project development as well as for simply running a single jupyter notebook or python script.
@@ -70,9 +70,9 @@ The Emily CLI is available on Windows, Linux and Mac OS:
 
 Follow the install guides:
 
-- <a href="https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Windows">Windows install guide</a>
-- <a href="https://github.com/amboltio/emily-cli/wiki/How-to-install-Emily-on-Linux">Linux install guide</a>
-- <a href="https://github.com/amboltio/emily-cli/wiki/How-to-install-emily-on-Mac">Mac OS install guide</a>
+- <a href="https://emily.ambolt.io/docs/latest/guides/install-windows">Windows install guide</a>
+- <a href="https://emily.ambolt.io/docs/latest/guides/install-linux">Linux install guide</a>
+- <a href="https://emily.ambolt.io/docs/latest/guides/install-macos">Mac OS install guide</a>
 
 </details>
 <br>
@@ -80,7 +80,7 @@ Follow the install guides:
 <details open>
 <summary>Quick Start</summary>
 
-* [Quick-Start](https://github.com/amboltio/emily-cli/wiki/Quick-Start)
+* [Quick-Start](https://emily.ambolt.io/docs/latest/guides/quick-start)
 </details>
 <br>
 
