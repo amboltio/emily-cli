@@ -1,8 +1,0 @@
-{
-    "id": "G8FNZM",
-    "name": "house-price-prediction-api",
-    "containerName": "emily-house-price-prediction-api-g8fnzm",
-    "image": "slim",
-    "imageVersion": "2.0.0",
-    "mountTargets": []
-}

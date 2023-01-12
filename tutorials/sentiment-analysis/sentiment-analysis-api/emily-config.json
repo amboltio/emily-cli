@@ -1,8 +1,0 @@
-{
-    "id": "1H66IR",
-    "name": "sentiment-analysis-api",
-    "containerName": "emily-sentiment-analysis-api-1h66ir",
-    "image": "nlp",
-    "imageVersion": "1.0.0",
-    "mountTargets": []
-}

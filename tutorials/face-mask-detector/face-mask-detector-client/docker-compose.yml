@@ -1,9 +1,0 @@
-
-version: "3"
-services:
-  emily-face-mask-detector-client-9ebqlg:
-
-    # Add your custom configuration here!
-
-    networks:
-      - emily-face-mask-detector-client-9ebqlg-network

@@ -1,9 +1,0 @@
-
-version: "3"
-services:
-  emily-face-mask-detector-api-xa5jt2:
-
-    # Add your custom configuration here!
-
-    networks:
-      - emily-face-mask-detector-api-xa5jt2-network

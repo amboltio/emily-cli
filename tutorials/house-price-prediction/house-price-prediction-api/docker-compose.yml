@@ -1,9 +1,0 @@
-
-version: "3"
-services:
-  emily-house-price-prediction-api-g8fnzm:
-
-    # Add your custom configuration here!
-
-    networks:
-      - emily-house-price-prediction-api-g8fnzm-network

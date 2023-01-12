@@ -1,8 +1,0 @@
-{
-    "id": "9EBQLG",
-    "name": "face-mask-detector-client",
-    "containerName": "emily-face-mask-detector-client-9ebqlg",
-    "image": "slim",
-    "imageVersion": "2.0.0",
-    "mountTargets": []
-}

@@ -1,6 +1,0 @@
-version: "3"
-services:
-  emily-face-mask-detector-api-xa5jt2:
-    
-    volumes:
-      []
