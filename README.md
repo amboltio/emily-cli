@@ -87,20 +87,6 @@ Follow the install guides:
 <details open>
 <summary>Tutorials</summary>
 
-* [Face Mask Detector](https://github.com/amboltio/emily-cli/tree/main/tutorials/face-mask-detector): Detect if a person is wearing a face mask or not 😷
-* [Sentiment Analysis](https://github.com/amboltio/emily-cli/tree/main/tutorials/sentiment-analysis): Classify reviews as negative 👎 or positive 👍  
-* [House Price Prediction](https://github.com/amboltio/emily-cli/tree/main/tutorials/house-price-prediction): predict house prices with a Linear Regression Model 🏠📈 
-
-[comment]: <> (* [Text Recognition]&#40;https://github.com/amboltio/emily-cli/tree/main/tutorials/text-recognition&#41;: Learn how to train, evaluate and predict sentences with a fully connected PyTorch classifier implemented in the Emily API template.)
-</details>
-
-
-[comment]: <> (## Privacy Policy)
-
-[comment]: <> (The Emily CLI collects no data by default.)
-
-[comment]: <> (If you opt in to share anonumous usage data, you will be sharing:)
-
-[comment]: <> (* Log-data produced by the Emily CLI in case of crashes. - You will be prompted for acknowledgement each time.)
-
-[comment]: <> (* Basic usage of the CLI: installation, updates, command usage)
+* [Face Mask Detector](https://github.com/amboltio/emily-tutorials/tree/main/tutorials/face-mask-detector): Detect if a person is wearing a face mask or not 😷
+* [Sentiment Analysis](https://github.com/amboltio/emily-tutorials/tree/main/tutorials/sentiment-analysis): Classify reviews as negative 👎 or positive 👍  
+* [House Price Prediction](https://github.com/amboltio/emily-tutorials/tree/main/tutorials/house-price-prediction): predict house prices with a Linear Regression Model 🏠📈 
